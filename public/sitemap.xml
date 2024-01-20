@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/vendor/sitemap/styles/xml.xsl" type="text/xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+	<url>
+	<loc>http://127.0.0.1:8000</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/lien-he</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/gioi-thieu</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/khuyen-mai</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/ban-an</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/tu-tho</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/ban-ghe-go-xua</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/ban-hoc</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/ban-ghe-go</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/danh-muc/ban-ghe-an-moi</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/phong/phong-an</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/phong/phong-khach</loc>
+	</url>
+	<url>
+	<loc>http://127.0.0.1:8000/phong/phong-hoc</loc>
+	</url>
+</urlset>
+

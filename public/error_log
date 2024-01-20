@@ -1,0 +1,60 @@
+[15-Sep-2022 04:33:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'anhtest2_example'@'localhost' to database 'anhtest2_example' in /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_exampl...', 'JhC*bK^}Xg%K', Array)
+#1 /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_exampl...', 'JhC*bK^}Xg%K', Array)
+#2 /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFac in /home/anhtest2/dev.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:57:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:57:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[26-Sep-2022 21:59:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'anhtest2_anhtester_user'@'localhost' (using password: YES) in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#1 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'anhtest2_anhtes...', 'VGk', Array)
+#2 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Con in /home/anhtest2/phuongnam.anhtester.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712
+[31-Oct-2022 14:55:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'phuongn2_admin'@'localhost' (using password: YES) in /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'phuongn2_admin', '=Z]mw%2Rr3_V@', Array)
+#1 /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'phuongn2_admin', '=Z]mw%2Rr3_V@', Array)
+#2 /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(184): Illuminate\Database\Connectors\M in /home/phuongn2/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 712

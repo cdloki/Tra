@@ -1,0 +1,48 @@
+.tab-content .tab-pane {
+    margin-top: 20px;
+}
+
+.required {
+    color: red;
+}
+
+.image-table {
+    height: 50px;
+    width: 100px;
+}
+
+.text {
+    display: block;
+    max-width: 500px;
+    /* max-height: 200px; */
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.text>* {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.text>*>* {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.swal2-show {
+    width: 24.5rem !important;
+    padding: 1.00rem !important;
+}
+
+.swal2-close {
+    margin-left: 2rem !important;
+}
+
+/* width: 32rem; padding: 1.25rem; */
+/* <div class="swal2-container swal2-top-end swal2-backdrop-show" style="overflow-y:

@@ -1,0 +1,172 @@
+<?php
+
+namespace App\Repositories\SEO;
+
+use App\Repositories\SEO\SEORepositoryInterface;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+use App\Models\Settings;
+use App\Models\Posts;
+use App\Models\Categorys;
+use App\Models\Products;
+use App\Models\Rooms;
+
+
+
+
+
+
+class SEORepository implements SEORepositoryInterface
+{
+    protected $tSEOPost;
+    protected $tSEOSetting;
+    protected $tSEOCategory;
+    protected $tSEOProduct;
+    protected $tSEORoom;
+
+    public function __construct(
+        Posts $tSEOPost,
+        Settings $tSEOSetting,
+        Products $tSEOProduct,
+        Categorys $tSEOCategory,
+        Rooms $tSEORoom
+
+
+    )
+    {
+        $this->tSEOPost = $tSEOPost;
+        $this->tSEOSetting = $tSEOSetting;
+        $this->tSEOCategory = $tSEOCategory;
+        $this->tSEOProduct = $tSEOProduct;
+        $this->tSEORoom = $tSEORoom;
+
+    }
+
+
+    public function getDataSEO( $page, $type, $id)
+    {
+
+        $data = $this->tSEOSetting->getOneSetting();
+              $dataSEO = [
+                'author' => $data['title_website'],
+                // 'google_signin_client_id'
+                'title' => $data['title_website'],
+                'image' => $data['image_seo_website'],
+                'description' => $data['description_seo_website'],
+                'keywords' => $data['keyword_seo_website'],
+                'fb_app_id' => $data['facebook_social_website'],
+                'image_alt' => $data['title_website'],
+                'site_name' => $data['title_website'],
+                'url' => asset(''),
+              ];
+        switch ($page) {
+            case 'home':
+
+              break;
+            case 'post':
+                if (!empty($id) && $type == 3){
+                    $dataPost = $this->tSEOPost->getOnePost($id);
+                } else {
+                    $dataPost = $this->tSEOPost->getOnePostWithType($type);
+                }
+
+                if (!empty($dataPost["title_seo_post"])){
+                    $dataSEO['title'] = $dataPost['title_seo_post'];
+                }
+                if (!empty($dataPost["description_seo_post"])){
+                    $dataSEO['description'] = $dataPost['description_seo_post'];
+                }
+                if (!empty($dataPost["keyword_seo_post"])){
+                    $dataSEO['keywords'] = $dataPost['keyword_seo_post'];
+                }
+                break;
+            case 'category':
+                $dataCategory = $this->tSEOCategory->getOneCategory($id);
+                // dd($dataCategory);
+                if (!empty($dataCategory["title_seo_category"])){
+                    $dataSEO['title'] = $dataCategory['title_seo_category'];
+                }
+                if (!empty($dataCategory["description_seo_category"])){
+                    $dataSEO['description'] = $dataCategory['description_seo_category'];
+                }
+                if (!empty($dataCategory["keyword_seo_category"])){
+                    $dataSEO['keywords'] = $dataCategory['keyword_seo_category'];
+                }
+                break;
+            case 'room':
+                $dataRoom = $this->tSEORoom->getOneRoom($id);
+                if (!empty($dataRoom["title_seo_room"])){
+                    $dataSEO['title'] = $dataRoom['title_seo_room'];
+                }
+                if (!empty($dataRoom["description_seo_room"])){
+                    $dataSEO['description'] = $dataRoom['description_seo_room'];
+                }
+                if (!empty($dataRoom["keyword_seo_room"])){
+                    $dataSEO['keywords'] = $dataRoom['keyword_seo_room'];
+                }
+                break;
+            default:
+            'code to be executed if n=label1';
+        }
+        $htmlSEO = $this->renderHTMLSEO($dataSEO);
+        return $htmlSEO;
+    }
+
+    public function renderHTMLSEO($data)
+    {
+        $html = "
+        <meta name='author' content='".$data["author"]."'>
+        <meta name='google-signin-client_id' content='345238891330-r4anuala3q6lph6ougn88lgjue6tod7l.apps.googleusercontent.com'>
+        <meta name='title' content='".$data["title"]."' />
+        <meta name='image' content='".asset($data["image"])."' />
+        <meta name='description'
+            content='".$data["description"]."'>
+        <meta name='keywords'
+            content='".$data["keywords"]."'>
+
+        <!-- Open Graph / Facebook -->
+        <meta property='og:locale' content='vi_vn' />
+        <meta property='fb:app_id' content='".$data["fb_app_id"]."' />
+        <meta property='og:image' content='".asset($data["image"])."' />
+        <meta property='og:image:alt' content='".$data["title"]."' />
+        <meta property='og:title' content='".$data["title"]."' />
+        <meta property='og:type' content='article' />
+        <meta property='og:site_name' content='".$data["title"]."'>
+        <meta property='og:url' content='".$data["url"]."' />
+        <meta property='og:description'
+            content='".$data["description"]."'>
+        <meta property='og:keywords'
+            content='".$data["keywords"]."'>
+
+        <meta property='article:publisher' content='https://www.facebook.com/automationtestselenium'>
+        <meta property='article:author' content='https://www.facebook.com/automationtestselenium'>
+        <meta property='article:published_time'
+            content='2022-08-08 15:59:47'>
+        <meta property='article:modified_time' content='2022-08-08 15:59:47'>
+        <meta property='article:tag'
+            content='".$data["keywords"]."'>
+
+        <link rel='canonical' href='".$data["url"]."' />
+        <link rel='alternate' href='".$data["url"]."' hreflang='vi-vn' />
+        <meta name='robots' content='index, follow'>
+        <meta name='googlebot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'>
+        <meta name='bingbot' content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'>
+
+        <!-- Twitter -->
+        <meta name='twitter:site' content='".$data["author"]."'>
+        <meta name='twitter:card' content='summary_large_image'>
+        <meta name='twitter:url' content='".$data["url"]."'>
+        <meta name='twitter:title' content='".$data["title"]."'>
+        <meta name='twitter:description'
+            content='".$data["description"]."'>
+        <meta name='twitter:keywords'
+            content='".$data["keywords"]."'>
+        <meta name='twitter:image' content='".asset($data["image"])."'>
+        <meta name='twitter:image:alt' content='".$data["title"]."'>
+        ";
+        return $html;
+    }
+
+
+}
+
