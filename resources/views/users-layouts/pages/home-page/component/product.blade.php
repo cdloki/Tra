@@ -1,6 +1,7 @@
 
 
  {{-- {{-- <section class="space"> --}}
+    <section class="space">
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-end">
                 <div class="col-lg">
@@ -68,8 +69,6 @@
             </div>
         </div>
     </section>
-
-
 
 
 

@@ -60,6 +60,8 @@ return [
                 'image/gif',
                 'application/pdf',
                 'text/plain',
+                'image/vnd.microsoft.icon',
+                'image/x-icon',
             ],
         ],
         'image' => [
