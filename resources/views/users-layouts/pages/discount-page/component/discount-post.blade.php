@@ -79,19 +79,6 @@
        </div>
     </div>
  </section>
- <div class="">
-    <div class="container z-index-common">
-       <div class="newsletter-wrap">
-          <div class="newsletter-content">
-             <h4 class="newsletter-title">Sign Up to Get Updates & News About Us.</h4>
-          </div>
-          <form class="newsletter-form">
-             <div class="form-group"><input class="form-control" type="email" placeholder="Email Address" required=""></div>
-             <button type="submit" class="th-btn style6">Subscribe</button>
-          </form>
-       </div>
-    </div>
- </div>
 
 
 

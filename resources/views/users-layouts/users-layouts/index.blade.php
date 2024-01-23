@@ -54,15 +54,14 @@
     <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
     <style>
+    body {
+        font-family: 'UTM Avo', sans-serif;
+    }
 
-        body{
-            font-family: 'UTM Avo', sans-serif;
-        }
-
-        .slider-area span {
-            font-size: inherit;
-            font-weight: inherit;
-        }
+    .slider-area span {
+        font-size: inherit;
+        font-weight: inherit;
+    }
     </style>
 </head>
 
@@ -78,7 +77,8 @@
             <div class="row gx-60">
                 <div class="col-lg-6">
                     <div class="product-big-img">
-                        <div class="img"><img src="{{asset('user\img\product\product_details_1_1.jpg')}}" alt="Product Image">
+                        <div class="img"><img src="{{asset('user\img\product\product_details_1_1.jpg')}}"
+                                alt="Product Image">
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,8 @@
                     <ul class="woocommerce-mini-cart cart_list product_list_widget">
                         <li class="woocommerce-mini-cart-item mini_cart_item"><a href="#"
                                 class="remove remove_from_cart_button"><i class="far fa-times"></i></a> <a href="#"><img
-                                    src="{{asset('user\img\product\product_thumb_1_1.jpg')}}" alt="Cart Image">Bosco Apple
+                                    src="{{asset('user\img\product\product_thumb_1_1.jpg')}}" alt="Cart Image">Bosco
+                                Apple
                                 Fruit</a> <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span
                                         class="woocommerce-Price-currencySymbol">$</span>940.00</span></span></li>
                         <li class="woocommerce-mini-cart-item mini_cart_item"><a href="#"
@@ -137,19 +138,24 @@
                                         class="woocommerce-Price-currencySymbol">$</span>899.00</span></span></li>
                         <li class="woocommerce-mini-cart-item mini_cart_item"><a href="#"
                                 class="remove remove_from_cart_button"><i class="far fa-times"></i></a> <a href="#"><img
-                                    src="{{asset('user\img\product\product_thumb_1_3.jpg')}}" alt="Cart Image">Mandarin orange</a>
+                                    src="{{asset('user\img\product\product_thumb_1_3.jpg')}}" alt="Cart Image">Mandarin
+                                orange</a>
                             <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span
-                                        class="woocommerce-Price-currencySymbol">$</span>756.00</span></span></li>
+                                        class="woocommerce-Price-currencySymbol">$</span>756.00</span></span>
+                        </li>
                         <li class="woocommerce-mini-cart-item mini_cart_item"><a href="#"
                                 class="remove remove_from_cart_button"><i class="far fa-times"></i></a> <a href="#"><img
-                                    src="{{asset('user\img\product\product_thumb_1_4.jpg')}}" alt="Cart Image">Shallot Red
+                                    src="{{asset('user\img\product\product_thumb_1_4.jpg')}}" alt="Cart Image">Shallot
+                                Red
                                 onion</a> <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span
                                         class="woocommerce-Price-currencySymbol">$</span>723.00</span></span></li>
                         <li class="woocommerce-mini-cart-item mini_cart_item"><a href="#"
                                 class="remove remove_from_cart_button"><i class="far fa-times"></i></a> <a href="#"><img
-                                    src="{{asset('user\img\product\product_thumb_1_5.jpg')}}" alt="Cart Image">Sour Red Cherry</a>
+                                    src="{{asset('user\img\product\product_thumb_1_5.jpg')}}" alt="Cart Image">Sour Red
+                                Cherry</a>
                             <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span
-                                        class="woocommerce-Price-currencySymbol">$</span>1080.00</span></span></li>
+                                        class="woocommerce-Price-currencySymbol">$</span>1080.00</span></span>
+                        </li>
                     </ul>
                     <p class="woocommerce-mini-cart__total total"><strong>Subtotal:</strong> <span
                             class="woocommerce-Price-amount amount"><span
@@ -172,8 +178,8 @@
             <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
             <div class=" dropdown_search" id="dropdown_search">
                 <form class="form-search" id="form-submit">
-                    <input class="input-search" autocomplete="off" id="input_search"
-                        placeholder="Nhập tên sản phẩm ..." type="text">
+                    <input class="input-search" autocomplete="off" id="input_search" placeholder="Nhập tên sản phẩm ..."
+                        type="text">
                     {{-- <button disabled><i class="ion-ios-search-strong"></i></button> --}}
                     <div class="search-list">
                         <div id="list-product">
@@ -190,7 +196,8 @@
     </div>
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo"><a href="home-organic-farm.html"><img src="{{asset('user\img\logo.svg')}}" alt="Frutin"></a>
+            <div class="mobile-logo"><a href="home-organic-farm.html"><img src="{{asset('user\img\logo.svg')}}"
+                        alt="Frutin"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -268,8 +275,8 @@
                         <div class="logo-bg"></div>
                         <div class="row align-items-center justify-content-between">
                             <div class="col-auto">
-                                <div class="header-logo"><a href="/"><img
-                                            src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a></div>
+                                <div class="header-logo"><a href="/"><img width="100"
+                                            src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                             </div>
                             <div class="col-auto">
                                 <nav class="main-menu d-none d-lg-inline-block">
@@ -297,7 +304,7 @@
                             <div class="col-auto d-none d-xl-block ms-auto">
                                 <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
                                             class="far fa-search"></i></button>
-                                            {{-- <button type="button"
+                                    {{-- <button type="button"
                                         class="simple-icon sideMenuToggler"><span class="badge">5</span> <i
                                             class="fa-regular fa-cart-shopping"></i></button> <a href="contact.html"
                                         class="th-btn style4">Get A Quote<i class="fas fa-chevrons-right ms-2"></i></a> --}}
@@ -310,11 +317,11 @@
         </div>
     </header>
 
-<!-- Body -->
+    <!-- Body -->
 
-@yield('content')
+    @yield('content')
 
-<!-- End Body -->
+    <!-- End Body -->
 
 
 
@@ -327,31 +334,31 @@
                 <div class="col-xl-6 mb-40 mb-xl-0">
                     <div class="img-box5">
                         <div class="shape1"><img src="{{asset('user\img\normal\about_3_2.png')}}" alt="About"></div>
-                        <div class="img1"><img src="{{asset('user\img\normal\about_3_1.png')}}" alt="About"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 text-center text-xl-start">
-                    <div class="title-area mb-32"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                alt="shape">About Us Company</span>
-                        <h2 class="sec-title">Organic Integrity Durable Impact Frutin's Story</h2>
-                        <p class="sec-text">Some studies suggest that organic foods may have higher levels of certain
-                            nutrients and antioxidants compared to conventionally grown foods. However, this can vary
-                            depending on factors like soil quality and growing conditions.</p>
-                    </div>
-                    <div class="checklist list-two-column mb-40">
-                        <ul>
-                            <li>100% Organic Products</li>
-                            <li>No Synthetic Chemicals</li>
-                            <li>Always Fresh & Natural Foods</li>
-                            <li>Best Prices</li>
-                            <li>Environmental Benefits</li>
-                        </ul>
-                    </div>
-                    <div><a href="about.html" class="th-btn">Discover More<i class="fas fa-chevrons-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="img1"><img src="{{asset('user\img\normal\about_3_1.png')}}" alt="About"></div>
+    </div>
+    </div>
+    <div class="col-xl-6 text-center text-xl-start">
+        <div class="title-area mb-32"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
+                    alt="shape">About Us Company</span>
+            <h2 class="sec-title">Organic Integrity Durable Impact Frutin's Story</h2>
+            <p class="sec-text">Some studies suggest that organic foods may have higher levels of certain
+                nutrients and antioxidants compared to conventionally grown foods. However, this can vary
+                depending on factors like soil quality and growing conditions.</p>
         </div>
+        <div class="checklist list-two-column mb-40">
+            <ul>
+                <li>100% Organic Products</li>
+                <li>No Synthetic Chemicals</li>
+                <li>Always Fresh & Natural Foods</li>
+                <li>Best Prices</li>
+                <li>Environmental Benefits</li>
+            </ul>
+        </div>
+        <div><a href="about.html" class="th-btn">Discover More<i class="fas fa-chevrons-right ms-2"></i></a>
+        </div>
+    </div>
+    </div>
+    </div>
     </div>
     <section class="space-bottom">
         <div class="container z-index-common">
@@ -373,7 +380,8 @@
             </div>
         </div>
     </section>
-    <section class="overflow-hidden bg-smoke2 space" id="service-sec" data-bg-src="{{asset('user/img/bg/service_bg_1.png')}}">
+    <section class="overflow-hidden bg-smoke2 space" id="service-sec"
+        data-bg-src="{{asset('user/img/bg/service_bg_1.png')}}">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-8">
@@ -386,7 +394,8 @@
             <div class="row gy-40 justify-content-center">
                 <div class="col-xl-4 col-md-6">
                     <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_1.jpg')}}" alt="Service"></div>
+                        <div class="box-img"><img src="{{asset('user\img\service\service_card_1.jpg')}}" alt="Service">
+                        </div>
                         <div class="box-icon"><img src="{{asset('user\img\icon\service_card_1.svg')}}" alt="Icon"></div>
                         <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
                             <h3 class="box-title"><a href="service-details.html">Fresh Vegetable</a></h3>
@@ -396,7 +405,8 @@
                 </div>
                 <div class="col-xl-4 col-md-6">
                     <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_2.jpg')}}" alt="Service"></div>
+                        <div class="box-img"><img src="{{asset('user\img\service\service_card_2.jpg')}}" alt="Service">
+                        </div>
                         <div class="box-icon"><img src="{{asset('user\img\icon\service_card_2.svg')}}" alt="Icon"></div>
                         <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
                             <h3 class="box-title"><a href="service-details.html">Organic Fertilizer</a></h3>
@@ -406,7 +416,8 @@
                 </div>
                 <div class="col-xl-4 col-md-6">
                     <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_3.jpg')}}" alt="Service"></div>
+                        <div class="box-img"><img src="{{asset('user\img\service\service_card_3.jpg')}}" alt="Service">
+                        </div>
                         <div class="box-icon"><img src="{{asset('user\img\icon\service_card_3.svg')}}" alt="Icon"></div>
                         <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
                             <h3 class="box-title"><a href="service-details.html">Natural Fruits</a></h3>
@@ -422,86 +433,88 @@
 
 
     {{-- <section class="why-sec3 space" data-bg-src="{{asset('user/img/bg/why_bg_2_2.jpg')}}">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="title-area text-center"><span class="sub-title"><img
-                                src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Why Choose Us</span>
-                        <h2 class="sec-title text-white">Savor the Purity, Taste The Difference!</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="title-area text-center"><span class="sub-title"><img
+                            src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Why Choose Us</span>
+                    <h2 class="sec-title text-white">Savor the Purity, Taste The Difference!</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-0 justify-content-between">
+            <div class="col-sm-auto">
+                <div class="why-feature-left">
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_1.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">100% Organic</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
+                        </div>
+                    </div>
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_2.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">Fresh Products</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
+                        </div>
+                    </div>
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_3.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">Biodynamic Food</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row gx-0 justify-content-between">
-                <div class="col-sm-auto">
-                    <div class="why-feature-left">
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_1.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">100% Organic</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
-                        </div>
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_2.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">Fresh Products</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
-                        </div>
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_3.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">Biodynamic Food</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
+            <div class="col-auto d-none d-lg-block">
+                <div class="img-box4 mt-0"><img src="{{asset('user\img\normal\why_3_1.png')}}" alt="Why"></div>
+            </div>
+            <div class="col-sm-auto">
+                <div class="why-feature-right">
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_4.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">Secured Payment</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <div class="img-box4 mt-0"><img src="{{asset('user\img\normal\why_3_1.png')}}" alt="Why"></div>
-                </div>
-                <div class="col-sm-auto">
-                    <div class="why-feature-right">
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_4.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">Secured Payment</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_5.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">Neat & Clean</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
                         </div>
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_5.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">Neat & Clean</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
-                        </div>
-                        <div class="why-feature">
-                            <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_6.svg')}}" alt=""></div>
-                            <div class="media-body">
-                                <div class="box-title">Daily Fresh</div>
-                                <p class="box-text">Our products are certified by reputable organic.</p>
-                            </div>
+                    </div>
+                    <div class="why-feature">
+                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_6.svg')}}" alt=""></div>
+                        <div class="media-body">
+                            <div class="box-title">Daily Fresh</div>
+                            <p class="box-text">Our products are certified by reputable organic.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
     <section class="space" id="process-sec">
-        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_7.png')}}" alt="shape">
+        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_7.png')}}"
+                alt="shape">
         </div>
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img src="{{asset('user\img\shape\vector_shape_6.png')}}"
-                alt="shape"></div>
+        <div class="shape-mockup" data-bottom="0" data-right="0"><img
+                src="{{asset('user\img\shape\vector_shape_6.png')}}" alt="shape"></div>
         <div class="container">
-            <div class="title-area text-center"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                        alt="Icon">How We Make Quality Foods</span>
+            <div class="title-area text-center"><span class="sub-title"><img
+                        src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">How We Make Quality Foods</span>
                 <h2 class="sec-title">How We Work It?</h2>
             </div>
             <div class="row gy-4 justify-content-center">
                 <div class="col-xl-3 col-md-6 process-box-wrap">
                     <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_1.svg')}}" alt="icon"></div>
+                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_1.svg')}}"
+                                alt="icon"></div>
                         <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
                                 src="{{asset('user\img\normal\process_box_1.jpg')}}" alt="image"></div>
                         <p class="box-number">Step - 01</p>
@@ -512,7 +525,8 @@
                 </div>
                 <div class="col-xl-3 col-md-6 process-box-wrap">
                     <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_2.svg')}}" alt="icon"></div>
+                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_2.svg')}}"
+                                alt="icon"></div>
                         <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
                                 src="{{asset('user\img\normal\process_box_2.jpg')}}" alt="image"></div>
                         <p class="box-number">Step - 02</p>
@@ -523,7 +537,8 @@
                 </div>
                 <div class="col-xl-3 col-md-6 process-box-wrap">
                     <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_3.svg')}}" alt="icon"></div>
+                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_3.svg')}}"
+                                alt="icon"></div>
                         <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
                                 src="{{asset('user\img\normal\process_box_3.jpg')}}" alt="image"></div>
                         <p class="box-number">Step - 03</p>
@@ -534,7 +549,8 @@
                 </div>
                 <div class="col-xl-3 col-md-6 process-box-wrap">
                     <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_4.svg')}}" alt="icon"></div>
+                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_4.svg')}}"
+                                alt="icon"></div>
                         <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
                                 src="{{asset('user\img\normal\process_box_4.jpg')}}" alt="image"></div>
                         <p class="box-number">Step - 04</p>
@@ -558,7 +574,8 @@
                 <div class="col-xl-7 text-center text-xl-start align-self-center">
                     <div class="ps-xl-4">
                         <div class="title-area text-center text-xl-start"><span class="sub-title"><img
-                                    src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Looking For Answers?</span>
+                                    src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Looking For
+                                Answers?</span>
                             <h2 class="sec-title">Frequently Asked If You Have any Questions?</h2>
                         </div>
                         <div class="accordion" id="faqAccordion">
@@ -656,9 +673,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_1.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_1.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Fresh Vegetables</a></h3>
@@ -667,9 +684,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_2.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_2.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Vegetables</a></h3>
@@ -678,9 +695,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_3.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_3.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Fruits</a></h3>
@@ -689,9 +706,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_4.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_4.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Farming</a></h3>
@@ -700,9 +717,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_1.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_1.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Fresh Vegetables</a></h3>
@@ -711,9 +728,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_2.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_2.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Vegetables</a></h3>
@@ -722,9 +739,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_3.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_3.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Fruits</a></h3>
@@ -733,9 +750,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}" alt="gallery image"> <a
-                                    href="{{asset('user/img\gallery\gallery_1_4.jpg')}}" class="icon-btn style2 popup-image"><i
-                                        class="far fa-plus"></i></a></div>
+                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}"
+                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_4.jpg')}}"
+                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
                             <div class="box-content">
                                 <p class="box-subtitle">Fresh Food & Vegetables</p>
                                 <h3 class="box-title"><a href="project-details.html">Organic Farming</a></h3>
@@ -753,8 +770,8 @@
     </div>
     <section class="overflow-hidden space" id="testi-sec">
         <div class="container">
-            <div class="title-area text-center"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                        alt="Icon">Testimonials</span>
+            <div class="title-area text-center"><span class="sub-title"><img
+                        src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Testimonials</span>
                 <h2 class="sec-title">Our Customer Feedback</h2>
             </div>
             <div class="testi-box-area" data-bg-src="{{asset('user/img/bg/testi_bg_2.png')}}">
@@ -785,7 +802,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="testi-box_quote"><img src="{{asset('user\img\testimonial\quote_1.png')}}" alt="Image"></div>
+                    <div class="testi-box_quote"><img src="{{asset('user\img\testimonial\quote_1.png')}}" alt="Image">
+                    </div>
                     <div class="icon-box"><button data-slider-prev="#testiSlide2" class="slider-arrow default"><i
                                 class="far fa-arrow-left"></i></button> <button data-slider-next="#testiSlide2"
                             class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
@@ -794,10 +812,11 @@
         </div>
     </section>
     <section class="overflow-hidden space bg-smoke2" id="blog-sec">
-        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_1.png')}}" alt="shape">
+        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_1.png')}}"
+                alt="shape">
         </div>
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img src="{{asset('user\img\shape\vector_shape_2.png')}}"
-                alt="shape"></div>
+        <div class="shape-mockup" data-bottom="0" data-right="0"><img
+                src="{{asset('user\img\shape\vector_shape_2.png')}}" alt="shape"></div>
         <div class="container">
             <div class="row justify-content-lg-between justify-content-center align-items-end">
                 <div class="col-lg">
@@ -877,46 +896,60 @@
                 data-slider-options='{"breakpoints":{"0":{"slidesPerView":2},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"},"1400":{"slidesPerView":"6"}}}'>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo"></div>
+                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -926,29 +959,14 @@
 
 
     <footer class="footer-wrapper footer-layout2">
-        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\footer_shape_1.png')}}" alt="shape">
-        </div>
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img src="{{asset('user\img\shape\footer_shape_2.png')}}"
-                alt="shape"></div>
-        <div class="container z-index-common">
-            <div class="newsletter-wrap">
-                <div class="newsletter-content">
-                    <div class="email-icon"><img src="{{asset('user\img\icon\email_1.svg')}}" alt="Icon"></div>
-                    <h4 class="newsletter-title">Sign Up to Get Updates & News About Us.</h4>
-                </div>
-                <form class="newsletter-form">
-                    <div class="form-group"><input class="form-control" type="email" placeholder="Email Address"
-                            required=""></div><button type="submit" class="th-btn style3">Subscribe</button>
-                </form>
-            </div>
-        </div>
+        
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
-                                <div class="about-logo"><a href="/"><img
+                                <div class="about-logo"><a href="/"><img width="100"
                                             src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a></div>
                                 <p class="about-text">{!! $Setting["description_seo_website"] !!}</p>
                                 <div class="th-social"><a href="{{$Setting["facebook_website"]}}"><i
@@ -968,11 +986,12 @@
                                 <ul class="menu">
 
                                     @foreach ($menuCategory as $key => $item)
-                                        <li>
-                                            <a class=" {{$key > 10 ? "hidden" : ""}}" href="{{route('category.index',$item['url_category'])}}">
+                                    <li>
+                                        <a class=" {{$key > 10 ? "hidden" : ""}}"
+                                            href="{{route('category.index',$item['url_category'])}}">
                                             {{$item["name_category"]}}
-                                            </a>
-                                        </li>
+                                        </a>
+                                    </li>
                                     @endforeach
 
                                 </ul>
@@ -981,7 +1000,8 @@
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Đường dẫn nhanh</h3>
+                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
+                                    alt="Icon">Đường dẫn nhanh</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="blog.html">Trang Chủ</a></li>
@@ -994,7 +1014,8 @@
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Contact
+                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
+                                    alt="Icon">Contact
                                 Us</h3>
                             <div class="th-widget-contact">
                                 <div class="info-box">
@@ -1005,7 +1026,7 @@
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
                                     <p class="info-box_text"><a href="tel:+{{$Setting["phone_website"]}}"
                                             class="info-box_link">{{$Setting["phone_website"]}}</a>
-                                        </p>
+                                    </p>
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-envelope"></i></div>
@@ -1019,17 +1040,18 @@
             </div>
         </div>
         {{-- <div class="copyright-wrap" data-bg-src="{{asset('user/img/bg/copyright_bg_1.png')}}">
-            <div class="container">
-                <div class="row gy-2 align-items-center">
-                    <div class="col-md-6">
-                        <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2023 <a
-                                href="home-organic-farm.html">Frutin</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="payment-img"><img src="{{asset('user\img\normal\payment_methods.png')}}" alt="Image"></div>
+        <div class="container">
+            <div class="row gy-2 align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2023 <a
+                            href="home-organic-farm.html">Frutin</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="payment-img"><img src="{{asset('user\img\normal\payment_methods.png')}}" alt="Image">
                     </div>
                 </div>
             </div>
+        </div>
         </div> --}}
     </footer>
     <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">

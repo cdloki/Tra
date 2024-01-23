@@ -35,11 +35,11 @@
                         <div class="col-lg-4 mx-auto">
                             <div class="card">
                                 <div class="card-body p-0 auth-header-box"
-                                    style="background-color: #e3b557;border-radius: 5px 5px 0px 0px;">
+                                    style="background-color: #017d03;border-radius: 5px 5px 0px 0px;">
                                     <div class="text-center p-3">
                                         <a href="/" class="logo logo-admin">
-                                            <img src="{{asset($Setting["icon_general_website"])}}" width="120"
-                                                alt="logo" class="Logo Phương Nam">
+                                            <img width="100" src="{{asset($Setting["logo_general_website"])}}" width="120"
+                                                alt="logo" class="Logo">
                                         </a>
                                         <h2 class="mt-3 mb-1 fw-semibold text-white font-28"
                                             style="text-transform:uppercase ;">Đăng nhập</h2>
