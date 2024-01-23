@@ -1,34 +1,41 @@
 <section class="th-blog-wrapper blog-details space-top space-extra-bottom">
     <div class="container">
-       <div class="row">
-          <div class="col-xxl-8 col-lg-7">
-             <div class="th-blog blog-single">
-                <div class="blog-img"><img src="{{asset($dataDiscount["discount"]["image_post"])}}" alt="Blog Image"></div>
-                <div class="blog-content">
-                   <div class="blog-meta"><a class="author" href="blog.html"><i class="far fa-user"></i>By Admin</a>
-                    <a href="blog.html"><i class="far fa-calendar"></i>21 June, 2023</a>
-                    <a href="blog-details.html"><i class="far fa-comments"></i>Comments (3)</a>
+        <div class="row">
+            <div class="col-xxl-8 col-lg-7">
+                <div class="th-blog blog-single">
+                    <div class="blog-img"><img src="{{asset($dataDiscount["discount"]["image_post"])}}"
+                            alt="Blog Image"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta"><a class="author"><i class="far fa-user"></i>By
+                                Admin</a>
+                            <a><i class="far fa-calendar"></i>{{$dataDiscount["discount"]["created_at"]}}</a>
+                        </div>
+                        <h2 class="blog-title">{{$dataDiscount["discount"]["name_post"]}}</h2>
+
+                        {!! $dataDiscount["discount"]["description_post"] !!}
+
+
+                        <!-- <div class="share-links clearfix">
+                            <div class="row justify-content-between">
+                                <div class="col-sm-auto">
+                                    <span class="share-links-title">Tags:</span>
+                                    <div class="tagcloud"><a href="blog.html">Agriculture</a> <a
+                                            href="blog.html">Organic</a></div>
+                                </div>
+                                <div class="col-sm-auto text-xl-end">
+                                    <span class="share-links-title">Share On:</span>
+                                    <div class="th-social"><a href="https://facebook.com/" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a> <a href="https://twitter.com/"
+                                            target="_blank"><i class="fab fa-twitter"></i></a> <a
+                                            href="https://linkedin.com/" target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a> <a href="https://instagram.com/"
+                                            target="_blank"><i class="fab fa-instagram"></i></a></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
-                   <h2 class="blog-title">{{$dataDiscount["discount"]["name_post"]}}</h2>
-
-                   {!! $dataDiscount["discount"]["description_post"] !!}
-
-
-                   <div class="share-links clearfix">
-                      <div class="row justify-content-between">
-                         <div class="col-sm-auto">
-                            <span class="share-links-title">Tags:</span>
-                            <div class="tagcloud"><a href="blog.html">Agriculture</a> <a href="blog.html">Organic</a></div>
-                         </div>
-                         <div class="col-sm-auto text-xl-end">
-                            <span class="share-links-title">Share On:</span>
-                            <div class="th-social"><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a> <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a> <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-             {{-- <div class="th-comments-wrap">
+                {{-- <div class="th-comments-wrap">
                 <h2 class="blog-inner-title h4"><i class="far fa-comments"></i> Comments (03)</h2>
                 <ul class="comment-list">
                    <li class="th-comment-item">
@@ -81,32 +88,37 @@
                    <div class="col-12 form-group mb-0"><button class="th-btn">Post Comment</button></div>
                 </div>
              </div> --}}
-          </div>
-          <div class="col-xxl-4 col-lg-5">
-             <aside class="sidebar-area">
-                <div class="widget">
-                   <h3 class="widget_title">Bài viết khác</h3>
-                   <div class="recent-post-wrap">
+            </div>
+            <div class="col-xxl-4 col-lg-5">
+                <aside class="sidebar-area">
+                    <div class="widget">
+                        <h3 class="widget_title">Bài viết khác</h3>
+                        <div class="recent-post-wrap">
 
 
-                    @foreach ($dataDiscount["discount-new"] as $key => $item )
+                            @foreach ($dataDiscount["discount-new"] as $key => $item )
 
 
-                    <div class="recent-post">
-                        <div class="media-img"><a href="{{route('discount-post.show',$item['url_post'])}}"><img src="{{asset($item["image_post"])}}" alt="Blog Image"></a></div>
-                        <div class="media-body">
-                           <h4 class="post-title"><a class="text-inherit" href="{{route('discount-post.show',$item['url_post'])}}">{{$item["name_post"]}}</a></h4>
-                           <div class="recent-post-meta"><a href="{{route('discount-post.show',$item['url_post'])}}"><i class="far fa-calendar"></i>{{$item["created_at"]}}</a></div>
+                            <div class="recent-post">
+                                <div class="media-img"><a href="{{route('discount-post.show',$item['url_post'])}}"><img
+                                            src="{{asset($item["image_post"])}}" alt="Blog Image"></a></div>
+                                <div class="media-body">
+                                    <h4 class="post-title"><a class="text-inherit"
+                                            href="{{route('discount-post.show',$item['url_post'])}}">{{$item["name_post"]}}</a>
+                                    </h4>
+                                    <div class="recent-post-meta"><a
+                                            href="{{route('discount-post.show',$item['url_post'])}}"><i
+                                                class="far fa-calendar"></i>{{$item["created_at"]}}</a></div>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
-                     </div>
-                    @endforeach
-                </div>
-                </div>
-             </aside>
-          </div>
-       </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
     </div>
- </section>
+</section>
 
 
 
@@ -116,42 +128,43 @@
             <div class="blog-post-media">
                 <div class="blog-image single-blog">
                     <a><img src="{{asset($dataDiscount["discount"]["image_post"])}}" alt="blog"></a>
-                </div>
-            </div>
-            <div>
-                <h4 class="blog-title" style="text-align: center;margin-top: 10px">
-                    <a>{{$dataDiscount["discount"]["name_post"]}}</a></h4>
-                <ul class="blog-page-meta">
-                    <li>
-                        <a><i class="ion-calendar"></i> {{$dataDiscount["discount"]["created_at"]}}</a>
-                    </li>
-                </ul>
-                {!! $dataDiscount["discount"]["content_post"] !!}
-            </div>
-            <br>
-            <div class="single-post-content">
-                {!! $dataDiscount["discount"]["description_post"] !!}
-            </div>
-        </div>
+</div>
+</div>
+<div>
+    <h4 class="blog-title" style="text-align: center;margin-top: 10px">
+        <a>{{$dataDiscount["discount"]["name_post"]}}</a>
+    </h4>
+    <ul class="blog-page-meta">
+        <li>
+            <a><i class="ion-calendar"></i> {{$dataDiscount["discount"]["created_at"]}}</a>
+        </li>
+    </ul>
+    {!! $dataDiscount["discount"]["content_post"] !!}
+</div>
+<br>
+<div class="single-post-content">
+    {!! $dataDiscount["discount"]["description_post"] !!}
+</div>
+</div>
+</div>
+<div class="blog-single-tags-share d-sm-flex justify-content-between">
+    <div class="blog-single-tags d-flex">
     </div>
-    <div class="blog-single-tags-share d-sm-flex justify-content-between">
-        <div class="blog-single-tags d-flex">
-        </div>
-        <div class="blog-single-share d-flex">
-            <span class="title">Share:</span>
-            <ul class="social">
-                <li>
-                    <a href="#"><i class="ion-social-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="ion-social-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="ion-social-google"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="ion-social-instagram"></i></a>
-                </li>
-            </ul>
-        </div>
-    </div> --}}
+    <div class="blog-single-share d-flex">
+        <span class="title">Share:</span>
+        <ul class="social">
+            <li>
+                <a href="#"><i class="ion-social-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="ion-social-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="ion-social-google"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="ion-social-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> --}}

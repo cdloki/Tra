@@ -220,10 +220,11 @@
              </div>
           </div>
        </div>
-       <ul class="nav product-tab-style1" id="productTab" role="tablist">
+       <br><br>
+       <!-- <ul class="nav product-tab-style1" id="productTab" role="tablist">
           <li class="nav-item" role="presentation"><a class="nav-link th-btn" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false">Product Description</a></li>
           <li class="nav-item" role="presentation"><a class="nav-link th-btn active" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="true">Customer Reviews</a></li>
-       </ul>
+       </ul> -->
        <div class="tab-content" id="productTabContent">
         <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
             {!! $dataDetailProduct["detail-product"]["description_product"] !!}

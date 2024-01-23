@@ -229,15 +229,21 @@
                         <div class="header-links">
                             <ul>
                                 <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
-                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
+                                    <a target="_blank"
+                                        href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
                                 </li>
                                 <li>
                                     <div class="social-links">
-                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                        <a target="_blank" href="{{$Setting["facebook_website"]}}">
+                                            <img width="20" src="{{asset('user/img/icon/facebook-icon.png')}}" alt="">
+                                        </a>
+                                        <a target="_blank" href="{{$Setting["shoppe_website"]}}">
+                                            <img width="20" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="">
+                                        </a>
+                                        <a target="_blank" href="{{$Setting["zalo_website"]}}">
+                                            <img width="20" src="{{asset('user/img/icon/zalo-icon-circle-1.png')}}"
+                                                alt="">
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -304,11 +310,17 @@
                                 <div class="about-logo"><a href="/"><img width="100"
                                             src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a></div>
                                 <p class="about-text">{!! $Setting["description_seo_website"] !!}</p>
-                                <div class="th-social"><a href="{{$Setting["facebook_website"]}}"><i
-                                            class="fab fa-facebook-f"></i></a> <a href="{{$Setting["zalo_website"]}}"><i
-                                            class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                            class="fab fa-linkedin-in"></i></a> <a href="https://www.whatsapp.com/"><i
-                                            class="fab fa-whatsapp"></i></a></div>
+                                <div class="th-social">
+                                    <a target="_blank" href="{{$Setting["facebook_website"]}}">
+                                        <img width="25" src="{{asset('user/img/icon/facebook-icon.png')}}" alt="">
+                                    </a>
+                                    <a target="_blank" href="{{$Setting["shoppe_website"]}}">
+                                        <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="">
+                                    </a>
+                                    <a target="_blank" href="{{$Setting["zalo_website"]}}">
+                                        <img width="25" src="{{asset('user/img/icon/zalo-icon-circle-1.png')}}" alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -367,12 +379,12 @@
                                     <p class="info-box_text"><a href="mailto:{{$Setting["email_website"]}}"
                                             class="info-box_link">{{$Setting["email_website"]}}</a></p>
                                 </div>
-                                <div class="info-box">
+                                <!-- <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
                                     <p class="info-box_text"><a href="{{$Setting["shoppe_website"]}}" target="_blank"
                                             class="info-box_link">{{$Setting["shoppe_website"]}}</a>
                                     </p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -383,8 +395,8 @@
         <div class="container">
             <div class="row gy-2 align-items-center">
                 <div class="col-md-6">
-                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2023 <a
-                            href="home-organic-farm.html">Frutin</a>. All Rights Reserved.</p>
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a
+                            href="home-organic-farm.html">Việt Long Trà</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="payment-img"><img src="{{asset('user\img\normal\payment_methods.png')}}" alt="Image">

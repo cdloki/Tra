@@ -6,7 +6,7 @@
 
 <!-- Breadcrumb Area start -->
 <div class="breadcumb-wrapper"
-    data-bg-src="https://png.pngtree.com/background/20210710/original/pngtree-taobao-tmall-spring-tea-listed-home-promotion-poster-banner-picture-image_1003482.jpg">
+    data-bg-src="{{asset('user/img/bg/bg_blog.jpg')}}">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Liên hệ</h1>
@@ -50,7 +50,8 @@
                                     <div class="box-icon bg-theme2"><i class="fa-light fa-phone"></i></div>
                                     <div class="media-body">
                                         <h3 class="box-title">Số điện thoại</h3>
-                                        <p class="box-text"><a href="tel:+{{$Setting["phone_website"]}}">{{$Setting["phone_website"]}}</a>
+                                        <p class="box-text"><a
+                                                href="tel:+{{$Setting["phone_website"]}}">{{$Setting["phone_website"]}}</a>
                                         </p>
                                     </div>
                                 </div>
@@ -59,8 +60,9 @@
                                 <div class="contact-feature">
                                     <div class="box-icon bg-title"><i class="fa-solid fa-bag-shopping"></i></div>
                                     <div class="media-body">
-                                        <h3 class="box-title">Shoppe</h3>
-                                        <p class="box-text"><a href="{{$Setting["shoppe_website"]}}">{{$Setting["shoppe_website"]}}</a>
+                                        <h3 class="box-title">Shopee</h3>
+                                        <p class="box-text"><a
+                                                href="{{$Setting["shoppe_website"]}}">{{$Setting["shoppe_website"]}}</a>
                                         </p>
                                     </div>
                                 </div>
@@ -70,19 +72,17 @@
                                     <div class="media-body">
                                         <h3 class="box-title">Theo dõi</h3>
                                         <div class="th-social">
-                                            <a target="_blank" href="{{$Setting["facebook_website"]}}" ><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank"
-                                                href="{{$Setting["fanpage_website"]}}"><i class="fab fa-twitter"></i>
+                                            <a target="_blank" href="{{$Setting["facebook_website"]}}">
+                                                <img width="25" src="{{asset('user/img/icon/facebook-icon.png')}}"
+                                                    alt="">
                                             </a>
-                                            <a target="_blank" href="{{$Setting["fanpage_website"]}}"><i
-                                                    class="fab fa-instagram"></i>
+                                            <a target="_blank" href="{{$Setting["shoppe_website"]}}">
+                                                <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}"
+                                                    alt="">
                                             </a>
-                                            <a target="_blank"
-                                                 href="{{$Setting["zalo_website"]}}"><i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                            <a target="_blank" href="{{$Setting["shoppe_website"]}}"><i
-                                                    class="fab fa-pinterest-p"></i>
+                                            <a target="_blank" href="{{$Setting["zalo_website"]}}">
+                                                <img width="25" src="{{asset('user/img/icon/zalo-icon-circle-1.png')}}"
+                                                    alt="">
                                             </a>
 
                                         </div>
@@ -99,7 +99,7 @@
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990389804123!2d108.21814667465951!3d16.06598848461302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218336f7ca5f3%3A0xd708db6497400e2d!2zMTY0QSBOZ3V54buFbiBDaMOtIFRoYW5oLCBQaMaw4bubYyBOaW5oLCBI4bqjaSBDaMOidSwgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1706017243309!5m2!1sen!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

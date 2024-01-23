@@ -11,8 +11,8 @@
                                 src="{{asset($item["image_post"])}}" alt="Blog Image"></a></div>
                     <div class="blog-content">
                         <div class="blog-meta"><a class="author"><i class="far fa-user"></i>Admin</a> <a><i
-                                    class="far fa-calendar"></i>{{$item["created_at"]}}</a> <a
-                                href="blog-details.html"><i class="far fa-comments"></i>Comments (3)</a></div>
+                                    class="far fa-calendar"></i>{{$item["created_at"]}}</a>
+                        </div>
                         <h2 class="blog-title"><a
                                 href="{{route('discount-post.show',$item['url_post'])}}">{{$item["name_post"]}}</a></h2>
                         <p class="blog-text">
