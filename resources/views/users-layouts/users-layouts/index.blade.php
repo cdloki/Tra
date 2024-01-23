@@ -240,83 +240,76 @@
             </div>
         </div>
     </div>
-    <header class="th-header header-layout2">
-        <div class="sticky-wrapper">
+
+
+
+    <header class="th-header header-layout1">
+        <div class="header-top">
             <div class="container">
-                <div class="z-index-common">
-                    <div class="header-top">
-                        <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                            <div class="col-auto d-none d-lg-block">
-                                {{-- <p class="header-notice">Orders of $50 or more qualify for free shipping!</p> --}}
-                            </div>
-                            <div class="col-auto">
-                                <div class="header-links">
-                                    <ul>
-                                        <li class="d-none d-xxl-inline-block"><i class="fal fa-location-dot"></i><a
-                                                href="https://www.google.com/maps">8502 Preston Rd. Inglewood, Maine
-                                                98380</a></li>
-                                        <li>
-                                            <div class="social-links"><a href="https://www.facebook.com/"><i
-                                                        class="fab fa-facebook-f"></i></a> <a
-                                                    href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                                <a href="https://www.linkedin.com/"><i
-                                                        class="fab fa-linkedin-in"></i></a> <a
-                                                    href="https://www.instagram.com/"><i
-                                                        class="fab fa-instagram"></i></a> <a
-                                                    href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+                    <div class="col-auto d-none d-lg-block">
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-links">
+                            <ul>
+                                <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i><a
+                                        href="https://www.google.com/maps">8502 Preston Rd. Inglewood, Maine 98380</a>
+                                </li>
+                                <li>
+                                    <div class="social-links"><a href="https://www.facebook.com/"><i
+                                                class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
+                                                class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
+                                                class="fab fa-linkedin-in"></i></a> <a
+                                            href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a
+                                            href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="menu-area">
-                        <div class="logo-bg"></div>
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <div class="header-logo"><a href="/"><img width="100"
-                                            src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
-                            </div>
-                            <div class="col-auto">
-                                <nav class="main-menu d-none d-lg-inline-block">
-                                    <ul>
-                                        <li><a href="/">Trang chủ</a></li>
-                                        <li class="menu-item-has-children"><a href="#">Danh mục</a>
-                                            <ul class="sub-menu">
-                                                @foreach ($menuCategory as $key => $item )
-                                                <li><a
-                                                        href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
-                                                </li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{route('discount-post')}}">Bài viết</a></li>
-                                        <li><a href="{{route('info')}}">Giới thiệu</a></li>
-                                        <li><a href="{{route('contact')}}">Liên hệ</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <div class="menu-area">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo"><a href="/"><img width="100"
+                                src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li><a href="/">Trang chủ</a></li>
 
-
-
-                                    </ul>
-                                </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
-                                        class="far fa-bars"></i></button>
-                            </div>
-                            <div class="col-auto d-none d-xl-block ms-auto">
-                                <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
-                                            class="far fa-search"></i></button>
-                                    {{-- <button type="button"
-                                        class="simple-icon sideMenuToggler"><span class="badge">5</span> <i
-                                            class="fa-regular fa-cart-shopping"></i></button> <a href="contact.html"
-                                        class="th-btn style4">Get A Quote<i class="fas fa-chevrons-right ms-2"></i></a> --}}
-                                </div>
-                            </div>
+                                    <li class="menu-item-has-children"><a href="#">Danh mục</a>
+                                        <ul class="sub-menu">
+                                            @foreach ($menuCategory as $key => $item )
+                                            <li><a
+                                                    href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{route('discount-post')}}">Bài viết</a></li>
+                                    <li><a href="{{route('info')}}">Giới thiệu</a></li>
+                                    <li><a href="{{route('contact')}}">Liên hệ</a></li>
+                                </ul>
+                            </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
+                                    class="far fa-bars"></i></button>
+                        </div>
+                        <div class="col-auto d-none d-xl-block">
+                            <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
+                                        class="far fa-search"></i></button>
+                                        <button type="button"
+                                    class="simple-icon sideMenuToggler">
+                                    </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
     <!-- Body -->
 
     @yield('content')
@@ -324,642 +317,8 @@
     <!-- End Body -->
 
 
-
-
-
-
-    {{-- <div class="overflow-hidden space" id="about-sec">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 mb-40 mb-xl-0">
-                    <div class="img-box5">
-                        <div class="shape1"><img src="{{asset('user\img\normal\about_3_2.png')}}" alt="About"></div>
-    <div class="img1"><img src="{{asset('user\img\normal\about_3_1.png')}}" alt="About"></div>
-    </div>
-    </div>
-    <div class="col-xl-6 text-center text-xl-start">
-        <div class="title-area mb-32"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                    alt="shape">About Us Company</span>
-            <h2 class="sec-title">Organic Integrity Durable Impact Frutin's Story</h2>
-            <p class="sec-text">Some studies suggest that organic foods may have higher levels of certain
-                nutrients and antioxidants compared to conventionally grown foods. However, this can vary
-                depending on factors like soil quality and growing conditions.</p>
-        </div>
-        <div class="checklist list-two-column mb-40">
-            <ul>
-                <li>100% Organic Products</li>
-                <li>No Synthetic Chemicals</li>
-                <li>Always Fresh & Natural Foods</li>
-                <li>Best Prices</li>
-                <li>Environmental Benefits</li>
-            </ul>
-        </div>
-        <div><a href="about.html" class="th-btn">Discover More<i class="fas fa-chevrons-right ms-2"></i></a>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <section class="space-bottom">
-        <div class="container z-index-common">
-            <div class="row gy-30">
-                <div class="col-xxl-4 col-lg-5">
-                    <div class="offer-card mega-hover" data-bg-src="{{asset('user/img/bg/cta_bg_2_1.jpg')}}"><span
-                            class="h6 box-subtitle">Get Extra <span class="text-theme">50% Off</span></span>
-                        <h3 class="box-title">Fresh Vegetable &<br>Organic Fruits</h3><a href="shop-details.html"
-                            class="th-btn">Shop Now<i class="fas fa-chevrons-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-xxl-8 col-lg-7">
-                    <div class="offer-card mega-hover" data-bg-src="{{asset('user/img/bg/cta_bg_2_2.jpg')}}"><span
-                            class="h6 box-subtitle">Get Extra <span class="text-theme">60% Off</span></span>
-                        <h3 class="box-title">Organic Vegetable &<br>Fresh Fruits</h3><a href="shop-details.html"
-                            class="th-btn">Shop Now<i class="fas fa-chevrons-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="overflow-hidden bg-smoke2 space" id="service-sec"
-        data-bg-src="{{asset('user/img/bg/service_bg_1.png')}}">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-8">
-                    <div class="title-area text-center"><span class="sub-title"><img
-                                src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Our Services</span>
-                        <h2 class="sec-title">Our Organic Framing Service For You!</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-40 justify-content-center">
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_1.jpg')}}" alt="Service">
-                        </div>
-                        <div class="box-icon"><img src="{{asset('user\img\icon\service_card_1.svg')}}" alt="Icon"></div>
-                        <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
-                            <h3 class="box-title"><a href="service-details.html">Fresh Vegetable</a></h3>
-                            <p class="box-text">Inspections to ensure compliance with organic standards.</p>
-                        </div><a href="service-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_2.jpg')}}" alt="Service">
-                        </div>
-                        <div class="box-icon"><img src="{{asset('user\img\icon\service_card_2.svg')}}" alt="Icon"></div>
-                        <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
-                            <h3 class="box-title"><a href="service-details.html">Organic Fertilizer</a></h3>
-                            <p class="box-text">Inspections to ensure compliance with organic standards.</p>
-                        </div><a href="service-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card">
-                        <div class="box-img"><img src="{{asset('user\img\service\service_card_3.jpg')}}" alt="Service">
-                        </div>
-                        <div class="box-icon"><img src="{{asset('user\img\icon\service_card_3.svg')}}" alt="Icon"></div>
-                        <div class="box-content" data-mask-src="{{asset('user/img/bg/service_card_shape.png')}}">
-                            <h3 class="box-title"><a href="service-details.html">Natural Fruits</a></h3>
-                            <p class="box-text">Inspections to ensure compliance with organic standards.</p>
-                        </div><a href="service-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-
-
-
-    {{-- <section class="why-sec3 space" data-bg-src="{{asset('user/img/bg/why_bg_2_2.jpg')}}">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
-                <div class="title-area text-center"><span class="sub-title"><img
-                            src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Why Choose Us</span>
-                    <h2 class="sec-title text-white">Savor the Purity, Taste The Difference!</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row gx-0 justify-content-between">
-            <div class="col-sm-auto">
-                <div class="why-feature-left">
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_1.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">100% Organic</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_2.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">Fresh Products</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_3.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">Biodynamic Food</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-                <div class="img-box4 mt-0"><img src="{{asset('user\img\normal\why_3_1.png')}}" alt="Why"></div>
-            </div>
-            <div class="col-sm-auto">
-                <div class="why-feature-right">
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_4.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">Secured Payment</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_5.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">Neat & Clean</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                    <div class="why-feature">
-                        <div class="box-icon"><img src="{{asset('user\img\icon\why_feature_6.svg')}}" alt=""></div>
-                        <div class="media-body">
-                            <div class="box-title">Daily Fresh</div>
-                            <p class="box-text">Our products are certified by reputable organic.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    <section class="space" id="process-sec">
-        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_7.png')}}"
-                alt="shape">
-        </div>
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img
-                src="{{asset('user\img\shape\vector_shape_6.png')}}" alt="shape"></div>
-        <div class="container">
-            <div class="title-area text-center"><span class="sub-title"><img
-                        src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">How We Make Quality Foods</span>
-                <h2 class="sec-title">How We Work It?</h2>
-            </div>
-            <div class="row gy-4 justify-content-center">
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_1.svg')}}"
-                                alt="icon"></div>
-                        <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
-                                src="{{asset('user\img\normal\process_box_1.jpg')}}" alt="image"></div>
-                        <p class="box-number">Step - 01</p>
-                        <h3 class="box-title">Work Planning</h3>
-                        <p class="box-text">Begin by conducting thorough soil tests to understand its composition, pH
-                            levels, and nutrient.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_2.svg')}}"
-                                alt="icon"></div>
-                        <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
-                                src="{{asset('user\img\normal\process_box_2.jpg')}}" alt="image"></div>
-                        <p class="box-number">Step - 02</p>
-                        <h3 class="box-title">Farm Growing</h3>
-                        <p class="box-text">Begin by conducting thorough soil tests to understand its composition, pH
-                            levels, and nutrient.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_3.svg')}}"
-                                alt="icon"></div>
-                        <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
-                                src="{{asset('user\img\normal\process_box_3.jpg')}}" alt="image"></div>
-                        <p class="box-number">Step - 03</p>
-                        <h3 class="box-title">Crop Harvesting</h3>
-                        <p class="box-text">Begin by conducting thorough soil tests to understand its composition, pH
-                            levels, and nutrient.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 process-box-wrap">
-                    <div class="process-box">
-                        <div class="box-icon bg-white"><img src="{{asset('user\img\icon\process_box_4.svg')}}"
-                                alt="icon"></div>
-                        <div class="box-img" data-mask-src="{{asset('user/img/bg/process_bg_shape.png')}}"><img
-                                src="{{asset('user\img\normal\process_box_4.jpg')}}" alt="image"></div>
-                        <p class="box-number">Step - 04</p>
-                        <h3 class="box-title">Food Processing</h3>
-                        <p class="box-text">Begin by conducting thorough soil tests to understand its composition, pH
-                            levels, and nutrient.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="bg-smoke2 space overflow-hidden" id="faq-sec" data-bg-src="{{asset('user/img/bg/faq_bg_1.png')}}">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-5">
-                    <div class="faq-img1">
-                        <div class="img1"><img src="{{asset('user\img\normal\faq_1_1.jpg')}}" alt="faq"></div>
-                        <div class="shape1"><img src="{{asset('user\img\bg\vector_shape_1.png')}}" alt="shape"></div>
-                    </div>
-                </div>
-                <div class="col-xl-7 text-center text-xl-start align-self-center">
-                    <div class="ps-xl-4">
-                        <div class="title-area text-center text-xl-start"><span class="sub-title"><img
-                                    src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Looking For
-                                Answers?</span>
-                            <h2 class="sec-title">Frequently Asked If You Have any Questions?</h2>
-                        </div>
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-1"><button class="accordion-button"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1"
-                                        aria-expanded="true" aria-controls="collapse-1">Do I need to be in when you
-                                        deliver?</button></div>
-                                <div id="collapse-1" class="accordion-collapse collapse show"
-                                    aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">Our organic farm, we begin with the foundation of healthy,
-                                            nutrient-rich soil. We employ sustainable practice such as crop rotation
-                                            cover cropping and composting. This helps maintain soil fertility,
-                                            structure, and microbial diversity. By avoiding synthetic fertilizers and
-                                            pesticides, we allow natural processes to flourish.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-2"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Do
-                                        I have to order every week?</button></div>
-                                <div id="collapse-2" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">Our organic farm, we begin with the foundation of healthy,
-                                            nutrient-rich soil. We employ sustainable practice such as crop rotation
-                                            cover cropping and composting. This helps maintain soil fertility,
-                                            structure, and microbial diversity. By avoiding synthetic fertilizers and
-                                            pesticides, we allow natural processes to flourish.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-3"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-3" aria-expanded="false"
-                                        aria-controls="collapse-3">From its medieval origins the digital?</button></div>
-                                <div id="collapse-3" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">Our organic farm, we begin with the foundation of healthy,
-                                            nutrient-rich soil. We employ sustainable practice such as crop rotation
-                                            cover cropping and composting. This helps maintain soil fertility,
-                                            structure, and microbial diversity. By avoiding synthetic fertilizers and
-                                            pesticides, we allow natural processes to flourish.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-card">
-                                <div class="accordion-header" id="collapse-item-4"><button
-                                        class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-4" aria-expanded="false"
-                                        aria-controls="collapse-4">What is Your Pricing Structure?</button></div>
-                                <div id="collapse-4" class="accordion-collapse collapse"
-                                    aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        <p class="faq-text">Our organic farm, we begin with the foundation of healthy,
-                                            nutrient-rich soil. We employ sustainable practice such as crop rotation
-                                            cover cropping and composting. This helps maintain soil fertility,
-                                            structure, and microbial diversity. By avoiding synthetic fertilizers and
-                                            pesticides, we allow natural processes to flourish.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-top-center space-top" data-bg-src="{{asset('user/img/bg/gallery_bg_1.jpg')}}">
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-end">
-                <div class="col-lg">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title"><img
-                                src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Our Photo Gallery</span>
-                        <h2 class="sec-title text-white">Insite Our Farming Gallery</h2>
-                    </div>
-                </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn">
-                        <div class="icon-box"><button data-slider-prev="#gallerySlider1" class="slider-arrow default"><i
-                                    class="far fa-arrow-left"></i></button> <button data-slider-next="#gallerySlider1"
-                                class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container container-gallery">
-            <div class="swiper th-slider has-shadow" id="gallerySlider1"
-                data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"4"}}}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_1.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Fresh Vegetables</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_2.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Vegetables</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_3.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Fruits</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_4.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Farming</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_1.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Fresh Vegetables</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_2.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Vegetables</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_3.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_3.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Fruits</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="gallery-card">
-                            <div class="box-img"><img src="{{asset('user\img\gallery\gallery_1_4.jpg')}}"
-                                    alt="gallery image"> <a href="{{asset('user/img\gallery\gallery_1_4.jpg')}}"
-                                    class="icon-btn style2 popup-image"><i class="far fa-plus"></i></a></div>
-                            <div class="box-content">
-                                <p class="box-subtitle">Fresh Food & Vegetables</p>
-                                <h3 class="box-title"><a href="project-details.html">Organic Farming</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-block d-lg-none mt-40 text-center">
-                <div class="icon-box"><button data-slider-prev="#gallerySlider1" class="slider-arrow default"><i
-                            class="far fa-arrow-left"></i></button> <button data-slider-next="#gallerySlider1"
-                        class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
-            </div>
-        </div>
-    </div>
-    <section class="overflow-hidden space" id="testi-sec">
-        <div class="container">
-            <div class="title-area text-center"><span class="sub-title"><img
-                        src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Testimonials</span>
-                <h2 class="sec-title">Our Customer Feedback</h2>
-            </div>
-            <div class="testi-box-area" data-bg-src="{{asset('user/img/bg/testi_bg_2.png')}}">
-                <div class="testi-box-img"><img src="{{asset('user\img\testimonial\testi_2_1.jpg')}}" alt="Image"></div>
-                <div class="testi-box-shape"><img src="{{asset('user\img\bg\testi_box_shape.png')}}" alt="image"></div>
-                <div class="testi-box-slide">
-                    <div class="swiper th-slider" id="testiSlide2" data-slider-options='{"effect":"slide"}'>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testi-box">
-                                    <p class="testi-box_text">“Diversity is a cornerstone of our farming philosophy. We
-                                        carefully select a wide range of crops, ensuring a varied and balanced
-                                        ecosystem. This not only helps to naturally deter pests and diseases but also
-                                        promotes soil health by varying the nutrient demands of different plants.”</p>
-                                    <h3 class="testi-box_name">Angelina Margret</h3><span
-                                        class="testi-box_desig">Customer of Our Shop</span>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testi-box">
-                                    <p class="testi-box_text">“Diversity is a cornerstone of our farming philosophy. We
-                                        carefully select a wide range of crops, ensuring a varied and balanced
-                                        ecosystem. This not only helps to naturally deter pests and diseases but also
-                                        promotes soil health by varying the nutrient demands of different plants.”</p>
-                                    <h3 class="testi-box_name">Alexan Micelito</h3><span
-                                        class="testi-box_desig">Customer of Our Shop</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi-box_quote"><img src="{{asset('user\img\testimonial\quote_1.png')}}" alt="Image">
-                    </div>
-                    <div class="icon-box"><button data-slider-prev="#testiSlide2" class="slider-arrow default"><i
-                                class="far fa-arrow-left"></i></button> <button data-slider-next="#testiSlide2"
-                            class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="overflow-hidden space bg-smoke2" id="blog-sec">
-        <div class="shape-mockup" data-top="0" data-left="0"><img src="{{asset('user\img\shape\vector_shape_1.png')}}"
-                alt="shape">
-        </div>
-        <div class="shape-mockup" data-bottom="0" data-right="0"><img
-                src="{{asset('user\img\shape\vector_shape_2.png')}}" alt="shape"></div>
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-end">
-                <div class="col-lg">
-                    <div class="title-area text-center text-lg-start"><span class="sub-title"><img
-                                src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Blog & News</span>
-                        <h2 class="sec-title">Latest Updates & News</h2>
-                    </div>
-                </div>
-                <div class="col-lg-auto d-none d-lg-block">
-                    <div class="sec-btn"><a href="blog.html" class="th-btn">View More Post<i
-                                class="fas fa-chevrons-right ms-2"></i></a></div>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col-xl-6">
-                    <div class="blog-box">
-                        <div class="blog-img"><img src="{{asset('user\img\blog\blog_2_1.jpg')}}" alt="blog image"></div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a> <a
-                                    href="blog.html"><i class="far fa-calendar"></i>15 March, 2023</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Change Your Eating Habits With Organic
-                                    Food</a></h3>
-                            <p class="box-text">Organic foods can be more expensive due to the labor-intensive nature.
-                            </p><a href="blog-details.html" class="th-btn">Read More<i
-                                    class="fas fa-chevrons-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="blog-box">
-                        <div class="blog-img"><img src="{{asset('user\img\blog\blog_2_2.jpg')}}" alt="blog image"></div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a> <a
-                                    href="blog.html"><i class="far fa-calendar"></i>16 March, 2023</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Transform Your Nutrition with Organic
-                                    Meal</a></h3>
-                            <p class="box-text">Organic foods can be more expensive due to the labor-intensive nature.
-                            </p><a href="blog-details.html" class="th-btn">Read More<i
-                                    class="fas fa-chevrons-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="blog-box">
-                        <div class="blog-img"><img src="{{asset('user\img\blog\blog_2_3.jpg')}}" alt="blog image"></div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a> <a
-                                    href="blog.html"><i class="far fa-calendar"></i>17 March, 2023</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Improve Your Health By Organic Eating</a>
-                            </h3>
-                            <p class="box-text">Organic foods can be more expensive due to the labor-intensive nature.
-                            </p><a href="blog-details.html" class="th-btn">Read More<i
-                                    class="fas fa-chevrons-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="blog-box">
-                        <div class="blog-img"><img src="{{asset('user\img\blog\blog_2_4.jpg')}}" alt="blog image"></div>
-                        <div class="blog-content">
-                            <div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a> <a
-                                    href="blog.html"><i class="far fa-calendar"></i>19 March, 2023</a></div>
-                            <h3 class="box-title"><a href="blog-details.html">Organic Eating Is Great For Better
-                                    Health</a></h3>
-                            <p class="box-text">Organic foods can be more expensive due to the labor-intensive nature.
-                            </p><a href="blog-details.html" class="th-btn">Read More<i
-                                    class="fas fa-chevrons-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="py-5 mt-1 bg-smoke2">
-        <div class="container th-container py-md-4">
-            <div class="swiper th-slider" id="blogSlider1"
-                data-slider-options='{"breakpoints":{"0":{"slidesPerView":2},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"},"1400":{"slidesPerView":"6"}}}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_1.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_2.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_3.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_4.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_5.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_6.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="brand-box"><img src="{{asset('user\img\brand\brand_1_7.svg')}}" alt="Brand Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-
-
     <footer class="footer-wrapper footer-layout2">
-        
+
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
