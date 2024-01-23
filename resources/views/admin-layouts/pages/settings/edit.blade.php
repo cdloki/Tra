@@ -135,6 +135,27 @@
                                                                 value="{{$dataSetting["zalo_website"]}}">
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="address_website" >Địa chỉ</label>
+                                                                <input type="text" name="address_website" class="form-control" id="address_website"
+                                                                value="{{$dataSetting["address_website"]}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="email_website" >Email</label>
+                                                                <input type="text" name="email_website" class="form-control" id="email_website"
+                                                                value="{{$dataSetting["email_website"]}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="shoppe_website" >Shoppe</label>
+                                                                <input type="text" name="shoppe_website" class="form-control" id="shoppe_website"
+                                                                value="{{$dataSetting["shoppe_website"]}}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                             </div><!--end card-body-->
                                         </div><!--end card-->

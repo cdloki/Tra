@@ -12,6 +12,8 @@ class Banners extends Model
     protected $fillable = [
         'id',
         'type_banner',
+        'name_banner',
+        'description_banner',
         'image_banner',
         'url_banner',
         'status',

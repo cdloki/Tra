@@ -17,6 +17,8 @@
         </div>
     </div>
 </div>
+
+
 <!-- Breadcrumb Area End -->
 <!-- contact area start -->
 <div class="contact-area mtb-60px">
@@ -28,10 +30,8 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-6 col-md-7">
                                 <div class="title-area text-center">
-                                    <h2 class="sec-title">Contact Information</h2>
-                                    <p class="sec-text">Organic foods are typically certified by regulatory bodies to
-                                        ensure they
-                                        meet specific organic standards.</p>
+                                    <h2 class="sec-title">Thông tin liên hệ</h2>
+                                    <p class="sec-text">Liên hệ với chúng tôi để được hỗ trợ tận tình</p>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +40,8 @@
                                 <div class="contact-feature">
                                     <div class="box-icon"><i class="fa-light fa-location-dot"></i></div>
                                     <div class="media-body">
-                                        <h3 class="box-title">Our Address</h3>
-                                        <p class="box-text">8502 Preston Rd. Ingle wood, Maine 98380</p>
+                                        <h3 class="box-title">Địa chỉ</h3>
+                                        <p class="box-text">{{$Setting["address_website"]}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -49,34 +49,42 @@
                                 <div class="contact-feature">
                                     <div class="box-icon bg-theme2"><i class="fa-light fa-phone"></i></div>
                                     <div class="media-body">
-                                        <h3 class="box-title">Phone Number</h3>
-                                        <p class="box-text"><a href="tel:+16326543654">+(163)-2654-3654</a> <a
-                                                href="tel:+16326545566">+(163)-2654-5566</a></p>
+                                        <h3 class="box-title">Số điện thoại</h3>
+                                        <p class="box-text"><a href="tel:+{{$Setting["phone_website"]}}">{{$Setting["phone_website"]}}</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="contact-feature">
-                                    <div class="box-icon bg-title"><i class="fa-light fa-envelope"></i></div>
+                                    <div class="box-icon bg-title"><i class="fa-solid fa-bag-shopping"></i></div>
                                     <div class="media-body">
-                                        <h3 class="box-title">Email Address</h3>
-                                        <p class="box-text"><a href="mailto:help24/7@frutin.com">help24/7@frutin.com</a>
-                                            <a href="mailto:info@frutin.com">info@frutin.com</a></p>
+                                        <h3 class="box-title">Shoppe</h3>
+                                        <p class="box-text"><a href="{{$Setting["shoppe_website"]}}">{{$Setting["shoppe_website"]}}</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="contact-feature">
                                     <div class="media-body">
-                                        <h3 class="box-title">Follow Social Media</h3>
-                                        <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
-                                                    class="fab fa-facebook-f"></i></a> <a target="_blank"
-                                                href="https://twitter.com/"><i class="fab fa-twitter"></i></a> <a
-                                                target="_blank" href="https://instagram.com/"><i
-                                                    class="fab fa-instagram"></i></a> <a target="_blank"
-                                                href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                            <a target="_blank" href="https://pinterest.com/"><i
-                                                    class="fab fa-pinterest-p"></i></a>
+                                        <h3 class="box-title">Theo dõi</h3>
+                                        <div class="th-social">
+                                            <a target="_blank" href="{{$Setting["facebook_website"]}}" ><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank"
+                                                href="{{$Setting["fanpage_website"]}}"><i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a target="_blank" href="{{$Setting["fanpage_website"]}}"><i
+                                                    class="fab fa-instagram"></i>
+                                            </a>
+                                            <a target="_blank"
+                                                 href="{{$Setting["zalo_website"]}}"><i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a target="_blank" href="{{$Setting["shoppe_website"]}}"><i
+                                                    class="fab fa-pinterest-p"></i>
+                                            </a>
+
                                         </div>
                                     </div>
                                 </div>

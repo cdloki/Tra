@@ -19,6 +19,7 @@
                     <table class="table" id="datatable_1">
                         <thead class="thead-light">
                           <tr>
+                            <th>Tên banner</th>
                             <th>Loại banner</th>
                             <th>Hình ảnh</th>
                             <th>Url</th>
@@ -29,6 +30,7 @@
                             @foreach ( $dataBanner as $item )
                             <tr>
                                 {{-- <td class="text" >{!! $item["keyword_slider"] !!}</td> --}}
+                                <td>{{$item["name_banner"]}}</td>
 
                                 <td>{{$item["type_banner"]}}</td>
                                 <td><img src="{{asset($item["image_banner"])}}" alt="{{$item["image_banner"] == null ? "Không tìm thấy ảnh" : asset($item["image_banner"])}}" class="image-table rounded"></td>

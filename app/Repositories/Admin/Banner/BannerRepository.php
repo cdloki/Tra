@@ -25,7 +25,7 @@ class BannerRepository implements BannerRepositoryInterface
 
     public function getListBanner()
     {
-        $filter["type_banner"] = ["banner","banner_right"];
+        $filter["type_banner"] = ["banner"];
         $data = $this->tBanner->getListBanner($filter)->toarray();
         if(empty($data)) {
             $dataStoreBanner[] = [
@@ -39,7 +39,27 @@ class BannerRepository implements BannerRepositoryInterface
                 'url_banner' => null,
             ];
             $dataStoreBanner[] = [
-                'type_banner' => "banner_right",
+                'type_banner' => "banner",
+                'image_banner' => null,
+                'url_banner' => null,
+            ];
+            $dataStoreBanner[] = [
+                'type_banner' => "banner",
+                'image_banner' => null,
+                'url_banner' => null,
+            ];
+            $dataStoreBanner[] = [
+                'type_banner' => "banner",
+                'image_banner' => null,
+                'url_banner' => null,
+            ];
+            $dataStoreBanner[] = [
+                'type_banner' => "banner",
+                'image_banner' => null,
+                'url_banner' => null,
+            ];
+            $dataStoreBanner[] = [
+                'type_banner' => "banner",
                 'image_banner' => null,
                 'url_banner' => null,
             ];
@@ -148,6 +168,8 @@ class BannerRepository implements BannerRepositoryInterface
             $dataStoreBanner = [
                 'id' => $data['id'],
                 'image_banner' => $data['image_banner'],
+                'name_banner' => $data['name_banner'],
+                'description_banner' => $data['description_banner'],
                 'url_banner' => $data['url_banner'],
             ];
             $id = $this->tBanner->edit($dataStoreBanner);

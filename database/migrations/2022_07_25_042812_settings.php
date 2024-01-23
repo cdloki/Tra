@@ -22,6 +22,9 @@ class Settings extends Migration
             $table->string('color_general_website', 120)->nullable();
             $table->string('zalo_website', 120)->nullable();
             $table->string('facebook_website', 120)->nullable();
+            $table->string('email_website', 120)->nullable();
+            $table->string('address_website', 120)->nullable();
+            $table->string('shoppe_website', 120)->nullable();
             $table->string('fanpage_website', 120)->nullable();
             $table->string('group_website', 120)->nullable();
             $table->string('youtube_website', 120)->nullable();

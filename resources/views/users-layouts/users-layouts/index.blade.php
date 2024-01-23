@@ -197,53 +197,28 @@
     </div>
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo"><a href="home-organic-farm.html"><img src="{{asset('user\img\logo.svg')}}"
+            <div class="mobile-logo"><a href="/"><img src="{{asset($Setting["logo_general_website"])}}"
                         alt="Frutin"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
                     <li><a href="/">Trang chủ</a></li>
-
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="menu-item-has-children"><a href="#">Service</a>
+                    <li class="menu-item-has-children"><a href="#">Danh mục</a>
                         <ul class="sub-menu">
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                    <li><a href="cart.html">Cart Page</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
+                            @foreach ($menuCategory as $key => $item )
+                            <li><a
+                                    href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                             </li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="project.html">Project Gallery</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                            <li><a href="faq.html">Faq Page</a></li>
-                            <li><a href="error.html">Error Page</a></li>
+                            @endforeach
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{route('discount-post')}}">Bài viết</a></li>
+                    <li><a href="{{route('info')}}">Giới thiệu</a></li>
+                    <li><a href="{{route('contact')}}">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-
-
     <header class="th-header header-layout1">
         <div class="header-top">
             <div class="container">
@@ -254,8 +229,7 @@
                         <div class="header-links">
                             <ul>
                                 <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
-                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">164A Nguyễn Chí Thanh, Phước
-                                        Ninh, Hải Châu, Đà Nẵng, Vietnam</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
                                 </li>
                                 <li>
                                     <div class="social-links">
@@ -365,7 +339,7 @@
                                     alt="Icon">Đường dẫn nhanh</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="blog.html">Trang Chủ</a></li>
+                                    <li><a href="/">Trang Chủ</a></li>
                                     <li><a href="{{route('discount-post')}}">Bài viết</a></li>
                                     <li><a href="{{route('info')}}">Giới thiệu</a></li>
                                     <li><a href="{{route('contact')}}">Liên Hệ</a></li>
@@ -376,13 +350,11 @@
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                    alt="Icon">Contact
-                                Us</h3>
+                                    alt="Icon">Liên hệ</h3>
                             <div class="th-widget-contact">
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-location-dot"></i></div>
-                                    <p class="info-box_text">164A Nguyễn Chí Thanh, Phước
-                                        Ninh, Hải Châu, Đà Nẵng, Vietnam</p>
+                                    <p class="info-box_text">{{$Setting["address_website"]}}</p>
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
@@ -392,8 +364,14 @@
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-envelope"></i></div>
-                                    <p class="info-box_text"><a href="mailto:vietlongtra@gmail.com"
-                                            class="info-box_link">vietlongtra@gmail.com</a></p>
+                                    <p class="info-box_text"><a href="mailto:{{$Setting["email_website"]}}"
+                                            class="info-box_link">{{$Setting["email_website"]}}</a></p>
+                                </div>
+                                <div class="info-box">
+                                    <div class="info-box_icon"><i class="fas fa-phone"></i></div>
+                                    <p class="info-box_text"><a href="{{$Setting["shoppe_website"]}}" target="_blank"
+                                            class="info-box_link">{{$Setting["shoppe_website"]}}</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

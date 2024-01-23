@@ -196,7 +196,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/bai-viet{keyword?}',[DiscountPageController::class ,'index'])->name('discount-post');//
     Route::get('/san-pham/{slug}',[DetailProductPageController::class ,'index'])->name('detail-product');
     Route::get('/danh-muc/{slug}',[CategoryPageController::class ,'index'])->name('category.index');//
-    Route::get('/khuyen-mai/{slug}',[DiscountPageController::class ,'show'])->name('discount-post.show');//
+    Route::get('/bai-viet/{slug}',[DiscountPageController::class ,'show'])->name('discount-post.show');//
     Route::get('/phong/{slug}{keyword?}',[RoomPageController::class ,'index'])->name('room.index');
     // Route::get('/phong/{slug}',[RoomPageController::class ,'index'])->name('room.index');
     Route::get('/get-data-product/{key}',[SearchProductController::class ,'index'])->name('product.search');

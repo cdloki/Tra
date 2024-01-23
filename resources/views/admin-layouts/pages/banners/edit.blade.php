@@ -42,6 +42,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="mb-3">
+                                                    <label for="name_banner" >Tên banner</label>
+                                                    <input type="text" name="name_banner" class="form-control"
+                                                        id="name_banner" value="{{$dataBanner['name_banner']}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
                                                     <label >Hình ảnh</label>
                                                     <div class="input-group">
                                                         <div class="input-group-text" id="choose_image" data-input="image_banner">Chọn hình ảnh</div>
@@ -60,6 +67,13 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                           <div class="col-md-12">
+                                            <label for="description_banner" >Mô tả </label>
+                                            <textarea class="form-control my-editor" style="height: 1000px" id="description_banner"  >
+                                                {!! $dataBanner["description_banner"]!!}
+                                            </textarea>
+                                        </div>
+
                                         </div>
                                     </div>
                                     <!--end card-body-->

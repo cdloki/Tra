@@ -49,6 +49,9 @@ class SettingRepository implements SettingRepositoryInterface
                 'youtube_website' => null,
                 'tiktok_website' => null,
                 'phone_website' => null,
+                'address_website' => null,
+                'email_website' => null,
+                'shoppe_website' => null,
 
             ];
             $idSetting = $this->tSetting->store($dataStoreSetting);
@@ -178,6 +181,10 @@ class SettingRepository implements SettingRepositoryInterface
                 'youtube_website' => $data['youtube_website'],
                 'tiktok_website' => $data['tiktok_website'],
                 'phone_website' => $data['phone_website'],
+                'address_website' => $data['address_website'],
+                'email_website' => $data['email_website'],
+                'shoppe_website' => $data['shoppe_website'],
+
             ];
             $id = $this->tSetting->edit($dataStoreSetting);
             DB::commit();

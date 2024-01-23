@@ -28,7 +28,7 @@
                    </div>
                 </div>
              </div>
-             <div class="th-comments-wrap">
+             {{-- <div class="th-comments-wrap">
                 <h2 class="blog-inner-title h4"><i class="far fa-comments"></i> Comments (03)</h2>
                 <ul class="comment-list">
                    <li class="th-comment-item">
@@ -80,7 +80,7 @@
                    <div class="col-12 form-group"><textarea placeholder="Write a Comment*" class="form-control"></textarea> <i class="far fa-pencil"></i></div>
                    <div class="col-12 form-group mb-0"><button class="th-btn">Post Comment</button></div>
                 </div>
-             </div>
+             </div> --}}
           </div>
           <div class="col-xxl-4 col-lg-5">
              <aside class="sidebar-area">

@@ -63,7 +63,7 @@ class DiscountPageRepository implements DiscountPageRepositoryInterface
         $filter["status"] = 1;
         $filter["type"] = 3;
         // $filter["paginate"] = true;
-        $data = $this->tDiscount->getListPost($filter)->take(3);
+        $data = $this->tDiscount->getListPost($filter)->take(5);
         return $data;
     }
     // public function getProductWithDiscountId($id){

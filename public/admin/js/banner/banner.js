@@ -239,6 +239,7 @@ let Banner = {
         });
         if (form.valid()) {
             let data = $('form').serializeArray();
+            data.push({ name: "description_banner", value: getValueTinymce("description_banner") });
             $.ajax({
                 url: laroute.route('banners.update'),
                 method: 'POST',
