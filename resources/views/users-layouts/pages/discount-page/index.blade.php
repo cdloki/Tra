@@ -6,7 +6,7 @@
 
 <!-- Header End -->
 <!-- Breadcrumb Area start -->
-<div class="breadcumb-wrapper" data-bg-src="https://png.pngtree.com/background/20210710/original/pngtree-taobao-tmall-spring-tea-listed-home-promotion-poster-banner-picture-image_1003482.jpg">
+<div class="breadcumb-wrapper" data-bg-src="{{asset('user/img/bg/bg_blog.jpg')}}">
     <div class="container">
        <div class="breadcumb-content">
           <h1 class="breadcumb-title">Bài viết</h1>

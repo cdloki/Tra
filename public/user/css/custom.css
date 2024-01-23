@@ -1,0 +1,15 @@
+.main-menu>ul>li>a {
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+.header-logo {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.hero-style1 {
+    position: relative;
+    z-index: 6;
+    padding: 150px 0;
+}

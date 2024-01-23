@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="{{asset('user/css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('user/css/custom.css')}}">
     <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
     <style>
@@ -252,16 +253,18 @@
                     <div class="col-auto">
                         <div class="header-links">
                             <ul>
-                                <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i><a
-                                        href="https://www.google.com/maps">8502 Preston Rd. Inglewood, Maine 98380</a>
+                                <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
+                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">164A Nguyễn Chí Thanh, Phước
+                                        Ninh, Hải Châu, Đà Nẵng, Vietnam</a>
                                 </li>
                                 <li>
-                                    <div class="social-links"><a href="https://www.facebook.com/"><i
-                                                class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                                class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                                class="fab fa-linkedin-in"></i></a> <a
-                                            href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a
-                                            href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></div>
+                                    <div class="social-links">
+                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -275,7 +278,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo"><a href="/"><img width="100"
-                                src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                                        src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                         </div>
                         <div class="col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
@@ -301,9 +304,8 @@
                         <div class="col-auto d-none d-xl-block">
                             <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
                                         class="far fa-search"></i></button>
-                                        <button type="button"
-                                    class="simple-icon sideMenuToggler">
-                                    </div>
+                                <button type="button" class="simple-icon sideMenuToggler">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,18 +381,19 @@
                             <div class="th-widget-contact">
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-location-dot"></i></div>
-                                    <p class="info-box_text">8502 Preston Rd. Inglewood, Maine 98380</p>
+                                    <p class="info-box_text">164A Nguyễn Chí Thanh, Phước
+                                        Ninh, Hải Châu, Đà Nẵng, Vietnam</p>
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
-                                    <p class="info-box_text"><a href="tel:+{{$Setting["phone_website"]}}"
+                                    <p class="info-box_text"><a href="tel:{{$Setting["phone_website"]}}"
                                             class="info-box_link">{{$Setting["phone_website"]}}</a>
                                     </p>
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-envelope"></i></div>
-                                    <p class="info-box_text"><a href="mailto:help24/7@frutin.com"
-                                            class="info-box_link">help24/7@frutin.com</a></p>
+                                    <p class="info-box_text"><a href="mailto:vietlongtra@gmail.com"
+                                            class="info-box_link">vietlongtra@gmail.com</a></p>
                                 </div>
                             </div>
                         </div>

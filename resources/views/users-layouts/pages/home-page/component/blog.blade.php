@@ -4,7 +4,7 @@
     <div class="container">
         <div class="title-area text-center"><span class="sub-title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
                     alt="shape">Bài viết</span>
-            <h2 class="sec-title">Cập nhật những bài viết mới nhất</h2>
+            <h2 class="sec-title">Bài viết mới nhất</h2>
         </div>
         <div class="slider-area">
             <div class="swiper th-slider has-shadow" id="blogSlider1"

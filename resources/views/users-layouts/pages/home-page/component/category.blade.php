@@ -9,7 +9,7 @@
     <div class="container">
         <div class="title-area text-center"><span class="sub-title"><img
                     src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Danh mục sản phẩm</span>
-            <h2 class="sec-title">Những danh mục sản phẩm chúng tôi cung cấp</h2>
+            <h2 class="sec-title">Danh mục sản phẩm</h2>
         </div>
         <div class="swiper th-slider"
             data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"400":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"}}}'>

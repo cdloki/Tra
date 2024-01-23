@@ -5,7 +5,7 @@
 @section('content')
 <!-- Header End -->
 <!-- Breadcrumb Area start -->
-<div class="breadcumb-wrapper" data-bg-src="{{asset($dataDiscount["discount"]["image_post"])}}">
+<div class="breadcumb-wrapper" data-bg-src="{{asset('user/img/bg/bg_blog.jpg')}}">
     <div class="container">
        <div class="breadcumb-content">
           <h1 class="breadcumb-title">{{$dataDiscount["discount"]["name_post"]}}</h1>

@@ -7,7 +7,7 @@
                 <div class="col-lg">
                     <div class="title-area text-center text-lg-start"><span class="sub-title"><img
                                 src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Sản phẩm</span>
-                        <h2 class="sec-title">Organic & Fresh Products Daily!</h2>
+                        <h2 class="sec-title">Sản phẩm của chúng tôi</h2>
                     </div>
                 </div>
                 <div class="col-lg-auto d-none d-lg-block">
