@@ -60,8 +60,7 @@
                                 Foods</span>
                             <h1 class="hero-title">
                                 <span class="title1" style="color: #463507" data-ani="slideinup" data-ani-delay="0.4s">
-                                    <img class="title-img" src="{{asset('user/img/hero/hero_title_shape.svg')}}"
-                                        alt="icon">VIỆT LONG TRÀ</span>
+                                    VIỆT LONG TRÀ</span>
                                 </span>
                                 <span class="title2 text-theme" style="font-size: 46px" data-ani="slideinup"
                                     data-ani-delay="0.5s">Đậm đà hương vị Việt</span>
