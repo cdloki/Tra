@@ -17,7 +17,7 @@
         </div><!--end page-title-box-->
     </div><!--end col-->
 </div>
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12 col-lg-3 order-lg-1 order-md-2 order-sm-2">
         <div class="card overflow-hidden">
             <div class="card-body">
@@ -345,7 +345,7 @@
         </div><!--end card-->
     </div> <!--end col-->
 
-</div><!--end row-->
+</div><!--end row--> --}}
 
 
 
