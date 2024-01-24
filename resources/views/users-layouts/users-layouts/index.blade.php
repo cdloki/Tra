@@ -151,16 +151,17 @@
             <div class="menu-area">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
+                        <div class="order-2 order-lg-1 col-auto">
                             <div class="header-logo"><a href="/"><img id="logo_img" width="100"
                                         src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                         </div>
-                        <div class="col-auto">
+                        <div class="order-1 order-lg-2 col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li><a href="/">Trang chủ</a></li>
 
-                                    <li class="menu-item-has-children"><a href="#">Danh mục</a>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Danh mục</a>
                                         <ul class="sub-menu">
                                             @foreach ($menuCategory as $key => $item )
                                             <li><a
@@ -176,7 +177,13 @@
                             </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
                                     class="far fa-bars"></i></button>
                         </div>
-                        <div class="col-auto d-none d-xl-block">
+                        <div class="order-3 m-2 p-2 col-auto d-block d-lg-none">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
+                            style="border:0;width: 400px" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="order-3 col-auto d-none d-xl-block">
                             <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
                                         class="far fa-search"></i></button>
                                 <button type="button" class="simple-icon sideMenuToggler">

@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="hero-img" data-ani="slideinright" data-ani-delay="0.5s"><img
-                            src="{{asset($item["image_slider"])}}" width="400" alt="Image"></div>
+                            src="{{asset($item["image_slider"])}}" width="450" alt="Image"></div>
                     <div class="hero-shape1" data-ani="slideinup" data-ani-delay="0.5s"><img
                             src="{{asset('user/img\hero\hero_shape_1_1.png')}}" alt="shape"></div>
                     <div class="hero-shape2" data-ani="slideindown" data-ani-delay="0.6s"><img

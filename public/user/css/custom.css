@@ -11,7 +11,7 @@
 .hero-style1 {
     position: relative;
     z-index: 6;
-    padding: 150px 0;
+    padding: 180px 0;
 }
 
 .contact-feature .box-text {
@@ -19,8 +19,35 @@
     max-width: 100% !important;
 }
 
+.th-menu-toggle {
+    width: 80px;
+    height: 80px;
+}
+
+.th-menu-wrapper .th-menu-area {
+    width: 100%;
+    max-width: 500px;
+}
+
+.th-mobile-menu ul li a{
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 28px;
+}
+
 @media only screen and (max-width: 600px) {
     #logo_img {
         max-width: 70%;
     }
+}
+.blog-card .blog-img img{
+    height: 190px;
+    object-fit: cover;
+    object-position: center center;
+}
+.th-mobile-menu ul .th-item-has-children>a:after {
+    display: none;
+}
+.th-mobile-menu ul .th-item-has-children>a .th-mean-expand{
+    font-size: 24px;
 }
