@@ -35,7 +35,7 @@
                                 <td>{{$item["name_category"]}}</td>
                                 <td><img src="{{asset($item["image_category"])}}" alt="{{$item["image_category"] == null ? "Không tìm thấy ảnh" : asset($item["image_category"])}}" class="image-table rounded"></td>
                                 <td >{!! $item["description_category"] !!}</td>
-                                <td ><a href="{{asset($item["url_category"])}}">{{asset($item["url_category"])}}</a></td>
+                                <td ><a href="{{route('category.index',$item['url_category'])}}">{{route('category.index',$item['url_category'])}}</a></td>
                                 <td>
                                     <a class="font-30" onclick="Category.changeStatus(this,{{$item['id']}})">
                                         <i class="{{$item["status"] == 0 ? "mdi mdi-play": "mdi mdi-pause"}}"></i>
