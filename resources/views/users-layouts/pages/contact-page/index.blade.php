@@ -5,8 +5,7 @@
 @section('content')
 
 <!-- Breadcrumb Area start -->
-<div class="breadcumb-wrapper"
-    data-bg-src="{{asset('user/img/bg/bg_blog.jpg')}}">
+<div class="breadcumb-wrapper" data-bg-src="{{asset('user/img/bg/bg_blog.jpg')}}">
     <div class="container">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Liên hệ</h1>
@@ -36,7 +35,7 @@
                             </div>
                         </div>
                         <div class="row gy-4 justify-content-center">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="contact-feature">
                                     <div class="box-icon"><i class="fa-light fa-location-dot"></i></div>
                                     <div class="media-body">
@@ -56,17 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="contact-feature">
-                                    <div class="box-icon bg-title"><i class="fa-solid fa-bag-shopping"></i></div>
-                                    <div class="media-body">
-                                        <h3 class="box-title">Shopee</h3>
-                                        <p class="box-text"><a
-                                                href="{{$Setting["shoppe_website"]}}">{{$Setting["shoppe_website"]}}</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="contact-feature">
                                     <div class="media-body">

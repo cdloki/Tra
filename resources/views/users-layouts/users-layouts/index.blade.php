@@ -152,7 +152,7 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
-                            <div class="header-logo"><a href="/"><img width="100"
+                            <div class="header-logo"><a href="/"><img id="logo_img" width="100"
                                         src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                         </div>
                         <div class="col-auto">

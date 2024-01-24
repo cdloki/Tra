@@ -13,3 +13,14 @@
     z-index: 6;
     padding: 150px 0;
 }
+
+.contact-feature .box-text {
+    line-height: 24px;
+    max-width: 100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    #logo_img {
+        max-width: 70%;
+    }
+}

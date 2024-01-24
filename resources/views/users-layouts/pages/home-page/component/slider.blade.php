@@ -60,10 +60,10 @@
                                     src="{{asset('user/img/theme-img/title_icon.svg')}}" alt="shape">100% Quality
                                 Foods</span>
                             <h1 class="hero-title">
-                                <span class="title1" style="color: #463507" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.4s">
+                                <span class="title1" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.4s">
                                     {!! $item["keyword_slider"] !!}</span>
                                 </span>
-                                <span class="title2 text-theme" style="font-size: 46px" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
+                                <span class="title2 text-theme" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
                                     data-ani-delay="0.5s">{!! $item["description_slider"] !!}</span>
                             </h1><a href="{{$item["url_slider"]}}" target="_blank" class="th-btn"
                                 data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.7s">
