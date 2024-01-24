@@ -52,25 +52,27 @@
 <div class="th-hero-wrapper hero-1" id="hero" data-bg-src="{{asset('user/img/hero/hero_bg_1_2.jpg')}}">
     <div class="swiper th-slider" id="heroSlide1" data-slider-options='{"effect":"fade"}'>
         <div class="swiper-wrapper">
+            @foreach ($dataHome["slider"] as $key => $item )
             <div class="swiper-slide">
                 <div class="hero-inner">
                     <div class="container">
-                        <div class="hero-style1"><span class="sub-title" data-ani="slideinup" data-ani-delay="0.2s"><img
+                        <div class="hero-style1"><span class="sub-title" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.2s"><img
                                     src="{{asset('user/img/theme-img/title_icon.svg')}}" alt="shape">100% Quality
                                 Foods</span>
                             <h1 class="hero-title">
-                                <span class="title1" style="color: #463507" data-ani="slideinup" data-ani-delay="0.4s">
-                                    VIỆT LONG TRÀ</span>
+                                <span class="title1" style="color: #463507" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.4s">
+                                    {!! $item["keyword_slider"] !!}</span>
                                 </span>
-                                <span class="title2 text-theme" style="font-size: 46px" data-ani="slideinup"
-                                    data-ani-delay="0.5s">Đậm đà hương vị Việt</span>
-                            </h1><a href="https://shopee.vn/vietlongtradanang" target="_blank" class="th-btn"
-                                data-ani="slideinup" data-ani-delay="0.7s">Mua ngay<i
+                                <span class="title2 text-theme" style="font-size: 46px" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
+                                    data-ani-delay="0.5s">{!! $item["description_slider"] !!}</span>
+                            </h1><a href="{{$item["url_slider"]}}" target="_blank" class="th-btn"
+                                data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.7s">
+                                {{$item["tbutton_slider"]}}<i
                                     class="fas fa-chevrons-right ms-2"></i></a>
                         </div>
                     </div>
                     <div class="hero-img" data-ani="slideinright" data-ani-delay="0.5s"><img
-                            src="{{asset('user/img\hero\ly_tra_1.png')}}" width="400" alt="Image"></div>
+                            src="{{asset($item["image_slider"])}}" width="400" alt="Image"></div>
                     <div class="hero-shape1" data-ani="slideinup" data-ani-delay="0.5s"><img
                             src="{{asset('user/img\hero\hero_shape_1_1.png')}}" alt="shape"></div>
                     <div class="hero-shape2" data-ani="slideindown" data-ani-delay="0.6s"><img
@@ -79,6 +81,7 @@
                             src="{{asset('user/img\hero\hero_shape_1_3.png')}}" alt="shape"></div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
     <div class="hero-shape4"><img class="svg-img" src="{{asset('user/img\hero\hero_shape_1_4.svg')}}" alt="shape"></div>

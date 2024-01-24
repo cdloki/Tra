@@ -29,7 +29,10 @@
                <div class="product-img">
                   <img src="{{asset($item["image_product"])}}" alt="Product Image">
                    {{-- <span class="product-tag">Hot</span> --}}
-                  <div class="actions"><a href="{{route('detail-product',$item['url_product'])}}" class="icon-btn popup-content"><i class="far fa-eye"></i></a>
+                  <div class="actions">
+                    {{-- <a href="{{route('detail-product',$item['url_product'])}}" class="icon-btn popup-content">
+                        <i class="far fa-eye"></i>
+                    </a> --}}
                     {{-- <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i>
                     </a>  --}}
                     {{-- <a href="wishlist.html" class="icon-btn"><i class="far fa-heart"></i>

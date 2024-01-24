@@ -309,7 +309,7 @@
     <script src="{{asset('user\js\vendor\jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('user\js\app.min.js')}}"></script>
     <script src="{{asset('user\js\main.js')}}"></script>
-    <!-- <script src="{{asset('js\common.js')}}"></script> -->
+    <script src="{{asset('js\common.js')}}"></script>
 
 </body>
 

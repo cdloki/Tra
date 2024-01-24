@@ -151,7 +151,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="mb-3">
-                                                                <label for="shoppe_website" >Shoppe</label>
+                                                                <label for="shoppe_website" >Shopee</label>
                                                                 <input type="text" name="shoppe_website" class="form-control" id="shoppe_website"
                                                                 value="{{$dataSetting["shoppe_website"]}}">
                                                             </div>
