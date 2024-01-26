@@ -116,13 +116,13 @@
     </div>
     <header class="th-header header-layout1">
         <div class="header-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
                     <div class="col-auto d-none d-lg-block">
                     </div>
                     <div class="col-auto">
                         <div class="header-links">
-                            <ul>
+                            <ul class="d-flex align-items-center">
                                 <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
                                     <a target="_blank"
                                         href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
@@ -141,6 +141,10 @@
                                         </a>
                                     </div>
                                 </li>
+                                <li class="d-lg-none">
+                                    <div><a href="/"><img id="logo_img" width="80"
+                                    src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -151,7 +155,7 @@
             <div class="menu-area">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
-                        <div class="order-2 order-lg-1 col-auto">
+                        <div class="d-none d-lg-block order-2 order-lg-1 col-auto">
                             <div class="header-logo"><a href="/"><img id="logo_img" width="100"
                                         src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                         </div>
@@ -180,7 +184,7 @@
                         <div class="order-3 m-2 p-2 col-auto d-block d-lg-none">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
-                            style="border:0;width: 400px" allowfullscreen="" loading="lazy"
+                            style="border:0;width: 500px" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="order-3 col-auto d-none d-xl-block">
