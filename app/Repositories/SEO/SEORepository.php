@@ -116,7 +116,7 @@ class SEORepository implements SEORepositoryInterface
     {
         $html = "
         <meta name='author' content='".$data["author"]."'>
-        <meta name='google-signin-client_id' content='345238891330-r4anuala3q6lph6ougn88lgjue6tod7l.apps.googleusercontent.com'>
+        <meta name='google-signin-client_id' content=''>
         <meta name='title' content='".$data["title"]."' />
         <meta name='image' content='".asset($data["image"])."' />
         <meta name='description'
@@ -138,11 +138,11 @@ class SEORepository implements SEORepositoryInterface
         <meta property='og:keywords'
             content='".$data["keywords"]."'>
 
-        <meta property='article:publisher' content='https://www.facebook.com/automationtestselenium'>
-        <meta property='article:author' content='https://www.facebook.com/automationtestselenium'>
+        <meta property='article:publisher' content='https://www.facebook.com/traoolongtaidanang'>
+        <meta property='article:author' content='https://www.facebook.com/traoolongtaidanang'>
         <meta property='article:published_time'
-            content='2022-08-08 15:59:47'>
-        <meta property='article:modified_time' content='2022-08-08 15:59:47'>
+            content='2024-01-24 15:59:47'>
+        <meta property='article:modified_time' content='2024-01-26 15:59:47'>
         <meta property='article:tag'
             content='".$data["keywords"]."'>
 

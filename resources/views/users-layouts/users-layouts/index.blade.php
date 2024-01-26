@@ -7,41 +7,31 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{$Setting["title_website"]}}</title>
+    <meta name="description" content="{{$Setting["description_seo_website"]}}">
+    <meta name="author" content="Việt Long Trà">
     <meta property="og:locale" content="vi_vn" />
-    <meta property="fb:app_id" content="{{$Setting["facebook_social_website"]}}" />
+    <meta property="fb:app_id" content="" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="google-site-verification" content="lO0j89nkETGOImDmXPfbYFLlqWS7Ry7Y77ednElzYpo" />
 
     @yield('SEO')
 
-    {{-- <meta name="author" content="Frutin">
-    <meta name="description" content="Frutin - Organic and Healthy Food HTML Template">
-    <meta name="keywords" content="Frutin - Organic and Healthy Food HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"> --}}
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('user/img\favicon.png')}}">
 
-
-    {{-- Icon --}}
-    {{-- <link rel="shortcut icon" type="image/x-icon" href="{{asset($Setting["icon_general_website"])}}"> --}}
-    {{-- Titile --}}
-    {{-- <h1 style="display:none">{{$Setting["title_website"]}}</h1>
-    <h2 style="display:none">{{$Setting["description_seo_website"]}}</h2> --}}
-
-
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('user/img\favicons\apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('user/img\favicons\apple-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('user/img\favicons\apple-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('user/img\favicons\apple-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('user/img\favicons\apple-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('user/img\favicons\apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('user/img\favicons\apple-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('user/img\favicons\apple-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('user/img\favicons\apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('user/img\favicons\android-icon-192x192.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('user/img\favicons\favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('user/img\favicons\favicon-96x96.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('user/img\favicons\favicon-16x16.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('user/img\favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('user/img\favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('user/img\favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('user/img\favicon.png')}}">
     <link rel="manifest" href="{{asset('user/img\favicons\manifest.json')}}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -51,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('user/css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('user/css/custom.css?version=26-01-2024 8:55CH')}}">
     <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
     <style>
