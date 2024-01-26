@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('user/css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/custom.css?version=26-01-2024 8:55CH')}}">
+    <link rel="stylesheet" href="{{asset('user/css/custom.css?version=26-01-2024 9:52CH')}}">
     <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
     <style>
@@ -174,7 +174,7 @@
                         <div class="order-3 m-2 p-2 col-auto d-block d-lg-none">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
-                            style="border:0;width: 500px" allowfullscreen="" loading="lazy"
+                            style="border:0;width: 250px" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="order-3 col-auto d-none d-xl-block">
