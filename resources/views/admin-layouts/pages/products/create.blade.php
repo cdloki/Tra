@@ -55,6 +55,7 @@
                                                                 <span class="required" style="font-size: 11px;">(*) Nếu bỏ trống hệ thống sẽ tự tạo URL</span>
                                                             </div>
                                                         </div>
+
                                                         <div class="col-md-6">
                                                             <div class="mb-3">
                                                                 <label >Chọn Danh mục</label>
@@ -78,6 +79,15 @@
                                                                 <div class="input-group">
                                                                     <input type="text" name="price" class="form-control" id="price" onkeydown="maskData(this)"  >
                                                                     <div class="input-group-text">VNĐ</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="shopee_url" >Url Shoppe </label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-text">/</div>
+                                                                    <input type="text" class="form-control" id="shopee_url" name="shopee_url" >
                                                                 </div>
                                                             </div>
                                                         </div>

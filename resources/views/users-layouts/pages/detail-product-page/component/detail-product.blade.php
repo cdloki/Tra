@@ -1,193 +1,7 @@
-<!-- Shop details Area start -->
-{{-- <section class="product-details-area mtb-60px">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12">
-                <div class="product-details-img product-details-tab">
-                    <div class="zoompro-wrap zoompro-2">
-                        <div class="zoompro-border zoompro-span">
-                            <img class="zoompro" src="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}"
-                            data-zoom-image="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}" alt="">
-                        </div>
-                    </div>
-                    <div id="gallery" class="product-dec-slider-2 owl-carousel owl-nav-style owl-nav-style-2">
-                        @foreach ($dataDetailProduct["detail-product"]["image_product"] as $key => $item )
-                            <a class="{{ $key == 1 ? "active" : "" }}"
-                            data-image="{{asset($item["url_image"])}}"
-                            data-zoom-image="{{asset($item["url_image"])}}">
-                                <img src="{{asset($item["url_image"])}}" alt="">
-                            </a>
-                        @endforeach
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12">
-                <div class="product-details-content">
-                    <h2 >{{$dataDetailProduct["detail-product"]["name_product"]}}</h2>
-                    <p class="reference">Danh mục:
-                        @foreach ($dataDetailProduct["detail-product"]["category_product"] as $key => $item)
-                        <span> <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}},</a></span>
-                        @endforeach
-                    </p>
-                    <div class="pricing-meta">
-
-                        <ul>
-                            <li><h3 style="color: black">Giá : </h3></li>
-                            @if ( $dataDetailProduct["detail-product"]["cost"] != null && $dataDetailProduct["detail-product"]["price"] != null )
-                            <li class="old-price ">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}</li>
-
-                            <li class="current-price" style="font-size: 22px;
-                            margin: 20px 0;"
-                            >{{$dataDetailProduct["detail-product"]["price"] . " VNĐ"}}</li>
-                            @else
-                            <li class="current-price"
-                            style="font-size: 22px;
-                            margin: 20px 0;"
-                            >
-                            {{$dataDetailProduct["detail-product"]["cost"] == null ? "Liên hệ" : $dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}
-                            </li>
-                            @endif
-                        </ul>
-                    </div>
-                    <div class="pro-details-list">
-                        <div class="compare-table table-responsive">
-                            <table class="table mb-0">
-                                <tbody>
-                                    <tr>
-                                        <td class="first-column">Thông tin bảo hành</td>
-                                        <td >
-                                            {!! $dataDetailProduct["detail-product"]["warranty"] !!}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="first-column">Thời gian bảo hành</td>
-                                        <td >
-                                            {!! $dataDetailProduct["detail-product"]["time_warranty"] !!}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="first-column">Sản phẩm</td>
-                                        <td >
-                                            {!! $dataDetailProduct["detail-product"]["element_product"] !!}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="first-column">Quà tặng</td>
-                                        <td >
-                                            {!! $dataDetailProduct["detail-product"]["gift"] !!}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="first-column">Lưu ý sử dụng</td>
-                                        <td >
-                                            {!! $dataDetailProduct["detail-product"]["note"] !!}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="pro-details-quality mt-0px">
-                        <div class="cart-plus-minus">
-                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1">
-                        </div>
-                        <div class="pro-details-cart btn-hover">
-                            <a href="#"> + Thêm vào giỏ hàng</a>
-                        </div>
-                    </div>
-                    <div class="pro-details-wish-com">
-                        <div class="pro-details-wishlist">
-                            <a href="#"><i class="ion-android-favorite-outline"></i>Thêm vào danh sách yêu thích</a>
-                        </div>
-                    </div>
-                    <div class="pro-details-social-info">
-                        <span>Share</span>
-                        <div class="social-info">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="ion-social-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-google"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="ion-social-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pro-details-policy">
-                        <ul>
-                            <li><img src="{{asset('user/images/icons/policy.png')}}" alt=""><span>Chính sách bảo mật</span></li>
-                            <li><img src="{{asset('user/images/icons/policy-2.png')}}" alt=""><span>Chính sách giao hàng</span></li>
-                            <li><img src="{{asset('user/images/icons/policy-3.png')}}" alt=""><span>Chính sách hoàn trả</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-<!-- Shop details Area End -->
-<!-- product details description area start -->
-{{-- <div class="description-review-area mb-60px">
-    <div class="container">
-        <div class="description-review-wrapper">
-            <div class="description-review-topbar nav">
-                <a data-bs-toggle="tab" href="#des-details1">Mô tả</a>
-                <a class="active" data-bs-toggle="tab" href="#des-details2">Thông tin kỹ thuật</a>
-            </div>
-            <div class="tab-content description-review-bottom">
-                <div id="des-details2" class="tab-pane active">
-                    <div class="product-anotherinfo-wrapper">
-                        <ul>
-                            {!! $dataDetailProduct["detail-product"]["specifications"] !!}
-                        </ul>
-                    </div>
-                </div>
-                <div id="des-details1" class="tab-pane">
-                    <div class="product-description-wrapper">
-                        {!! $dataDetailProduct["detail-product"]["description_product"] !!}
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- product details description area end -->
-
-
-
        <div class="row gx-60">
           <div class="col-lg-6">
              <div class="product-big-img">
                 <div class="img"><img src="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}" alt="Product Image">
-
-                    {{-- <div class="product-details-img product-details-tab">
-                        <div class="zoompro-wrap zoompro-2">
-                            <div class="zoompro-border zoompro-span">
-                                <img class="zoompro" src="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}"
-                                data-zoom-image="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}" alt="">
-                            </div>
-                        </div>
-                        <div id="gallery" class="product-dec-slider-2 owl-carousel owl-nav-style owl-nav-style-2">
-                            @foreach ($dataDetailProduct["detail-product"]["image_product"] as $key => $item )
-                                <a class="{{ $key == 1 ? "active" : "" }}"
-                                data-image="{{asset($item["url_image"])}}"
-                                data-zoom-image="{{asset($item["url_image"])}}">
-                                    <img src="{{asset($item["url_image"])}}" alt="">
-                                </a>
-                            @endforeach
-                        </div>
-
-                    </div> --}}
-
                 </div>
              </div>
           </div>
@@ -214,7 +28,15 @@
                     </span>
 
                 </div>
+                <div class="product_meta">
+                    <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="" style="margin-bottom: 4px">:
 
+                        <a href="{{$item["shopee_url"]}}">
+                             {{$item["shopee_url"]}}
+                        </a>
+                    </span>
+
+                </div>
 
 
              </div>

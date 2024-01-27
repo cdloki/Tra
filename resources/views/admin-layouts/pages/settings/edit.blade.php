@@ -182,14 +182,20 @@
                                                                 value="{{$dataSetting["facebook_social_website"]}}">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <div class="mb-3">
                                                                 <label for="messenger_social_website" >Messenger</label>
                                                                 <input type="text" name="messenger_social_website" class="form-control" id="messenger_social_website"
                                                                 value="{{$dataSetting["messenger_social_website"]}}">
                                                             </div>
                                                         </div>
-
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="google_site_verification" >Google Site Verification</label>
+                                                                <input type="text" name="google_site_verification" class="form-control" id="google_site_verification"
+                                                                value="{{$dataSetting["google_site_verification"]}}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                             </div><!--end card-body-->
                                         </div><!--end card-->

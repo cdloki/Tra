@@ -92,6 +92,17 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <label for="shopee_url" >Url Shoppe </label>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-text">/</div>
+                                                                    <input type="text" class="form-control" id="shopee_url"
+                                                                    value="{{$dataProduct["shopee_url"]}}" disabled
+                                                                    name="shopee_url" >
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         {{-- <div class="col-md-6">
                                                             <div class="mb-3">
                                                                 <label for="name__product" >Bảo hành</label>

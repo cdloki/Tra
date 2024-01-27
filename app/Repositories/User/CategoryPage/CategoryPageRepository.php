@@ -59,7 +59,7 @@ class CategoryPageRepository implements CategoryPageRepositoryInterface
     public function getProductWithCategoryId($id){
 
         $filter["id_category"] = $id;
-        // $filter["status"] = 1;
+        $filter["status"] = 1;
         $filter["paginate"] = true;
         return $this->tMappingCategoryProduct->getListMappingCategoryProduct($filter);
     }

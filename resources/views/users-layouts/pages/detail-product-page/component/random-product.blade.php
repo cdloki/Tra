@@ -1,7 +1,7 @@
 <div class="space-extra-top mb-30">
     <div class="row justify-content-between align-items-center">
         <div class="col-md-auto">
-            <h2 class="sec-title text-center">Related Products</h2>
+            <h2 class="sec-title text-center">Các sản phẩm khác</h2>
         </div>
         <div class="col-md d-none d-sm-block">
             <hr class="title-line">
@@ -23,7 +23,7 @@
                 <div class="th-product product-grid">
                     <div class="product-img">
                         <img src="{{asset($item["image_product"]["url_image"])}}" alt="Product Image">
-                        
+
                     </div>
 
                     <div class="product-content">

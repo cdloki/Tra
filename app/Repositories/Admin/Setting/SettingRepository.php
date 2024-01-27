@@ -52,6 +52,8 @@ class SettingRepository implements SettingRepositoryInterface
                 'address_website' => null,
                 'email_website' => null,
                 'shoppe_website' => null,
+                'google_site_verification' => null,
+
 
             ];
             $idSetting = $this->tSetting->store($dataStoreSetting);
@@ -184,7 +186,7 @@ class SettingRepository implements SettingRepositoryInterface
                 'address_website' => $data['address_website'],
                 'email_website' => $data['email_website'],
                 'shoppe_website' => $data['shoppe_website'],
-
+                'google_site_verification' => $data['google_site_verification'],
             ];
             $id = $this->tSetting->edit($dataStoreSetting);
             DB::commit();

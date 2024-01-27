@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{$Setting["title_website"]}}</title>
     <meta name="description" content="{{$Setting["description_seo_website"]}}">
     <meta name="author" content="Việt Long Trà">
@@ -13,22 +12,22 @@
     <meta property="fb:app_id" content="" />
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="google-site-verification" content="lO0j89nkETGOImDmXPfbYFLlqWS7Ry7Y77ednElzYpo" />
+    <meta name="google-site-verification" content="{{$Setting["google_site_verification"]}}" />
 
     @yield('SEO')
 
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('user/img\favicon.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('user/img\favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset($Setting["icon_general_website"])}}">
 
-    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('user/img\favicon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('user/img\favicon.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('user/img\favicon.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('user/img\favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset($Setting["icon_general_website"])}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset($Setting["icon_general_website"])}}">
     <link rel="manifest" href="{{asset('user/img\favicons\manifest.json')}}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicon.png">

@@ -60,6 +60,7 @@ class ProductRepository implements ProductRepositoryInterface
                 'gift' => $data['gift'],
                 'element_product' => $data['element_product'],
                 'specifications' => $data['specifications'],
+                'shopee_url' => $data['shopee_url'],
                 'note' => $data['note'],
             ];
             if ($dataStoreProduct['url_product'] == NULL) {
@@ -180,6 +181,7 @@ class ProductRepository implements ProductRepositoryInterface
                 'gift' => $data['gift'],
                 'element_product' => $data['element_product'],
                 'specifications' => $data['specifications'],
+                'shopee_url' => $data['shopee_url'],
                 'note' => $data['note'],
             ];
             if ($dataStoreProduct['url_product'] == NULL) {
