@@ -14,6 +14,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="google-site-verification" content="{{$Setting["google_site_verification"]}}" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{$Setting["googleanaly_social_website"]}}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '{{$Setting["googleanaly_social_website"]}}');
+    </script>
+
     @yield('SEO')
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset($Setting["icon_general_website"])}}">
@@ -132,7 +145,7 @@
                                 </li>
                                 <li class="d-lg-none">
                                     <div><a href="/"><img id="logo_img" width="80"
-                                    src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                                                src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                                 </li>
                             </ul>
                         </div>
@@ -171,10 +184,10 @@
                                     class="far fa-bars"></i></button>
                         </div>
                         <div class="order-3 m-2 p-2 col-auto d-block d-lg-none">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
-                            style="border:0;width: 250px" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
+                                style="border:0;width: 250px" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="order-3 col-auto d-none d-xl-block">
                             <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
