@@ -17,14 +17,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{$Setting["googleanaly_social_website"]}}"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', '{{$Setting["googleanaly_social_website"]}}');
+        gtag('config', '{{$Setting["googleanaly_social_website"]}}');
     </script>
 
     @yield('SEO')
@@ -47,9 +47,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Lexend:wght@300;400;500;600;700;800;900&family=Lobster&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Lexend:wght@300;400;500;600;700;800;900&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('user/css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/fontawesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
@@ -57,14 +55,14 @@
     <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
     <style>
-    body {
-        font-family: 'UTM Avo', sans-serif;
-    }
+        body {
+            font-family: 'UTM Avo', sans-serif;
+        }
 
-    .slider-area span {
-        font-size: inherit;
-        font-weight: inherit;
-    }
+        .slider-area span {
+            font-size: inherit;
+            font-weight: inherit;
+        }
     </style>
 </head>
 
@@ -76,8 +74,7 @@
             <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
             <div class=" dropdown_search" id="dropdown_search">
                 <form class="form-search" id="form-submit">
-                    <input class="input-search" autocomplete="off" id="input_search" placeholder="Nhập tên sản phẩm ..."
-                        type="text">
+                    <input class="input-search" autocomplete="off" id="input_search" placeholder="Nhập tên sản phẩm ..." type="text">
                     {{-- <button disabled><i class="ion-ios-search-strong"></i></button> --}}
                     <div class="search-list">
                         <div id="list-product">
@@ -94,8 +91,7 @@
     </div>
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo"><a href="/"><img src="{{asset($Setting["logo_general_website"])}}"
-                        alt="Frutin"></a>
+            <div class="mobile-logo"><a href="/"><img src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -103,8 +99,7 @@
                     <li class="menu-item-has-children"><a href="#">Danh mục</a>
                         <ul class="sub-menu">
                             @foreach ($menuCategory as $key => $item )
-                            <li><a
-                                    href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                            <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                             </li>
                             @endforeach
                         </ul>
@@ -126,8 +121,31 @@
                         <div class="header-links">
                             <ul class="d-flex align-items-center">
                                 <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
-                                    <a target="_blank"
-                                        href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
+                                </li>
+                                <li class="d-block d-lg-none">
+                                    <div>
+                                        <nav class="main-menu d-none d-lg-inline-block">
+                                            <ul>
+                                                <li><a href="/">Trang chủ</a></li>
+
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Danh mục</a>
+                                                    <ul class="sub-menu">
+                                                        @foreach ($menuCategory as $key => $item )
+                                                        <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{{route('discount-post')}}">Bài viết</a></li>
+                                                <li><a href="{{route('info')}}">Giới thiệu</a></li>
+                                                <li><a href="{{route('contact')}}">Liên hệ</a></li>
+                                            </ul>
+                                        </nav>
+                                        <button style="height: 20px;" type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i>
+                                        </button>
+                                    </div>
                                 </li>
                                 <li>
                                     <div class="social-links">
@@ -138,14 +156,12 @@
                                             <img width="20" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="">
                                         </a>
                                         <a target="_blank" href="{{$Setting["zalo_website"]}}">
-                                            <img width="20" src="{{asset('user/img/icon/zalo-icon-circle-1.png')}}"
-                                                alt="">
+                                            <img width="20" src="{{asset('user/img/icon/zalo-icon-circle-1.png')}}" alt="">
                                         </a>
                                     </div>
                                 </li>
                                 <li class="d-lg-none">
-                                    <div><a href="/"><img id="logo_img" width="80"
-                                                src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                                    <div><a href="/"><img id="logo_img" width="80" src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                                 </li>
                             </ul>
                         </div>
@@ -158,10 +174,9 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="d-none d-lg-block order-2 order-lg-1 col-auto">
-                            <div class="header-logo"><a href="/"><img id="logo_img" width="100"
-                                        src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
+                            <div class="header-logo"><a href="/"><img id="logo_img" width="100" src="{{asset($Setting["logo_general_website"])}}" alt="Logo"></a></div>
                         </div>
-                        <div class="order-1 order-lg-2 col-auto">
+                        <div class="d-none d-lg-block order-2 order-lg-1 col-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li><a href="/">Trang chủ</a></li>
@@ -170,8 +185,7 @@
                                         <a href="#">Danh mục</a>
                                         <ul class="sub-menu">
                                             @foreach ($menuCategory as $key => $item )
-                                            <li><a
-                                                    href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                            <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                             </li>
                                             @endforeach
                                         </ul>
@@ -180,18 +194,15 @@
                                     <li><a href="{{route('info')}}">Giới thiệu</a></li>
                                     <li><a href="{{route('contact')}}">Liên hệ</a></li>
                                 </ul>
-                            </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
-                                    class="far fa-bars"></i></button>
+                            </nav>
+                            <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i>
+                            </button>
                         </div>
-                        <div class="order-3 m-2 p-2 col-auto d-block d-lg-none">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus"
-                                style="border:0;width: 250px" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="col-auto flex-fill mt-2 d-flex d-lg-none">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus" style="border:0;width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="order-3 col-auto d-none d-xl-block">
-                            <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i
-                                        class="far fa-search"></i></button>
+                            <div class="header-button"><button type="button" class="simple-icon searchBoxToggler"><i class="far fa-search"></i></button>
                                 <button type="button" class="simple-icon sideMenuToggler">
                             </div>
                         </div>
@@ -215,8 +226,7 @@
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
-                                <div class="about-logo"><a href="/"><img width="100"
-                                            src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a></div>
+                                <div class="about-logo"><a href="/"><img width="100" src="{{asset($Setting["logo_general_website"])}}" alt="Frutin"></a></div>
                                 <p class="about-text">{!! $Setting["description_seo_website"] !!}</p>
                                 <div class="th-social">
                                     <a target="_blank" href="{{$Setting["facebook_website"]}}">
@@ -234,16 +244,14 @@
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                    alt="Icon">Danh mục</h3>
+                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Danh mục</h3>
                             <div class="menu-all-pages-container">
 
                                 <ul class="menu">
 
                                     @foreach ($menuCategory as $key => $item)
                                     <li>
-                                        <a class=" {{$key > 10 ? "hidden" : ""}}"
-                                            href="{{route('category.index',$item['url_category'])}}">
+                                        <a class=" {{$key > 10 ? "hidden" : ""}}" href="{{route('category.index',$item['url_category'])}}">
                                             {{$item["name_category"]}}
                                         </a>
                                     </li>
@@ -255,8 +263,7 @@
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                    alt="Icon">Đường dẫn nhanh</h3>
+                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Đường dẫn nhanh</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="/">Trang Chủ</a></li>
@@ -269,8 +276,7 @@
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                    alt="Icon">Liên hệ</h3>
+                            <h3 class="widget_title"><img src="{{asset('user\img\theme-img\title_icon.svg')}}" alt="Icon">Liên hệ</h3>
                             <div class="th-widget-contact">
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-location-dot"></i></div>
@@ -278,14 +284,12 @@
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
-                                    <p class="info-box_text"><a href="tel:{{$Setting["phone_website"]}}"
-                                            class="info-box_link">{{$Setting["phone_website"]}}</a>
+                                    <p class="info-box_text"><a href="tel:{{$Setting["phone_website"]}}" class="info-box_link">{{$Setting["phone_website"]}}</a>
                                     </p>
                                 </div>
                                 <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-envelope"></i></div>
-                                    <p class="info-box_text"><a href="mailto:{{$Setting["email_website"]}}"
-                                            class="info-box_link">{{$Setting["email_website"]}}</a></p>
+                                    <p class="info-box_text"><a href="mailto:{{$Setting["email_website"]}}" class="info-box_link">{{$Setting["email_website"]}}</a></p>
                                 </div>
                                 <!-- <div class="info-box">
                                     <div class="info-box_icon"><i class="fas fa-phone"></i></div>
@@ -303,8 +307,7 @@
         <div class="container">
             <div class="row gy-2 align-items-center">
                 <div class="col-md-6">
-                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a
-                            href="home-organic-farm.html">Việt Long Trà</a>. All Rights Reserved.</p>
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="home-organic-farm.html">Việt Long Trà</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="payment-img"><img src="{{asset('user\img\normal\payment_methods.png')}}" alt="Image">
@@ -315,8 +318,7 @@
         </div> --}}
     </footer>
     <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
             </path>
         </svg></div>
     <script src="{{asset('user\js\vendor\jquery-3.6.0.min.js')}}"></script>
