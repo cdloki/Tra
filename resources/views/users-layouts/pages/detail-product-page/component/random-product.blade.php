@@ -41,14 +41,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
 
         <!-- Single Item -->
         @endforeach
 
-
+    </div>
     </div>
 </div>
 <div class="d-block d-md-none mt-40 text-center">
@@ -56,4 +56,4 @@
                 class="far fa-arrow-left"></i></button> <button data-slider-next="#productSlider1"
             class="slider-arrow default"><i class="far fa-arrow-right"></i></button></div>
 </div>
-</div>
+

@@ -69,7 +69,6 @@ class SEORepository implements SEORepositoryInterface
                 } else {
                     $dataPost = $this->tSEOPost->getOnePostWithType($type);
                 }
-
                 if (!empty($dataPost["title_seo_post"])){
                     $dataSEO['title'] = $dataPost['title_seo_post'];
                 }
@@ -79,10 +78,17 @@ class SEORepository implements SEORepositoryInterface
                 if (!empty($dataPost["keyword_seo_post"])){
                     $dataSEO['keywords'] = $dataPost['keyword_seo_post'];
                 }
+
+                if (!empty($dataPost["image_post"])){
+                    $dataSEO['image'] = $dataPost['image_post'];
+                }
+                if (!empty($dataPost["url_post"])){
+                    $dataSEO['url'] = asset($dataPost['url_post']);
+                }
+
                 break;
             case 'category':
                 $dataCategory = $this->tSEOCategory->getOneCategory($id);
-                // dd($dataCategory);
                 if (!empty($dataCategory["title_seo_category"])){
                     $dataSEO['title'] = $dataCategory['title_seo_category'];
                 }
@@ -92,19 +98,25 @@ class SEORepository implements SEORepositoryInterface
                 if (!empty($dataCategory["keyword_seo_category"])){
                     $dataSEO['keywords'] = $dataCategory['keyword_seo_category'];
                 }
-                break;
-            case 'room':
-                $dataRoom = $this->tSEORoom->getOneRoom($id);
-                if (!empty($dataRoom["title_seo_room"])){
-                    $dataSEO['title'] = $dataRoom['title_seo_room'];
+                if (!empty($dataCategory["image_category"])){
+                    $dataSEO['image'] = $dataCategory['image_category'];
                 }
-                if (!empty($dataRoom["description_seo_room"])){
-                    $dataSEO['description'] = $dataRoom['description_seo_room'];
-                }
-                if (!empty($dataRoom["keyword_seo_room"])){
-                    $dataSEO['keywords'] = $dataRoom['keyword_seo_room'];
+                if (!empty($dataCategory["url_category"])){
+                    $dataSEO['url'] = asset($dataCategory['url_category']);
                 }
                 break;
+            // case 'room':
+            //     $dataRoom = $this->tSEORoom->getOneRoom($id);
+            //     if (!empty($dataRoom["title_seo_room"])){
+            //         $dataSEO['title'] = $dataRoom['title_seo_room'];
+            //     }
+            //     if (!empty($dataRoom["description_seo_room"])){
+            //         $dataSEO['description'] = $dataRoom['description_seo_room'];
+            //     }
+            //     if (!empty($dataRoom["keyword_seo_room"])){
+            //         $dataSEO['keywords'] = $dataRoom['keyword_seo_room'];
+            //     }
+            //     break;
             default:
             'code to be executed if n=label1';
         }
