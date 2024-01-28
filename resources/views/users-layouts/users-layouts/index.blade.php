@@ -327,9 +327,13 @@
             </path>
         </svg></div>
     <script src="{{asset('user\js\vendor\jquery-3.6.0.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/laroute.js') }}"></script>
+
     <script src="{{asset('user\js\app.min.js')}}"></script>
     <script src="{{asset('user\js\main.js')}}"></script>
-    <script src="{{asset('js\common.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="{{asset('user\js\common.js')}}"></script>
 
 </body>
 

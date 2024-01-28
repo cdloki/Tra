@@ -15,17 +15,20 @@ function delay(fn, ms) {
 
 
 let result = document.querySelector('#input_search');
-result.addEventListener('keyup', function () {
-    let data = document.querySelector('#input_search').value;
-    document.querySelector('#input_search_mobie').value = data;
-});
+
+// result.addEventListener('keyup', function () {
+//     let data = document.querySelector('#input_search').value;
+//     console.log(data)
+    // document.querySelector('#input_search_mobie').value = data;
+    // alert(data);
+// });
 
 
-let result_mobie = document.querySelector('#input_search_mobie');
-result_mobie.addEventListener('keyup', function () {
-    let data = document.querySelector('#input_search_mobie').value;
-    document.querySelector('#input_search').value = data;
-});
+// let result_mobie = document.querySelector('#input_search_mobie');
+// result_mobie.addEventListener('keyup', function () {
+//     let data = document.querySelector('#input_search_mobie').value;
+//     document.querySelector('#input_search').value = data;
+// });
 
 
 
@@ -74,6 +77,7 @@ function getDataProduct() {
                 data: data
             },
             success: function (res) {
+                console.log(res)
                 if (res.error != false && res.length != 0) {
                     res.forEach(function (item) {
                         html = `
