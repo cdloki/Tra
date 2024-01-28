@@ -169,7 +169,12 @@
                 </div>
             </div>
         </div>
-        <div class="sticky-wrapper">
+        <div class="d-lg-none">
+            <div class="m-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus" style="border:0;width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="sticky-wrapper d-none d-lg-block">
             <div class="menu-area">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
