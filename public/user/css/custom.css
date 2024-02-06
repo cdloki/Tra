@@ -132,7 +132,7 @@ body {
     border-bottom-right-radius: 30px !important;
     overflow: hidden;
      /* Show scrollbars */
-     overflow-y: scroll;
+     /* overflow-y: scroll; */
 
 }
 
@@ -140,7 +140,11 @@ body {
     height: auto;
     overflow: auto;
     overflow-x: hidden;
-    max-height: 500px !important;
+    max-height: 270px !important;
+}
+
+.search_list{
+    /* margin-bottom: 20px !important; */
 }
 
 .search-list>div::-webkit-scrollbar {
