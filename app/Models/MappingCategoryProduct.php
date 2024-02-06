@@ -39,7 +39,7 @@ class MappingCategoryProduct extends Model
         $select->join('categorys', 'categorys.id', '=', $this->table.'.id_category');
 
         if(!empty($filter["paginate"])) {
-            return $select->paginate(10);
+            return $select->paginate(12);
         } else {
             return $select->get();
         }

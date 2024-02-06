@@ -34,7 +34,7 @@
                                 <td>
                                     <img src="{{$item["dataImage"] != null ? asset($item["dataImage"][0]["url_image"]) : ""}}" alt="" height="40">
                                     <p class="d-inline-block align-middle mb-0">
-                                        <a href="" class="d-inline-block align-middle mb-0 product-name fw-semibold">{{$item["name_product"]}}</a>
+                                        <a href="{{route('detail-product',$item['url_product'])}}" target="_blank" class="d-inline-block align-middle mb-0 product-name fw-semibold">{{$item["name_product"]}}</a>
                                         <br>
                                         <span class="text-muted font-13 fw-semibold">{{$item["code_product"]}}</span>
                                     </p>
