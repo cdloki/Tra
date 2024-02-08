@@ -10,6 +10,7 @@ use App\Models\Posts;
 use App\Models\Categorys;
 use App\Models\Products;
 use App\Models\Rooms;
+use App\Models\MappingProductImage;
 
 
 
@@ -23,11 +24,13 @@ class SEORepository implements SEORepositoryInterface
     protected $tSEOCategory;
     protected $tSEOProduct;
     protected $tSEORoom;
+    protected $tMappingProductImage;
 
     public function __construct(
         Posts $tSEOPost,
         Settings $tSEOSetting,
         Products $tSEOProduct,
+        MappingProductImage $tMappingProductImage,
         Categorys $tSEOCategory,
         Rooms $tSEORoom
 
@@ -39,6 +42,7 @@ class SEORepository implements SEORepositoryInterface
         $this->tSEOCategory = $tSEOCategory;
         $this->tSEOProduct = $tSEOProduct;
         $this->tSEORoom = $tSEORoom;
+        $this->tMappingProductImage = $tMappingProductImage;
 
     }
 
@@ -83,7 +87,8 @@ class SEORepository implements SEORepositoryInterface
                     $dataSEO['image'] = $dataPost['image_post'];
                 }
                 if (!empty($dataPost["url_post"])){
-                    $dataSEO['url'] = asset($dataPost['url_post']);
+                    $dataSEO['url'] = route('discount-post.show', ['slug' => $dataPost["url_post"]]);
+
                 }
 
                 break;
@@ -102,21 +107,31 @@ class SEORepository implements SEORepositoryInterface
                     $dataSEO['image'] = $dataCategory['image_category'];
                 }
                 if (!empty($dataCategory["url_category"])){
-                    $dataSEO['url'] = asset($dataCategory['url_category']);
+                    $dataSEO['url'] = route('category.index', ['slug' => $dataCategory["url_category"]]);
                 }
                 break;
-            // case 'room':
-            //     $dataRoom = $this->tSEORoom->getOneRoom($id);
-            //     if (!empty($dataRoom["title_seo_room"])){
-            //         $dataSEO['title'] = $dataRoom['title_seo_room'];
-            //     }
-            //     if (!empty($dataRoom["description_seo_room"])){
-            //         $dataSEO['description'] = $dataRoom['description_seo_room'];
-            //     }
-            //     if (!empty($dataRoom["keyword_seo_room"])){
-            //         $dataSEO['keywords'] = $dataRoom['keyword_seo_room'];
-            //     }
-            //     break;
+            case 'product':
+
+                $filter["id_product"] = $id;
+                $filter["main_image"] = 1;
+                $dataProductImage = $this->tMappingProductImage->getListMappingProductImage($filter)->first();
+                $dataProduct = $this->tSEOProduct->getOneProduct($id);
+                if (!empty($dataProduct["name_product"])){
+                    $dataSEO['title'] = $dataProduct['name_product'];
+                }
+                if (!empty($dataProduct["description_product"])){
+                    $dataSEO['description'] = $dataProduct['description_product'];
+                }
+                // if (!empty($dataCategory["keyword_seo_category"])){
+                //     $dataSEO['keywords'] = $dataCategory['keyword_seo_category'];
+                // }
+                if (!empty($dataProductImage["url_image"])){
+                    $dataSEO['image'] = $dataProductImage['url_image'];
+                }
+                if (!empty($dataProduct["url_product"])){
+                    $dataSEO['url'] = route('detail-product', ['slug' => $dataProduct["url_product"]]);
+                }
+                break;
             default:
             'code to be executed if n=label1';
         }

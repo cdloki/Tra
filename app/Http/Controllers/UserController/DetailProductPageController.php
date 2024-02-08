@@ -25,7 +25,7 @@ class DetailProductPageController extends Controller
     {
         $dataDetailProduct["detail-product"] = $this->rDetailProductPage->getDataProduct($slug);
         $dataDetailProduct["random-product"] = $this->rDetailProductPage->getDataRandomProduct();
-        $dataDetailProduct["SEO"] = $this->rSEO->getDataSEO($page = null, $type = null, $id = null);
+        $dataDetailProduct["SEO"] = $this->rSEO->getDataSEO($page = "product", $type = null, $id = $dataDetailProduct["detail-product"]["id"]);
 
         return view('users-layouts.pages.detail-product-page.index',
         [
