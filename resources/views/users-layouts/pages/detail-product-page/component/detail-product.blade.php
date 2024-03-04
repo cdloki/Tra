@@ -31,7 +31,7 @@
                    </div>
                </div>
            </div> -->
-           <div class="col-lg-6 align-self-center">
+           <div class="col-lg-6 align-self-center product-detail-right">
                <div class="product-about">
                    @if ( $dataDetailProduct["detail-product"]["cost"] != null &&
                    $dataDetailProduct["detail-product"]["price"] != null )
