@@ -292,7 +292,6 @@
 renderSelect("categorys","#id_category","multiple")
 
 // renderDataTagSEO()
-
 </script>
 @endsection
 @endsection

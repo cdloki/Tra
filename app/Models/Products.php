@@ -24,7 +24,6 @@ class Products extends Model
         'price',
         'cost',
         'element_product',
-        'shopee_url',
         'status',
         'created_at',
         'updated_at',

@@ -90,7 +90,6 @@ class SEORepository implements SEORepositoryInterface
                     $dataSEO['url'] = route('discount-post.show', ['slug' => $dataPost["url_post"]]);
 
                 }
-
                 break;
             case 'category':
                 $dataCategory = $this->tSEOCategory->getOneCategory($id);
@@ -119,8 +118,8 @@ class SEORepository implements SEORepositoryInterface
                 if (!empty($dataProduct["name_product"])){
                     $dataSEO['title'] = $dataProduct['name_product'];
                 }
-                if (!empty($dataProduct["description_product"])){
-                    $dataSEO['description'] = $dataProduct['description_product'];
+                if (!empty($dataProduct["note"])){
+                    $dataSEO['description'] = $dataProduct['note'];
                 }
                 // if (!empty($dataCategory["keyword_seo_category"])){
                 //     $dataSEO['keywords'] = $dataCategory['keyword_seo_category'];
@@ -147,7 +146,7 @@ class SEORepository implements SEORepositoryInterface
         <meta name='title' content='".$data["title"]."' />
         <meta name='image' content='".asset($data["image"])."' />
         <meta name='description'
-            content='".$data["description"]."'>
+            content='".strip_tags($data["description"])."'>
         <meta name='keywords'
             content='".$data["keywords"]."'>
 
@@ -161,7 +160,7 @@ class SEORepository implements SEORepositoryInterface
         <meta property='og:site_name' content='".$data["title"]."'>
         <meta property='og:url' content='".$data["url"]."' />
         <meta property='og:description'
-            content='".$data["description"]."'>
+            content='".strip_tags($data["description"])."'>
         <meta property='og:keywords'
             content='".$data["keywords"]."'>
 
@@ -185,7 +184,7 @@ class SEORepository implements SEORepositoryInterface
         <meta name='twitter:url' content='".$data["url"]."'>
         <meta name='twitter:title' content='".$data["title"]."'>
         <meta name='twitter:description'
-            content='".$data["description"]."'>
+            content='".strip_tags($data["description"])."'>
         <meta name='twitter:keywords'
             content='".$data["keywords"]."'>
         <meta name='twitter:image' content='".asset($data["image"])."'>
