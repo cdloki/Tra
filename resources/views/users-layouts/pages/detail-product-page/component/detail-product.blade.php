@@ -1,16 +1,20 @@
        <div class="row gx-60">
-
            <div class="col-lg-6">
                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                    <div class="carousel-inner">
-                       <div class="carousel-item active">
-                           <img src="{{asset('user\img\gallery\gallery_1_1.jpg')}}" class="d-block w-100"
+                    @foreach ( $dataDetailProduct["detail-product"]["image_product"] as $key => $item)
+                       <div
+                       {{-- @dd($item["main_image"] == 1) --}}
+                       @if ($item["main_image"] == 1)
+                       class="carousel-item active"
+                       @else
+                       class="carousel-item"
+                       @endif
+                       >
+                           <img src="{{asset($item["url_image"])}}" class="d-block w-100"
                                alt="image-slider-1" />
                        </div>
-                       <div class="carousel-item">
-                           <img src="{{asset('user\img\gallery\gallery_1_2.jpg')}}" class="d-block w-100"
-                               alt="image-slider-2" />
-                       </div>
+                    @endforeach
                    </div>
                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
                        data-bs-slide="prev">

@@ -190,3 +190,14 @@ body {
 .search_list {
     margin-left: 10%;
 }
+.carousel-control-prev {
+    background: none !important;
+    border: none !important;
+
+}
+
+.carousel-control-next{
+    background: none !important;
+    border: none !important;
+
+}
