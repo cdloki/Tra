@@ -67,7 +67,7 @@
                                             src="{{asset($item["image_post"])}}" alt="Blog Image"></a></div>
                                 <div class="media-body">
                                     <h4 class="post-title"><a class="text-inherit"
-                                            href="blog-details.html">{{$item["name_post"]}}</a></h4>
+                                            href="{{route('discount-post.show',$item['url_post'])}}">{{$item["name_post"]}}</a></h4>
                                     <div class="recent-post-meta"><a href="blog.html"><i
                                                 class="far fa-calendar"></i>{{$item["created_at"]}}</a></div>
                                 </div>
