@@ -48,6 +48,10 @@
     #logo_img {
         max-width: 70%;
     }
+
+    .product-detail-right{
+      margin-top: 30px;
+    }
 }
 
 .blog-card .blog-img img {
@@ -132,7 +136,7 @@ body {
     border-bottom-right-radius: 30px !important;
     overflow: hidden;
      /* Show scrollbars */
-     overflow-y: scroll;
+     /* overflow-y: scroll; */
 
 }
 

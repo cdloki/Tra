@@ -34,7 +34,6 @@ class Settings extends Model
         'address_website',
         'email_website',
         'shoppe_website',
-        'google_site_verification',
         'created_at',
         'updated_at',
         'create_by_id',

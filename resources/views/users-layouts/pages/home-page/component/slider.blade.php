@@ -56,26 +56,19 @@
             <div class="swiper-slide">
                 <div class="hero-inner">
                     <div class="container">
-                        <div class="hero-style1"><span class="sub-title"
-                                data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
-                                data-ani-delay="0.2s"><img src="{{asset('user/img/theme-img/title_icon.svg')}}"
-                                    alt="shape">100% Quality
+                        <div class="hero-style1"><span class="sub-title" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.2s"><img
+                                    src="{{asset('user/img/theme-img/title_icon.svg')}}" alt="shape">100% Quality
                                 Foods</span>
                             <h1 class="hero-title">
-                                <span class="title1"
-                                    data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
-                                    data-ani-delay="0.4s">
+                                <span class="title1" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.4s">
                                     {!! $item["keyword_slider"] !!}</span>
                                 </span>
-                                <span class="title2 text-theme"
-                                    data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
+                                <span class="title2 text-theme" data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
                                     data-ani-delay="0.5s">{!! $item["description_slider"] !!}</span>
-                            </h1>
-                            <a href="{{$item["url_slider"]}}" target="_blank" class="th-btn"
-                                data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}"
-                                data-ani-delay="0.7s">
-                                {{$item["tbutton_slider"]}}<i class="fas fa-chevrons-right ms-2"></i>
-                            </a>
+                            </h1><a href="{{$item["url_slider"]}}" target="_blank" class="th-btn"
+                                data-ani="{{$item["location_slider"] % 2 == 0 ? "slidebottomright" : "slideinup"}}" data-ani-delay="0.7s">
+                                {{$item["tbutton_slider"]}}<i
+                                    class="fas fa-chevrons-right ms-2"></i></a>
                         </div>
                     </div>
                     <div class="hero-img" data-ani="slideinright" data-ani-delay="0.5s"><img

@@ -38,7 +38,6 @@ class Settings extends Migration
             $table->string('title_seo_website', 120)->nullable();
             $table->text('description_seo_website')->nullable();
             $table->text('image_seo_website')->nullable();
-            $table->string('google_site_verification', 120)->nullable();
             // $table->boolean('status')->default(0);
             $table->timestamps();
             $table->string('create_by_id', 120)->nullable();
