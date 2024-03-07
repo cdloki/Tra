@@ -28,9 +28,9 @@ class CreateProductsTable extends Migration
             $table->string('price', 120)->default(0)->nullable()->comment("Giá bán");
             $table->string('cost', 120)->default(0)->nullable()->comment("Giá gốc");
             $table->text('element_product')->nullable();
-            // $table->string('keyword_seo_product', 120)->nullable();
-            // $table->string('title_seo_product', 120)->nullable();
-            // $table->text('description_seo_product')->nullable();
+            $table->string('keyword_seo_product', 120)->nullable();
+            $table->string('title_seo_product', 120)->nullable();
+            $table->text('description_seo_product')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
             $table->string('create_by_id', 120)->nullable();

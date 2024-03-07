@@ -45,7 +45,6 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function storeProduct($data)
     {
-
         DB::beginTransaction();
         try {
             $dataStoreProduct = [
@@ -54,14 +53,17 @@ class ProductRepository implements ProductRepositoryInterface
                 'url_product' => $data['url_product'],
                 'cost' => $data['cost'],
                 'price' => $data['price'],
-                'warranty' => $data['warranty'],
-                'time_warranty' => $data['time_warranty'],
+                // 'warranty' => $data['warranty'],
+                // 'time_warranty' => $data['time_warranty'],
                 'description_product' => $data['description_product'],
-                'gift' => $data['gift'],
-                'element_product' => $data['element_product'],
-                'specifications' => $data['specifications'],
+                // 'gift' => $data['gift'],
+                // 'element_product' => $data['element_product'],
+                // 'specifications' => $data['specifications'],
                 'shopee_url' => $data['shopee_url'],
                 'note' => $data['note'],
+                'title_seo_product' => $data['title_seo'],
+                'description_seo_product' => strip_tags($data['description_seo']),
+                'keyword_seo_product' => $data['dataTagSeo'],
             ];
             if ($dataStoreProduct['url_product'] == NULL) {
                 $dataStoreProduct["url_product"] = ChangeToSlug($data['name_product']);
@@ -175,14 +177,17 @@ class ProductRepository implements ProductRepositoryInterface
                 'url_product' => $data['url_product'],
                 'cost' => $data['cost'],
                 'price' => $data['price'],
-                'warranty' => $data['warranty'],
-                'time_warranty' => $data['time_warranty'],
+                // 'warranty' => $data['warranty'],
+                // 'time_warranty' => $data['time_warranty'],
                 'description_product' => $data['description_product'],
-                'gift' => $data['gift'],
-                'element_product' => $data['element_product'],
-                'specifications' => $data['specifications'],
+                // 'gift' => $data['gift'],
+                // 'element_product' => $data['element_product'],
+                // 'specifications' => $data['specifications'],
                 'shopee_url' => $data['shopee_url'],
                 'note' => $data['note'],
+                'title_seo_product' => $data['title_seo'],
+                'description_seo_product' => strip_tags($data['description_seo']),
+                'keyword_seo_product' => $data['dataTagSeo'],
             ];
             if ($dataStoreProduct['url_product'] == NULL) {
                 $dataStoreProduct["url_product"] = ChangeToSlug($data['name_product']);

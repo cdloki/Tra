@@ -121,9 +121,16 @@ class SEORepository implements SEORepositoryInterface
                 if (!empty($dataProduct["note"])){
                     $dataSEO['description'] = $dataProduct['note'];
                 }
-                // if (!empty($dataCategory["keyword_seo_category"])){
-                //     $dataSEO['keywords'] = $dataCategory['keyword_seo_category'];
-                // }
+                if (!empty($dataProduct["title_seo_product"])){
+                    $dataSEO['title'] = $dataProduct['title_seo_product'];
+                }
+                if (!empty($dataProduct["description_seo_product"])){
+                    $dataSEO['description'] = $dataProduct['description_seo_product'];
+                }
+                if (!empty($dataProduct["keyword_seo_product"])){
+                    $dataSEO['keywords'] = $dataProduct['keyword_seo_product'];
+                }
+
                 if (!empty($dataProductImage["url_image"])){
                     $dataSEO['image'] = $dataProductImage['url_image'];
                 }

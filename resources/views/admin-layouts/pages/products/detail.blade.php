@@ -19,12 +19,12 @@
             </div><!--end card-header-->
             <div class="card-body">
                 <div class="card-body">
-                        {{-- <nav>
+                        <nav>
                             <div class="nav nav-tabs" id="nav-tab">
                                 <a class="nav-link active" data-bs-toggle="tab" href="#step1">Thông tin chung</a>
-                                <a class="nav-link" data-bs-toggle="tab" href="#step2">Thông tin chi tiết</a>
+                                <a class="nav-link" data-bs-toggle="tab" href="#step2">SEO</a>
                             </div>
-                        </nav> --}}
+                        </nav>
                         <input type="hidden" id="id_product" name="id" value="{{$dataProduct["id"]}}">
 
                         <div class="tab-content" id="nav-tabContent">
@@ -220,79 +220,36 @@
                                     </div> <!-- end col -->
                                 </div>
                             </div>
+
+
                             <div class="tab-pane" id="step2">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="card">
                                             <div class="card-body">
                                                     <div class="row">
-                                                        {{-- <div class="col-md-6">
+                                                        <div class="col-md-6">
                                                             <div class="mb-3">
                                                                 <label >Từ khóa SEO</label>
                                                                     <select   id="tag_seo">
 
                                                                     </select>
+                                                                    <input type="hidden" id="keyword_seo_product" value="{{$dataProduct["keyword_seo_product"]}}">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="mb-3">
                                                                 <label >Tiêu đề SEO</label>
-                                                                <input type="text" class="form-control" id="title_seo" name="title_seo">
-                                                            </div>
-                                                        </div>--}}
-
-
-
-
-                                                        {{-- <div class="col-md-12">
-                                                            <div class="mb-3">
-                                                                <label >Hình ảnh</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-text" id="choose_image" data-input="image__product" data-preview="review">Chọn hình ảnh</div>
-                                                                    <input type="text" class="form-control" id="image__product" name="image__product" >
-
-                                                                </div>
-                                                                <div id="review" ></div>
-
-                                                            </div>
-                                                        </div> --}}
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label for="warranty" >Thông tin bảo hành</label>
-                                                                <input type="text" name="warranty" class="form-control" id="warranty"
-                                                                value="{{$dataProduct["warranty"]}}" disabled
+                                                                <input type="text"  class="form-control" id="title_seo" name="title_seo"
+                                                                value="{{$dataProduct["title_seo_product"]}}" disabled
                                                                 >
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="mb-3">
-                                                                <label for="time_warranty" >Thời gian bảo hành</label>
-                                                                <input type="text" name="time_warranty" class="form-control"
-                                                                value="{{$dataProduct["time_warranty"]}}" disabled
-                                                                id="time_warranty"  >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label >Quà tặng</label>
-                                                                <textarea class="form-control my-editor-detail"  id="gift" >
-                                                                    {!! $dataProduct["gift"]!!}
-                                                                </textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label >Thành phần</label>
-                                                                <textarea class="form-control my-editor-detail"  id="element_product" >
-                                                                    {!! $dataProduct["element_product"]!!}
-                                                                </textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label >Thông số kĩ thuật</label>
-                                                                <textarea class="form-control my-editor-detail"  id="specifications" >
-                                                                    {!! $dataProduct["specifications"]!!}
+                                                                <label >Mô tả</label>
+                                                                <textarea class="form-control my-editor-detail" id="description_seo"  >
+                                                                    {!! $dataProduct["description_seo_product"]!!}
                                                                 </textarea>
                                                             </div>
                                                         </div>
@@ -317,6 +274,9 @@
 <script src="{{asset('admin/js/product/product.js')}}"></script>
 <script >
 let id = $("#id_product").val();
+
+let keyword_seo_product = $("#keyword_seo_product").val();
+renderDataTagSEO(keyword_seo_product,"detail")
 
 renderSelect("categorys","#id_category","multiple","detail",id)
 Product.renderImage(id)

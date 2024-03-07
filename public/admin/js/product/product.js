@@ -69,13 +69,15 @@ let Product = {
         if (form.valid()) {
 
             let data = $('form').serializeArray();
-            // let dataTagSeo = $('#tag_seo')[0].selectr.getValue()
+            let dataTagSeo = $('#tag_seo')[0].selectr.getValue()
             let dataCategory = $('#id_category')[0].selectr.getValue()
-            // data.push({ name: "dataTagSeo", value: dataTagSeo });
+            data.push({ name: "dataTagSeo", value: dataTagSeo });
+            data.push({ name: "description_seo", value: getValueTinymce("description_product") });
             data.push({ name: "description_product", value: getValueTinymce("description_product") });
-            data.push({ name: "gift", value: getValueTinymce("gift") });
-            data.push({ name: "element_product", value: getValueTinymce("element_product") });
-            data.push({ name: "specifications", value: getValueTinymce("specifications") });
+
+            // data.push({ name: "gift", value: getValueTinymce("gift") });
+            // data.push({ name: "element_product", value: getValueTinymce("element_product") });
+            // data.push({ name: "specifications", value: getValueTinymce("specifications") });
             data.push({ name: "note", value: getValueTinymce("note") });
             data.push({ name: "dataCategory", value: dataCategory });
 
@@ -269,14 +271,17 @@ let Product = {
             let data = $('form').serializeArray();
             // let dataTagSeo = $('#tag_seo')[0].selectr.getValue()
             let dataCategory = $('#id_category')[0].selectr.getValue()
+            let dataTagSeo = $('#tag_seo')[0].selectr.getValue()
+
             // data.push({ name: "dataTagSeo", value: dataTagSeo });
             data.push({ name: "description_product", value: getValueTinymce("description_product") });
-            data.push({ name: "gift", value: getValueTinymce("gift") });
-            data.push({ name: "element_product", value: getValueTinymce("element_product") });
-            data.push({ name: "specifications", value: getValueTinymce("specifications") });
+            // data.push({ name: "gift", value: getValueTinymce("gift") });
+            // data.push({ name: "element_product", value: getValueTinymce("element_product") });
+            // data.push({ name: "specifications", value: getValueTinymce("specifications") });
             data.push({ name: "note", value: getValueTinymce("note") });
             data.push({ name: "dataCategory", value: dataCategory });
-
+            data.push({ name: "dataTagSeo", value: dataTagSeo });
+            data.push({ name: "description_seo", value: getValueTinymce("description_seo") });
             $.ajax({
                 url: laroute.route('products.update'),
                 method: 'POST',

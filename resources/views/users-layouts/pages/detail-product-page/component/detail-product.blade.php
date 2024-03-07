@@ -44,7 +44,7 @@
                    @else
                    <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}</span>
                    @endif
-                   <h2 class="product-title">{{$dataDetailProduct["detail-product"]["name_product"]}}</h2>
+                   <h1 class="product-title">{{$dataDetailProduct["detail-product"]["name_product"]}}</h1>
                    {{-- <div class="product-rating">
                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span></div>
                    <a href="shop-details.html" class="woocommerce-review-link">(<span class="count">4</span> customer reviews)</a>
@@ -64,8 +64,8 @@
                        <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt=""
                                style="margin-bottom: 4px">:
 
-                           <a href="{{$item["shopee_url"]}}">
-                               {{$item["shopee_url"]}}
+                           <a href="{{$dataDetailProduct["detail-product"]["shopee_url"]}}">
+                               {{$dataDetailProduct["detail-product"]["shopee_url"]}}
                            </a>
                        </span>
 
