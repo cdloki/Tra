@@ -122,7 +122,7 @@ class SEORepository implements SEORepositoryInterface
                     $dataSEO['description'] = $dataProduct['note'];
                 }
                 if (!empty($dataProduct["title_seo_product"])){
-                    $dataSEO['title'] = $dataProduct['title_seo_product'];
+                    $dataSEO['title'] = "VIỆT LONG TRÀ - ".$dataProduct['title_seo_product'];
                 }
                 if (!empty($dataProduct["description_seo_product"])){
                     $dataSEO['description'] = $dataProduct['description_seo_product'];
