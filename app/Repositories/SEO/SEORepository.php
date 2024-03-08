@@ -74,7 +74,7 @@ class SEORepository implements SEORepositoryInterface
                     $dataPost = $this->tSEOPost->getOnePostWithType($type);
                 }
                 if (!empty($dataPost["title_seo_post"])){
-                    $dataSEO['title'] = $dataPost['title_seo_post'];
+                    $dataSEO['title'] = "VIỆT LONG TRÀ - ".$dataPost['title_seo_post'];
                 }
                 if (!empty($dataPost["description_seo_post"])){
                     $dataSEO['description'] = $dataPost['description_seo_post'];
@@ -94,7 +94,7 @@ class SEORepository implements SEORepositoryInterface
             case 'category':
                 $dataCategory = $this->tSEOCategory->getOneCategory($id);
                 if (!empty($dataCategory["title_seo_category"])){
-                    $dataSEO['title'] = $dataCategory['title_seo_category'];
+                    $dataSEO['title'] = "VIỆT LONG TRÀ - ".$dataCategory['title_seo_category'];
                 }
                 if (!empty($dataCategory["description_seo_category"])){
                     $dataSEO['description'] = $dataCategory['description_seo_category'];
