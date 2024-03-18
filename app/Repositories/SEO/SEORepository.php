@@ -148,6 +148,7 @@ class SEORepository implements SEORepositoryInterface
     public function renderHTMLSEO($data)
     {
         $html = "
+        <title>".$data["title"]."</title>
         <meta name='author' content='".$data["author"]."'>
         <meta name='google-signin-client_id' content=''>
         <meta name='title' content='".$data["title"]."' />

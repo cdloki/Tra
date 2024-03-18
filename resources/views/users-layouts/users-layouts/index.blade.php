@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{$Setting["title_website"]}}</title>
-    <meta name="description" content="{{$Setting["description_seo_website"]}}">
+    
+    <!-- <title>{{$Setting["title_website"]}}</title>
+    <meta name="description" content="{{$Setting["description_seo_website"]}}"> -->
+
     <meta name="author" content="Việt Long Trà">
     <meta property="og:locale" content="vi_vn" />
     <meta property="fb:app_id" content="" />
