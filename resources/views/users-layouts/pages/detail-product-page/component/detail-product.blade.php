@@ -2,26 +2,16 @@
            <div class="col-lg-6">
                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                    <div class="carousel-inner">
-                    @foreach ( $dataDetailProduct["detail-product"]["image_product"] as $key => $item)
-                       <div
-                       {{-- @dd($item["main_image"] == 1) --}}
-                       @if ($item["main_image"] == 1)
-                       class="carousel-item active"
-                       @else
-                       class="carousel-item"
-                       @endif
-                       >
-                           <img src="{{asset($item["url_image"])}}" class="d-block w-100"
-                               alt="image-slider-1" />
+                       @foreach ( $dataDetailProduct["detail-product"]["image_product"] as $key => $item)
+                       <div {{-- @dd($item["main_image"] == 1) --}} @if ($item["main_image"]==1) class="carousel-item active" @else class="carousel-item" @endif>
+                           <img src="{{asset($item["url_image"])}}" class="d-block w-100" alt="image-slider-1" />
                        </div>
-                    @endforeach
+                       @endforeach
                    </div>
-                   <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
-                       data-bs-slide="prev">
+                   <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                    </button>
-                   <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
-                       data-bs-slide="next">
+                   <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
                    </button>
                </div>
@@ -39,8 +29,7 @@
                <div class="product-about">
                    @if ( $dataDetailProduct["detail-product"]["cost"] != null &&
                    $dataDetailProduct["detail-product"]["price"] != null )
-                   <span
-                       class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}<del>{{$dataDetailProduct["detail-product"]["price"] . " VNĐ"}}</del></span>
+                   <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}<del>{{$dataDetailProduct["detail-product"]["price"] . " VNĐ"}}</del></span>
                    @else
                    <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}</span>
                    @endif
@@ -61,8 +50,7 @@
 
                    </div>
                    <div class="product_meta">
-                       <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt=""
-                               style="margin-bottom: 4px">:
+                       <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="" style="margin-bottom: 4px">:
 
                            <a href="{{$dataDetailProduct["detail-product"]["shopee_url"]}}">
                                {{$dataDetailProduct["detail-product"]["shopee_url"]}}
@@ -80,7 +68,8 @@
           <li class="nav-item" role="presentation"><a class="nav-link th-btn" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false">Product Description</a></li>
           <li class="nav-item" role="presentation"><a class="nav-link th-btn active" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="true">Customer Reviews</a></li>
        </ul> -->
-       <div class="tab-content" id="productTabContent">
+
+       <!-- <div class="tab-content" id="productTabContent">
            <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                {!! $dataDetailProduct["detail-product"]["description_product"] !!}
            </div>
@@ -90,13 +79,11 @@
                        <ul class="comment-list">
                            <li class="review th-comment-item">
                                <div class="th-post-comment">
-                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-1.jpg"
-                                           alt="Comment Author"></div>
+                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-1.jpg" alt="Comment Author"></div>
                                    <div class="comment-content">
                                        <h4 class="name">Adam Jhon</h4>
                                        <span class="commented-on"><i class="far fa-calendar"></i>22 April, 2023</span>
-                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
-                                               style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
+                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
                                                based on <span class="rating">1</span> customer rating</span></div>
                                        <p class="text">This product is very much qualityful and I love this working
                                            system and speed.</p>
@@ -105,13 +92,11 @@
                            </li>
                            <li class="review th-comment-item">
                                <div class="th-post-comment">
-                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-2.jpg"
-                                           alt="Comment Author"></div>
+                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-2.jpg" alt="Comment Author"></div>
                                    <div class="comment-content">
                                        <h4 class="name">Jusctin Dacon</h4>
                                        <span class="commented-on"><i class="far fa-calendar"></i>26 April, 2023</span>
-                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
-                                               style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
+                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
                                                based on <span class="rating">1</span> customer rating</span></div>
                                        <p class="text">They delivered the product in a few time. Product quality is also
                                            very good.</p>
@@ -120,13 +105,11 @@
                            </li>
                            <li class="review th-comment-item">
                                <div class="th-post-comment">
-                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-3.jpg"
-                                           alt="Comment Author"></div>
+                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-3.jpg" alt="Comment Author"></div>
                                    <div class="comment-content">
                                        <h4 class="name">Jacklin July</h4>
                                        <span class="commented-on"><i class="far fa-calendar"></i>26 April, 2023</span>
-                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
-                                               style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
+                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
                                                based on <span class="rating">1</span> customer rating</span></div>
                                        <p class="text">Their product and service is very satisfying. I highly recommend
                                            their services.</p>
@@ -135,13 +118,11 @@
                            </li>
                            <li class="review th-comment-item">
                                <div class="th-post-comment">
-                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-4.jpg"
-                                           alt="Comment Author"></div>
+                                   <div class="comment-avater"><img src="assets\img\blog\comment-author-4.jpg" alt="Comment Author"></div>
                                    <div class="comment-content">
                                        <h4 class="name">Adison Smith</h4>
                                        <span class="commented-on"><i class="far fa-calendar"></i>26 April, 2023</span>
-                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span
-                                               style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
+                                       <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5
                                                based on <span class="rating">1</span> customer rating</span></div>
                                        <p class="text">I am just in love with this product. Their service is also very
                                            good you can also try.</p>
@@ -158,15 +139,11 @@
                            <div class="form-group rating-select d-flex align-items-center">
                                <label>Your Rating</label>
                                <p class="stars"><span><a class="star-1" href="#">1</a> <a class="star-2" href="#">2</a>
-                                       <a class="star-3" href="#">3</a> <a class="star-4" href="#">4</a> <a
-                                           class="star-5" href="#">5</a></span></p>
+                                       <a class="star-3" href="#">3</a> <a class="star-4" href="#">4</a> <a class="star-5" href="#">5</a></span></p>
                            </div>
-                           <div class="col-12 form-group"><textarea placeholder="Write a Message"
-                                   class="form-control"></textarea> <i class="text-title far fa-pencil-alt"></i></div>
-                           <div class="col-md-6 form-group"><input type="text" placeholder="Your Name"
-                                   class="form-control"> <i class="text-title far fa-user"></i></div>
-                           <div class="col-md-6 form-group"><input type="text" placeholder="Your Email"
-                                   class="form-control"> <i class="text-title far fa-envelope"></i></div>
+                           <div class="col-12 form-group"><textarea placeholder="Write a Message" class="form-control"></textarea> <i class="text-title far fa-pencil-alt"></i></div>
+                           <div class="col-md-6 form-group"><input type="text" placeholder="Your Name" class="form-control"> <i class="text-title far fa-user"></i></div>
+                           <div class="col-md-6 form-group"><input type="text" placeholder="Your Email" class="form-control"> <i class="text-title far fa-envelope"></i></div>
                            <div class="col-12 form-group"><input id="reviewcheck" name="reviewcheck" type="checkbox">
                                <label for="reviewcheck">Save my name, email, and website in this browser for the next
                                    time I comment.<span class="checkmark"></span></label>
@@ -176,4 +153,4 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> -->

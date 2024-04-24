@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- <title>{{$Setting["title_website"]}}</title>
     <meta name="description" content="{{$Setting["description_seo_website"]}}"> -->
 
@@ -65,6 +65,15 @@
             font-size: inherit;
             font-weight: inherit;
         }
+
+        .product-about>.price {
+            font-size: 25px;
+            color: #dc3545;
+        }
+
+        .th-product .price {
+            color: #dc3545;
+        }
     </style>
 </head>
 
@@ -123,7 +132,7 @@
                         <div class="header-links">
                             <ul class="d-flex align-items-center">
                                 <li class="d-none d-sm-inline-block"><i class="fal fa-location-dot"></i>
-                                    <a target="_blank" href="https://maps.app.goo.gl/rMBAeNjajqxEsQ387">{{$Setting["address_website"]}}</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/2U68k62bXbjkujfD8">{{$Setting["address_website"]}}</a>
                                 </li>
                                 <li class="d-block d-lg-none">
                                     <div>
@@ -173,7 +182,7 @@
         </div>
         <div class="d-lg-none">
             <div class="m-2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.990379871989!2d108.220722!3d16.065989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142195c4e472cd9%3A0xfc80caf72101de77!2zVFLDgCBPT0xPTkcgLSDhuqRNIFThu6wgU0EgLSBU4bqgSSDEkMOAIE7hurRORw!5e0!3m2!1sen!2sus!4v1706032442263!5m2!1sen!2sus" style="border:0;width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.916495376298!2d108.21850557465963!3d16.069822484609706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218315ed7d079%3A0xb56d5fa713936cec!2zMTA0IE5ndXnhu4VuIENow60gVGhhbmgsIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1713945975374!5m2!1svi!2s" style="border:0;width: 100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="sticky-wrapper d-none d-lg-block">
