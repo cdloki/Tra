@@ -1,23 +1,27 @@
        <div class="row gx-60">
-           <div class="col-lg-6">
-               <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                   <div class="carousel-inner">
-                       @foreach ( $dataDetailProduct["detail-product"]["image_product"] as $key => $item)
-                       <div {{-- @dd($item["main_image"] == 1) --}} @if ($item["main_image"]==1) class="carousel-item active" @else class="carousel-item" @endif>
-                           <img src="{{asset($item["url_image"])}}" class="d-block w-100" alt="image-slider-1" />
-                       </div>
-                       @endforeach
+             <div class="col-lg-6">
+                   <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                         <div class="carousel-inner">
+                               @foreach ( $dataDetailProduct["detail-product"]["image_product"] as $key => $item)
+                               <div {{-- @dd($item["main_image"] == 1) --}} @if ($item["main_image"]==1)
+                                     class="carousel-item active" @else class="carousel-item" @endif>
+                                     <img src="{{asset($item["url_image"])}}" class="d-block w-100"
+                                           alt="image-slider-1" />
+                               </div>
+                               @endforeach
+                         </div>
+                         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                               data-bs-slide="prev">
+                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         </button>
+                         <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                               data-bs-slide="next">
+                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         </button>
                    </div>
-                   <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                   </button>
-                   <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                   </button>
-               </div>
-           </div>
+             </div>
 
-           <!-- <div class="col-lg-6">
+             <!-- <div class="col-lg-6">
                <div class="product-big-img">
                    <div class="img"><img
                            src="{{asset($dataDetailProduct["detail-product"]["image_product"][0]["url_image"])}}"
@@ -25,43 +29,44 @@
                    </div>
                </div>
            </div> -->
-           <div class="col-lg-6 align-self-center product-detail-right">
-               <div class="product-about">
-                   @if ( $dataDetailProduct["detail-product"]["cost"] != null &&
-                   $dataDetailProduct["detail-product"]["price"] != null )
-                   <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}<del>{{$dataDetailProduct["detail-product"]["price"] . " VNĐ"}}</del></span>
-                   @else
-                   <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}</span>
-                   @endif
-                   <h1 class="product-title">{{$dataDetailProduct["detail-product"]["name_product"]}}</h1>
-                   {{-- <div class="product-rating">
+             <div class="col-lg-6 align-self-center product-detail-right">
+                   <div class="product-about">
+                         @if ( $dataDetailProduct["detail-product"]["cost"] != null &&
+                         $dataDetailProduct["detail-product"]["price"] != null )
+                         <span
+                               class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}<del>{{$dataDetailProduct["detail-product"]["price"] . " VNĐ"}}</del></span>
+                         @else
+                         <span class="price">{{$dataDetailProduct["detail-product"]["cost"] . " VNĐ"}}</span>
+                         @endif
+                         <h1 class="product-title">{{$dataDetailProduct["detail-product"]["name_product"]}}</h1>
+                         {{-- <div class="product-rating">
                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span></div>
                    <a href="shop-details.html" class="woocommerce-review-link">(<span class="count">4</span> customer reviews)</a>
                 </div> --}}
-                   <p class="text">{!! $dataDetailProduct["detail-product"]["note"] !!}</p>
+                         <p class="text">{!! $dataDetailProduct["detail-product"]["note"] !!}</p>
 
 
-                   <div class="product_meta">
-                       <span>Danh Mục:
-                           @foreach ($dataDetailProduct["detail-product"]["category_product"] as $key => $item)
-                           <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
-                           @endforeach
-                       </span>
+                         <div class="product_meta">
+                               <span>Danh Mục:
+                                     @foreach ($dataDetailProduct["detail-product"]["category_product"] as $key =>
+                                     $item)
+                                     <a
+                                           href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                     @endforeach
+                               </span>
 
+                         </div>
+                         <div class="product_meta">
+                               <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}"
+                                           alt="" style="margin-bottom: 4px">:
+
+                                     <a href="{{$dataDetailProduct["detail-product"]["shopee_url"]}}">
+                                           {{$dataDetailProduct["detail-product"]["shopee_url"]}}
+                                     </a>
+                               </span>
+                         </div>
                    </div>
-                   <div class="product_meta">
-                       <span>Link Shoppe <img width="25" src="{{asset('user/img/icon/icon_shopee_32.png')}}" alt="" style="margin-bottom: 4px">:
-
-                           <a href="{{$dataDetailProduct["detail-product"]["shopee_url"]}}">
-                               {{$dataDetailProduct["detail-product"]["shopee_url"]}}
-                           </a>
-                       </span>
-
-                   </div>
-
-
-               </div>
-           </div>
+             </div>
        </div>
        <br><br>
        <!-- <ul class="nav product-tab-style1" id="productTab" role="tablist">
