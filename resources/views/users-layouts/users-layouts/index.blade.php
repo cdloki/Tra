@@ -111,7 +111,7 @@
                   <div class="th-mobile-menu">
                         <ul>
                               <li><a href="/">Trang chủ</a></li>
-                              <li class="menu-item-has-children"><a href="#">Danh mục</a>
+                              <li class="menu-item-has-children"><a href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
                                           @foreach ($menuCategory as $key => $item )
                                           <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
@@ -146,7 +146,7 @@
                                                                         <li><a href="/">Trang chủ</a></li>
 
                                                                         <li class="menu-item-has-children">
-                                                                              <a href="#">Danh mục</a>
+                                                                              <a href="#">Sản phẩm</a>
                                                                               <ul class="sub-menu">
                                                                                     @foreach ($menuCategory as $key =>
                                                                                     $item )
@@ -217,7 +217,7 @@
                                                 <ul>
                                                       <li><a href="/">Trang chủ</a></li>
                                                       <li class="menu-item-has-children">
-                                                            <a href="#">Danh mục</a>
+                                                            <a href="#">Sản phẩm</a>
                                                             <ul class="sub-menu">
                                                                   @foreach ($menuCategory as $key => $item )
                                                                   <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
@@ -293,7 +293,7 @@
                                     <div class="widget widget_nav_menu footer-widget">
                                           <h3 class="widget_title"><img
                                                       src="{{asset('user\img\theme-img\title_icon.svg')}}"
-                                                      alt="Icon">Danh mục</h3>
+                                                      alt="Icon">Sản phẩm</h3>
                                           <div class="menu-all-pages-container">
 
                                                 <ul class="menu">

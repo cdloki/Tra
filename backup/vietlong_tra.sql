@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 24, 2024 at 03:38 PM
--- Server version: 10.3.39-MariaDB-cll-lve
+-- Generation Time: May 04, 2024 at 12:36 AM
+-- Server version: 10.6.17-MariaDB-cll-lve
 -- PHP Version: 8.1.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -39,7 +39,7 @@ CREATE TABLE `banners` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `create_by_id` varchar(120) DEFAULT NULL,
   `last_modify_by_id` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `banners`
@@ -459,7 +459,9 @@ INSERT INTO `mapping_category_product` (`id`, `id_category`, `id_product`) VALUE
 (865, 12, 336),
 (866, 12, 337),
 (867, 12, 335),
-(868, 12, 318);
+(868, 12, 318),
+(869, 12, 338),
+(870, 12, 339);
 
 -- --------------------------------------------------------
 
@@ -1173,7 +1175,9 @@ INSERT INTO `mapping_product_image` (`id`, `id_product`, `main_image`, `url_imag
 (1880, 335, 1, '/storage/files/sanpham/66261ba76946e.jpg'),
 (1881, 318, 1, '/storage/files/sanpham/AM_TU_SA/662387558dbf2.jpg'),
 (1882, 318, 0, '/storage/files/sanpham/AM_TU_SA/66238755004fa.jpg'),
-(1883, 318, 0, '/storage/files/sanpham/AM_TU_SA/6623875020a5d.jpg');
+(1883, 318, 0, '/storage/files/sanpham/AM_TU_SA/6623875020a5d.jpg'),
+(1884, 338, 1, '/storage/files/sanpham/66290371b904a.jpg'),
+(1885, 339, 1, '/storage/files/sanpham/6629053875b7c.jpg');
 
 -- --------------------------------------------------------
 
@@ -1188,7 +1192,7 @@ CREATE TABLE `mapping_role_user` (
   `active` tinyint(4) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1650,7 +1654,9 @@ INSERT INTO `products` (`id`, `code_product`, `name_product`, `url_product`, `im
 (334, 'A43', 'Ấm Thạch Biều Thanh Khôi Đoạn Nê - Sơn Thủy', 'am-thach-bieu-thanh-khoi-doan-ne---son-thuy', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm<br />Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang</p>', NULL, NULL, NULL, '<p>Ấm Thạch Biều Thanh Kh&ocirc;i Đoạn N&ecirc;&nbsp;</p>\n<p>Họa tiết th&acirc;n ấm trước: Sơn thủy</p>\n<p>Họa tiết th&acirc;n ấm sau: Chữ H&aacute;n</p>\n<p>Dung t&iacute;ch: 220ml</p>\n<p>Lọc: 9 lỗ</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>', NULL, NULL, '2,000,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pmTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang', 1, '2024-04-22 01:08:55', '2024-04-22 01:13:06', NULL, NULL),
 (335, 'C96', 'ẤM ĐỨC TRUNG NÊ HƯNG- NGHỆ NHÂN HÀ NGHIỆP TÚ - DUNG TÍCH 165ML', 'am-duc-trung-ne-hung--nghe-nhan-ha-nghiep-tu---dung-tich-165ml', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm<br />Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang</p>', NULL, NULL, NULL, '<p>Ấm Đức Trung- Đ&agrave;i sen</p>\n<p>Dung t&iacute;ch 165ml</p>\n<p>Lọc: Tổ ong</p>\n<p>Nghệ nh&acirc;n: H&agrave; Nghiệp T&uacute;</p>\n<p>&nbsp;</p>', NULL, NULL, '2,800,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pmTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang', 1, '2024-04-22 01:12:57', '2024-04-23 09:01:38', NULL, NULL),
 (336, 'D04', 'ẤM TỬ SA DUNG THIÊN TỬ NÊ - DUNG TÍCH 220 ML', 'am-tu-sa-dung-thien-tu-ne---dung-tich-220-ml', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm</p>\n<p>Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang &nbsp;&nbsp;</p>', NULL, NULL, NULL, '<p>Dung t&iacute;ch: 220 ml</p>\n<p>Lọc: 9 lỗ</p>\n<p>D&aacute;ng ấm: Dung thi&ecirc;n</p>\n<p>chất đất: tử sa</p>', NULL, NULL, '1,500,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pm\nTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang &nbsp;&nbsp;', 1, '2024-04-22 04:43:25', '2024-04-23 03:22:18', NULL, NULL),
-(337, 'D08', 'ẤM KÍNH NGOÃ CHU NÊ - NGHỆ NHÂN TẠ DÂN HOÀI', 'am-kinh-ngoa-chu-ne---nghe-nhan-ta-dan-hoai', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm</p>\n<p>Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang &nbsp;&nbsp;</p>', NULL, NULL, NULL, '<p>dung t&iacute;ch: 190 ml</p>\n<p>Nghệ nh&acirc;n: Tạ D&acirc;n Ho&agrave;i</p>\n<p>Lọc: 9 lỗ&nbsp;</p>\n<p>&nbsp;</p>', NULL, NULL, '1,800,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pm\nTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang &nbsp;&nbsp;', 1, '2024-04-22 05:02:25', '2024-04-23 03:22:23', NULL, NULL);
+(337, 'D08', 'ẤM KÍNH NGOÃ CHU NÊ - NGHỆ NHÂN TẠ DÂN HOÀI', 'am-kinh-ngoa-chu-ne---nghe-nhan-ta-dan-hoai', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm</p>\n<p>Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang &nbsp;&nbsp;</p>', NULL, NULL, NULL, '<p>dung t&iacute;ch: 190 ml</p>\n<p>Nghệ nh&acirc;n: Tạ D&acirc;n Ho&agrave;i</p>\n<p>Lọc: 9 lỗ&nbsp;</p>\n<p>&nbsp;</p>', NULL, NULL, '1,800,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pm\nTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang &nbsp;&nbsp;', 1, '2024-04-22 05:02:25', '2024-04-23 03:22:23', NULL, NULL),
+(338, '17', 'Ấm thạch biều tử nê điếu sơn thủy- 160ml', '-am-thach-bieu-tu-ne-dieu-son-thuy--160ml', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm<br />Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang</p>', NULL, NULL, NULL, '<div dir=\"ltr\">\n<div class=\"input-box\" spellcheck=\"false\">\n<div id=\"waffle-rich-text-editor\" class=\"cell-input editable\" dir=\"ltr\" tabindex=\"0\" role=\"combobox\" contenteditable=\"true\" aria-autocomplete=\"list\" aria-label=\"B13\">Ấm thạch biều tử n&ecirc; điếu sơn thủy</div>\n</div>\n</div>\n<div>Dung t&iacute;ch: 160ml</div>\n<div>Lọc: 9 lỗ</div>\n<div>&nbsp;</div>', NULL, NULL, '900,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pmTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang', 1, '2024-04-24 06:05:50', '2024-04-24 06:14:00', NULL, NULL),
+(339, '83', 'Ấm Tiểu Đại Bân Như Ý- Dung tích 125ml', 'am-tieu-dai-ban-nhu-y--dung-tich-125ml', NULL, '<p>Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng<br />164a Nguyễn Ch&iacute; Thanh - Đ&agrave; Nẵng<br />Sdt/Zalo: 0939 222 522<br />Website: https://vietlongtra.com<br />Hoạt động: 9h00am-21:00pm<br />Tr&agrave; ngon tại Đ&agrave; Nẵng<br />Ấm Tử Sa tại Đ&agrave; Nẵng<br />Tr&agrave; Đ&agrave; Nẵng<br />Ấm tr&agrave; Đ&agrave; Nẵng<br />Tr&agrave; Olong tại Đ&agrave; Nẵng<br />Tr&agrave; xanh tại Đ&agrave; Nẵng<br />#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;<br />#vietlongtradanang</p>', NULL, NULL, NULL, '<p>Ấm Tiểu Đại B&acirc;n Như &Yacute;&nbsp;</p>\n<p>Chất đất: Đại Hồng B&agrave;o</p>\n<p>Dung t&iacute;ch: 125ml</p>\n<p>Lọc: Hoa mai</p>\n<p>&nbsp;</p>', NULL, NULL, '1,000,000', NULL, NULL, NULL, NULL, 'Tất cả sản phẩm đều c&oacute; sẵn v&agrave; được trưng b&agrave;y tại cửa h&agrave;ng164a Nguyễn Ch&iacute; Thanh - Đ&agrave; NẵngSdt/Zalo: 0939 222 522Website: https://vietlongtra.comHoạt động: 9h00am-21:00pmTr&agrave; ngon tại Đ&agrave; NẵngẤm Tử Sa tại Đ&agrave; NẵngTr&agrave; Đ&agrave; NẵngẤm tr&agrave; Đ&agrave; NẵngTr&agrave; Olong tại Đ&agrave; NẵngTr&agrave; xanh tại Đ&agrave; Nẵng#trangontaidanang &nbsp;#amtratusataidanang #traquatangtaidanang #traoolongtaidanang&nbsp;#vietlongtradanang', 1, '2024-04-24 06:13:43', '2024-04-24 06:13:55', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1665,7 +1671,7 @@ CREATE TABLE `roles` (
   `description_role` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1726,7 +1732,7 @@ CREATE TABLE `settings` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `create_by_id` varchar(120) DEFAULT NULL,
   `last_modify_by_id` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `settings`
@@ -1755,7 +1761,7 @@ CREATE TABLE `sliders` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `create_by_id` varchar(120) DEFAULT NULL,
   `last_modify_by_id` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `sliders`
@@ -1784,7 +1790,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `create_by_id` varchar(120) DEFAULT NULL,
   `last_modify_by_id` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -1944,13 +1950,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `mapping_category_product`
 --
 ALTER TABLE `mapping_category_product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=869;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=871;
 
 --
 -- AUTO_INCREMENT for table `mapping_product_image`
 --
 ALTER TABLE `mapping_product_image`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1884;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1886;
 
 --
 -- AUTO_INCREMENT for table `mapping_role_user`
@@ -1980,7 +1986,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=340;
 
 --
 -- AUTO_INCREMENT for table `roles`
