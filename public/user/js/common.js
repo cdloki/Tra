@@ -58,7 +58,7 @@ let getHostName = function () {
 
 function getDataProduct(data) {
 
-    console.log(data)
+    // console.log(data)
     if (data.length == 0) {
         document.getElementById('dropdown_search').classList.remove("show");
         document.getElementById('list-product').innerHTML = '';
