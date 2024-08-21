@@ -34,11 +34,15 @@ let result = document.querySelector('#input_search');
 
 
 $('#input_search').keyup(delay(function (e) {
-    getDataProduct();
+    let data = document.querySelector('#input_search').value;
+    document.querySelector('#input_search_mobie').value = data;
+    getDataProduct(data);
 }, 500));
 
 $('#input_search_mobie').keyup(delay(function (e) {
-    getDataProduct();
+    let data = document.querySelector('#input_search_mobie').value;
+    document.querySelector('#input_search').value = data;
+    getDataProduct(data);
 }, 500));
 
 let getHostName = function () {
@@ -52,8 +56,9 @@ let getHostName = function () {
 //     console.log('Time elapsed!', this.value);
 // }, 500));
 
-function getDataProduct() {
-    let data = document.querySelector('#input_search').value;
+function getDataProduct(data) {
+
+    console.log(data)
     if (data.length == 0) {
         document.getElementById('dropdown_search').classList.remove("show");
         document.getElementById('list-product').innerHTML = '';

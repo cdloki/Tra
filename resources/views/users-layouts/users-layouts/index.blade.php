@@ -194,6 +194,22 @@
                                                                         alt="Logo"></a></div>
                                                 </li>
                                           </ul>
+                                          <ul class="d-flex align-items-center">
+                                            <div class="dropdown-search" id="dropdown_search_mobie">
+                                                <form class="header-search" style="background: #fff; color:black;" id="form-submit-mobie">
+                                                    <input class="input-search" autocomplete="off" id="input_search_mobie" placeholder="Nhập tên sản phẩm ..." type="text">
+
+                                                    <div class="search-list">
+                                                        <div id="list-product-mobie">
+                                                            <div class="product-search">
+                                                                <a>Không tìm thấy sản phẩm !</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                          </ul>
                                     </div>
                               </div>
                         </div>
