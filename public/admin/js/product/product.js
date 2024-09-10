@@ -15,7 +15,7 @@ let Product = {
         // $("#title_seo").val(value);
     },
 
-    renderImage: function (id) {
+    renderImage: function (id,unique) {
         let cout = 0;
         $.ajax({
             url: laroute.route("mapping.mappingProductImage"),
@@ -23,20 +23,24 @@ let Product = {
             data: { id_product: id },
             success: function (res) {
                 if (res != null) {
+                    cout = 0;
                     res.forEach(function (res) {
-                        cout = cout + 1;
                         renderDataImage.push({
                             id: cout,
                             urlImage: res.url_image,
                             name: "Image" + cout,
                             main: res.main_image
                         });
+                        cout = cout + 1;
                     });
                     renderHtmlImage("review", renderDataImage)
                 }
             },
         });
     },
+
+
+
 
     validateCode: function (o) {
         let str = validaeCode($(o).val());
@@ -74,13 +78,14 @@ let Product = {
             data.push({ name: "dataTagSeo", value: dataTagSeo });
             data.push({ name: "description_seo", value: getValueTinymce("description_product") });
             data.push({ name: "description_product", value: getValueTinymce("description_product") });
+            // data.push({ name: "image_product", value: objectToArray(renderDataImage) });
+            data.push({ name: "image_product", value: JSON.stringify(renderDataImage) });
 
             // data.push({ name: "gift", value: getValueTinymce("gift") });
             // data.push({ name: "element_product", value: getValueTinymce("element_product") });
             // data.push({ name: "specifications", value: getValueTinymce("specifications") });
             data.push({ name: "note", value: getValueTinymce("note") });
             data.push({ name: "dataCategory", value: dataCategory });
-
             $.ajax({
                 url: laroute.route('products.store'),
                 method: 'POST',
@@ -282,6 +287,8 @@ let Product = {
             data.push({ name: "dataCategory", value: dataCategory });
             data.push({ name: "dataTagSeo", value: dataTagSeo });
             data.push({ name: "description_seo", value: getValueTinymce("description_seo") });
+            data.push({ name: "image_product", value: JSON.stringify(renderDataImage) });
+
             $.ajax({
                 url: laroute.route('products.update'),
                 method: 'POST',

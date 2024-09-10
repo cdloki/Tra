@@ -109,6 +109,8 @@ Route::group(['middleware' => ['checkLogin']], function () {
                 Route::post('/change-status', 'changeStatus')->name('products.change-status');
                 Route::post('/remove', 'remove')->name('products.remove');
 
+                // Route::post('/updateimg', 'updateimg')->name('products.updateimg');
+
 
             });
         });

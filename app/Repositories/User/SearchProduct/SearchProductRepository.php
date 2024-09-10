@@ -30,6 +30,7 @@ class SearchProductRepository implements SearchProductRepositoryInterface
         // $key = $loop->index;
         foreach ( $dataProduct as $key => $item) {
             $filter["id_product"] = $item["id"];
+            $filter["main_image"] = 1;
             $dataMapping = $this->tMappingProductImage->getListMappingProductImage($filter)->first();
             if(!empty($dataMapping)){
                 $dataProduct[$key]["dataImage"] = $dataMapping->url_image;

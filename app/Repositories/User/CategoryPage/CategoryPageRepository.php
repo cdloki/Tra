@@ -46,12 +46,28 @@ class CategoryPageRepository implements CategoryPageRepositoryInterface
         return $data;
     }
 
+    public function getAvatarImageProduct($id){
+        $filter["id_product"] = $id;
+        $filter["main_image"] = 1;
+
+        $data = $this->tMappingProductImage->getListMappingProductImage($filter);
+        if ($data->isEmpty()) {
+            $data[0] = [
+            "id" => null,
+            "id_product" => null,
+            "main_image" => null,
+            "url_image" => null,
+          ];
+        }
+        return $data;
+    }
+
     public function getDataProduct($id)
     {
 
         $data = $this->getProductWithCategoryId($id);
         foreach($data as $key => $item) {
-            $data[$key]["image_product"] = $this->getImageProduct($item['id_product'])->first()["url_image"];
+            $data[$key]["image_product"] = $this->getAvatarImageProduct($item['id_product'])->first()["url_image"];
         }
         return $data;
     }

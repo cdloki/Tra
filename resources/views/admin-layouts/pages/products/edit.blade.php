@@ -1,6 +1,7 @@
 
 @extends('admin-layouts.pages.products.index')
 @section('element')
+
 <div class="row">
     <div class="col-12">
         <form role="form" id="form-submit">
@@ -266,7 +267,7 @@
 <script src="{{asset('admin/js/product/product.js')}}"></script>
 <script >
 let id = $("#id_product").val();
-
+let unique = $("#unique").val();
 renderSelect("categorys","#id_category","multiple","edit",id)
 Product.renderImage(id)
 let keyword_seo_product = $("#keyword_seo_product").val();

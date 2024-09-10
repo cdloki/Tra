@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProductsRequest;
 
 use App\Repositories\Admin\Product\ProductRepositoryInterface;
 // use App\Repositories\Room\RoomRepositoryInterface;
+use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -81,6 +82,17 @@ class ProductsController  extends Controller
         $id = $request->id;
         return $this->rproduct->removeProduct($id);
     }
+    // public function updateimg(Request $request)
+    // {
+    //     dd($request->all());
+        // $dataProduct = $this->rproduct->getDetailproduct($id);
+        // $unique = Carbon::now()->format('YmdHisu');
+        // return view('admin-layouts.pages.products.edit',
+        //     [
+        //     'dataProduct' => $dataProduct,
+        //     'unique' => $unique,
+        //     ]);
+    // }
 
 
 }

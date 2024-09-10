@@ -69,16 +69,16 @@
              </div>
        </div>
        <br><br>
-       <!-- <ul class="nav product-tab-style1" id="productTab" role="tablist">
-          <li class="nav-item" role="presentation"><a class="nav-link th-btn" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false">Product Description</a></li>
-          <li class="nav-item" role="presentation"><a class="nav-link th-btn active" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="true">Customer Reviews</a></li>
-       </ul> -->
+       <ul class="nav product-tab-style1" id="productTab" role="tablist">
+          {{-- <li class="nav-item" role="presentation"><a class="nav-link th-btn active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false">Mô tả sản phẩm</a></li> --}}
+          {{-- <li class="nav-item" role="presentation"><a class="nav-link th-btn " id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="true">Customer Reviews</a></li> --}}
+       </ul>
 
-       <!-- <div class="tab-content" id="productTabContent">
+        <div class="tab-content" id="productTabContent">
            <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                {!! $dataDetailProduct["detail-product"]["description_product"] !!}
            </div>
-           <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">
+           {{-- <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">
                <div class="woocommerce-Reviews">
                    <div class="th-comments-wrap">
                        <ul class="comment-list">
@@ -157,5 +157,5 @@
                        </div>
                    </div>
                </div>
-           </div>
-       </div> -->
+           </div> --}}
+       </div>

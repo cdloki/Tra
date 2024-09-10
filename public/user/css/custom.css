@@ -201,3 +201,24 @@ body {
     border: none !important;
 
 }
+
+.header-search{
+ background: transparent !important;
+}
+.header-search input{
+ color: #000 !important;
+}
+.header-search input::placeholder{
+ color: #555;
+}
+#input_search_mobie {
+    margin-top: 5px;
+}
+#dropdown_search_mobie{
+       display: none;
+    }
+@media only screen and (max-width: 1024px){
+    #dropdown_search_mobie{
+       display: block;
+    }
+}

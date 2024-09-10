@@ -99,7 +99,7 @@ var lfm = function (id, type, options) {
 
                 target_input.dispatchEvent(new Event('change'));
                 if (button.getAttribute('data-preview') != null) {
-                    renderArrayImage(items)
+                    renderArrayImage(items, creat = true)
                     renderHtmlImage("review", renderDataImage)
 
                 }
@@ -109,59 +109,65 @@ var lfm = function (id, type, options) {
 };
 
 
-function renderArrayImage(items) {
+function renderArrayImage(items, creat = true) {
     renderDataImage = [];
     let cout = 0;
     items.forEach(function (item) {
-        cout = cout + 1;
-        renderDataImage.push({
-            id: cout,
-            urlImage: item.url,
-            name: item.name,
-            main: cout === 1 ? 1 : 0
-        });
-    });
-}
+        if (creat = true){
 
-function creatSiteMap() {
-
-    $.ajax({
-        url: laroute.route('creat-site-map'),
-        method: 'GET',
-        success: function (res) {
-            if (res.error == false) {
-                Swal.fire({
-                    title: res.message,
-                    icon: 'success',
-                    confirmButtonText: 'Xác nhận',
-                    // width: '400px',
-                    timer: 2000,
-                })
-            } else {
-                Swal.fire({
-                    title: res.message,
-                    icon: 'error',
-                    confirmButtonText: 'Xác nhận',
-                    width: '400px',
-                    timer: 2000,
-                })
-            }
-        },
-        error: function (res) {
-            Swal.fire({
-                title: "Cập nhật thất bại!",
-                // html: convertErrorsToHTML(res),
-                icon: 'error',
-                confirmButtonText: 'Xác nhận',
-                width: '400px',
-                timer: 2000,
-            })
+            renderDataImage.push({
+                id: cout,
+                urlImage: item.url,
+                name: item.name,
+                main: cout === 1 ? 1 : 0,
+            });
         }
+        if (creat != true){
+
+            renderDataImage.push({
+                id: cout,
+                urlImage: item.url,
+                name: item.name,
+                main: item.main == null ? 0 : item.main
+            });
+        }
+        cout = cout + 1;
+
     });
+
 }
+function objectToArray(obj) {
+    var data = [];
+    var cout = 0;
+    obj.forEach(function (item) {
+        data[cout] = [
+            id = cout,
+            urlImage = item.url,
+            nameImage = item.name,
+            main = item.main
+        ]
+        cout = cout + 1;
+    });
+    return data;
+}
+
+function changeCheckImage(o) {
+    renderDataImage.forEach(function (item) {
+        renderDataImage[item.id]['main'] = 0
+    });
+    renderDataImage[o]['main'] = 1
+    renderHtmlImage("review", renderDataImage)
+
+}
+
 
 function renderRemoveImage(o) {
     renderDataImage = renderDataImage.filter(e => e.id !== o)
+    let cout = 0;
+    renderDataImage.forEach(function (item) {
+        renderDataImage[cout]['id'] = cout
+        cout = cout + 1;
+    });
     renderHtmlImage("review", renderDataImage)
 }
 function renderHtmlImage(target_preview, items) {
@@ -169,7 +175,15 @@ function renderHtmlImage(target_preview, items) {
     let dataImage;
     target_preview.innerHTML = ""
     let dataInput;
+    let checked;
     items.forEach(function (item) {
+
+        if (item.main == 1) {
+            checked = "checked";
+        } else {
+            checked = "";
+        }
+
         dataImage = ` <div class="uppy-Dashboard-Item is-resumable" id="uppy_uppy-aa9e3d0d07ab512a2175a2f1476f7a1b/png-1e-image/png-738371-1648910059683" role="listitem">
         <div class="uppy-Dashboard-Item-preview">
             <div class="uppy-Dashboard-Item-previewInnerWrap" style="background-color: rgb(104, 109, 224);">
@@ -184,7 +198,9 @@ function renderHtmlImage(target_preview, items) {
                 </div>
             </div>
              <div class="uppy-Dashboard-Item-actionWrapper" style="margin-left: 10px">
-             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+             <input class="form-check-input" type="radio"  value="option1" ${checked}
+             onclick="changeCheckImage(${item.id})"
+             >
             </div>
             <div class="uppy-Dashboard-Item-actionWrapper">
                 <button class="uppy-u-reset uppy-Dashboard-Item-action uppy-Dashboard-Item-action--remove" type="button" aria-label="Remove file" title="Remove file"
@@ -201,7 +217,7 @@ function renderHtmlImage(target_preview, items) {
         target_preview.innerHTML += dataImage
 
         if (dataInput != null) {
-            dataInput += "," + item.urlImage;
+            dataInput += "," + ""+item.urlImage;
         } else {
             dataInput += item.urlImage;
 
@@ -425,3 +441,4 @@ function validaeCode(str) {
         .replace(/!|#|$|%|^|;|'|"|@|{|}|-|\-|&|=|,/g, "")
         .replace(/\`|\~|\!|\@|\#|\||\$|\%|\^|\&|\*|\(|\)|\+|\=|\,|\.|\/|\?|\>|\<|\'|\"|\:|\;|_/gi, '');
 }
+

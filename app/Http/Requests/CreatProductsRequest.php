@@ -41,10 +41,10 @@ class CreatProductsRequest extends FormRequest
     public function messages() {
         $data = \request()->all();
         $messages = [
-            'code_product.required' => __('Mã phòng không được để trống.'),
-            'code_product.max' => __('Mã phòng không được dài hơn 100 kí tự.'),
-            'name_product.required' => __('Tên phòng không được để trống.'),
-            'name_product.max' => __('Tên phòng không được dài hơn 100 kí tự.'),
+            'code_product.required' => __('Mã sản phẩm không được để trống.'),
+            'code_product.max' => __('Mã sản phẩm không được dài hơn 100 kí tự.'),
+            'name_product.required' => __('Tên sản phẩm không được để trống.'),
+            'name_product.max' => __('Tên sản phẩm không được dài hơn 100 kí tự.'),
             'url_product.unique' => __('Url đã được tạo trước đó.'),
         ];
         return $messages;

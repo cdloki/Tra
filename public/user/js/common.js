@@ -82,7 +82,6 @@ function getDataProduct(data) {
                 data: data
             },
             success: function (res) {
-                console.log(res)
                 if (res.error != false && res.length != 0) {
                     res.forEach(function (item) {
                         html = `

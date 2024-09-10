@@ -32,6 +32,7 @@ class ProductRepository implements ProductRepositoryInterface
         // $key = $loop->index;
         foreach ( $dataProduct as $key => $item) {
             $filter["id_product"] = $item["id"];
+            $filter["main_image"] = 1;
             $dataMapping = $this->tMappingProductImage->getListMappingProductImage($filter)->toarray();
             $dataProduct[$key]["dataImage"] = $dataMapping;
         }
@@ -83,13 +84,13 @@ class ProductRepository implements ProductRepositoryInterface
             }
 
             if ($data["image_product"] != null) {
-                $urlImage = explode(',',$data["image_product"]);
+                $data["image_product"] = json_decode($data["image_product"],true);
                 $cout = 0;
-                foreach ($urlImage as $item) {
+                foreach ($data["image_product"] as $item) {
                     $dataMappingImage[] = [
-                        "url_image" => $item,
+                        "url_image" => $item["urlImage"],
                         "id_product" => $id,
-                        "main_image" => $cout > 0 ? 0 : 1
+                        "main_image" => $item["main"]
                     ];
                     $cout = $cout + 1;
                 }
@@ -167,6 +168,7 @@ class ProductRepository implements ProductRepositoryInterface
 
     public function updateProduct($data)
     {
+        // dd($data);
 
         DB::beginTransaction();
         try {
@@ -213,14 +215,13 @@ class ProductRepository implements ProductRepositoryInterface
             // Xóa ảnh & update ảnh mới
             $this->tMappingProductImage->removeWithIdProduct($data['id']);
             if (!empty($data["image_product"])) {
-
-                $urlImage = explode(',',$data["image_product"]);
+                $data["image_product"] = json_decode($data["image_product"],true);
                 $cout = 0;
-                foreach ($urlImage as $item) {
+                foreach ($data["image_product"] as $item) {
                     $dataMappingImage[] = [
-                        "url_image" => $item,
+                        "url_image" => $item["urlImage"],
                         "id_product" => $data['id'],
-                        "main_image" => $cout > 0 ? 0 : 1
+                        "main_image" => $item["main"]
                     ];
                     $cout = $cout + 1;
                 }
