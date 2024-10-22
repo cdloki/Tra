@@ -159,7 +159,41 @@ function changeCheckImage(o) {
     renderHtmlImage("review", renderDataImage)
 
 }
-
+function creatSiteMap() {
+    $.ajax({
+        url: laroute.route('creat-site-map'),
+        method: 'GET',
+        success: function (res) {
+            if (res.error == false) {
+                Swal.fire({
+                    title: res.message,
+                    icon: 'success',
+                    confirmButtonText: 'Xác nhận',
+                    // width: '400px',
+                    timer: 2000,
+                })
+            } else {
+                Swal.fire({
+                    title: res.message,
+                    icon: 'error',
+                    confirmButtonText: 'Xác nhận',
+                    width: '400px',
+                    timer: 2000,
+                })
+            }
+        },
+        error: function (res) {
+            Swal.fire({
+                title: "Cập nhật thất bại!",
+                // html: convertErrorsToHTML(res),
+                icon: 'error',
+                confirmButtonText: 'Xác nhận',
+                width: '400px',
+                timer: 2000,
+            })
+        }
+    })
+}
 
 function renderRemoveImage(o) {
     renderDataImage = renderDataImage.filter(e => e.id !== o)

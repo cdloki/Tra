@@ -33,7 +33,7 @@
                                 <td class="text">{{$item["name_post"]}}</td>
                                 <td><img src="{{asset($item["image_post"])}}" alt="{{$item["image_post"] == null ? "Không tìm thấy ảnh" : asset($item["image_room"])}}" class="image-table rounded"></td>
                                 <td class="text">{!! $item["content_post"] !!}</td>
-                                <td ><a href="{{asset($item["url_post"])}}">{{asset($item["url_post"])}}</a></td>
+                                <td ><a href="{{asset("bai-viet/" . $item["url_post"])}}">{{asset("bai-viet/" . $item["url_post"])}}</a></td>
                                 <td>
                                     <a class="font-30" onclick="DiscountPost.changeStatus(this,{{$item['id']}})">
                                         <i class="{{$item["status"] == 0 ? "mdi mdi-play": "mdi mdi-pause"}}"></i>
