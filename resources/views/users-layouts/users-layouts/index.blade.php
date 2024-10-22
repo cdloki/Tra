@@ -20,14 +20,14 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id={{$Setting["googleanaly_social_website"]}}">
       </script>
       <script>
-      window.dataLayer = window.dataLayer || [];
+            window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-            dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+            function gtag() {
+                  dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-      gtag('config', '{{$Setting["googleanaly_social_website"]}}');
+            gtag('config', '{{$Setting["googleanaly_social_website"]}}');
       </script>
 
       @yield('SEO')
@@ -59,23 +59,29 @@
       <link href="https://fonts.cdnfonts.com/css/utm-avo" rel="stylesheet">
 
       <style>
-      body {
-            font-family: 'UTM Avo', sans-serif;
-      }
+            body {
+                  font-family: 'UTM Avo', sans-serif;
+            }
 
-      .slider-area span {
-            font-size: inherit;
-            font-weight: inherit;
-      }
+            .slider-area span {
+                  font-size: inherit;
+                  font-weight: inherit;
+            }
 
-      .product-about>.price {
-            font-size: 25px;
-            color: #dc3545;
-      }
+            .product-about>.price {
+                  font-size: 25px;
+                  color: #dc3545;
+            }
 
-      .th-product .price {
-            color: #dc3545;
-      }
+            .th-product .price {
+                  color: #dc3545;
+            }
+
+            .product-search a {
+                  margin-left: 20px;
+                  color: #198754;
+                  font-weight: 500;
+            }
       </style>
 </head>
 
@@ -195,19 +201,19 @@
                                                 </li>
                                           </ul>
                                           <ul class="d-flex align-items-center">
-                                            <div class="dropdown-search" id="dropdown_search_mobie">
-                                                <form class="header-search" style="background: #fff; color:black;" id="form-submit-mobie">
-                                                    <input class="input-search" autocomplete="off" id="input_search_mobie" placeholder="Nhập tên sản phẩm ..." type="text">
+                                                <div class="dropdown-search" id="dropdown_search_mobie">
+                                                      <form class="header-search" style="background: #fff; color:black;" id="form-submit-mobie">
+                                                            <input class="input-search" autocomplete="off" id="input_search_mobie" placeholder="Nhập tên sản phẩm ..." type="text">
 
-                                                    <div class="search-list">
-                                                        <div id="list-product-mobie">
-                                                            <div class="product-search">
-                                                                <a>Không tìm thấy sản phẩm !</a>
+                                                            <div class="search-list">
+                                                                  <div id="list-product-mobie">
+                                                                        <div class="product-search">
+                                                                              <a>Không tìm thấy sản phẩm !</a>
+                                                                        </div>
+                                                                  </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                                      </form>
+                                                </div>
 
                                           </ul>
                                     </div>
