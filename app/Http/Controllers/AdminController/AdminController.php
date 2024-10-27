@@ -7,11 +7,42 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Repositories\LoginUsers\LoginUsersRepositoryInterface;
+use App\Repositories\Admin\Category\CategoryRepositoryInterface;
+use App\Repositories\Admin\Product\ProductRepositoryInterface;
+use App\Repositories\Admin\DiscountPost\DiscountPostRepositoryInterface;
+
 class AdminController extends Controller
 {
+    protected $rDiscountPost;
+    protected $rCategory;
+
+    public function __construct(
+
+        DiscountPostRepositoryInterface $rDiscountPost,
+        CategoryRepositoryInterface $rCategory,
+        ProductRepositoryInterface $rproduct
+    )
+    {
+        $this->rDiscountPost = $rDiscountPost;
+        $this->rCategory = $rCategory;
+        $this->rproduct = $rproduct;
+
+    }
+
     public function index()
     {
-        return view('admin-layouts.pages.dashboard');
+
+        $filter = null;
+        $dataCategory = $this->rCategory->getListCategory($filter)->count();
+        $dataProduct = $this->rproduct->countListProduct($filter)->count();
+        $dataDiscountPost = $this->rDiscountPost->getListDiscountPost($filter)->count();
+        return view('admin-layouts.pages.dashboard',
+            [
+            'dataCategory' => $dataCategory,
+            'dataProduct' => $dataProduct,
+            'dataDiscountPost' => $dataDiscountPost,
+
+        ]);
     }
 
     public function login()

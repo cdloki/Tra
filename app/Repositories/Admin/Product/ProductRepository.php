@@ -26,6 +26,12 @@ class ProductRepository implements ProductRepositoryInterface
         $this->tMappingProductImage = $tMappingProductImage;
     }
 
+
+    public function countListProduct($filter)
+    {
+        $dataProduct = $this->tProduct->getListProduct($filter);
+        return $dataProduct;
+    }
     public function getListProduct($filter)
     {
         $dataProduct = $this->tProduct->getListProduct($filter)->toarray();
