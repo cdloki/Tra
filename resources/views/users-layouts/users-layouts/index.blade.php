@@ -120,7 +120,9 @@
                               <li class="menu-item-has-children"><a href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
                                           @foreach ($menuCategory as $key => $item )
-                                          <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                          <li>
+                                            <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
+                                            <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                           </li>
                                           @endforeach
                                     </ul>
@@ -154,9 +156,10 @@
                                                                         <li class="menu-item-has-children">
                                                                               <a href="#">Sản phẩm</a>
                                                                               <ul class="sub-menu">
-                                                                                    @foreach ($menuCategory as $key =>
-                                                                                    $item )
-                                                                                    <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                                                                    @foreach ($menuCategory as $key => $item )
+                                                                                    <li>
+                                                                                        <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
+                                                                                        <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                                                                     </li>
                                                                                     @endforeach
                                                                               </ul>
@@ -242,7 +245,9 @@
                                                             <a href="#">Sản phẩm</a>
                                                             <ul class="sub-menu">
                                                                   @foreach ($menuCategory as $key => $item )
-                                                                  <li><a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
+                                                                  <li>
+                                                                    <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
+                                                                    <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                                                   </li>
                                                                   @endforeach
                                                             </ul>
