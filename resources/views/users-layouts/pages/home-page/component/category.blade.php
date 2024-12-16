@@ -17,7 +17,7 @@
 
 
                 <!-- Single item -->
-                <div class="swiper-slide">
+                <div class="swiper-slide" >
                     <div class="category-card">
                         <a href="{{route('category.index',$item['url_category'])}}">
                             <div class="box-shape" data-bg-src="" style="background-image:  url('/user/img/bg/category_card_bg.png') "></div>

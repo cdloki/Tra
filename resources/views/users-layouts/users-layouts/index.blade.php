@@ -82,6 +82,45 @@
                   color: #198754;
                   font-weight: 500;
             }
+            .item-sanpham{
+                  height: 100px;
+                  width: 100%;
+                  display: flex !important;
+                  gap: 8px;
+                  align-items: center;
+            }
+            .item-sanpham img{
+                  height: 70px;
+                  width: 100px;
+                  object-fit: cover;
+            }
+            .item-sanpham a{
+                  max-width: 300px;
+                  flex: 1;
+            }
+            .th-menu-wrapper.menu-mobile>div{
+                  max-width: unset;
+                  width: calc(100vw - 20px) !important;
+            }
+            .th-menu-wrapper.menu-mobile>div li li>a{
+                  font-weight: 500 !important;
+                  font-size: .9em;
+            }
+            .item-menu-button{
+                  position: relative;
+            }
+            .item-menu-button span.th-mean-expand{
+                  display: block;
+                  height: 100% !important;
+                  width: 100% !important;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  background-color: transparent !important;
+                  border-radius: 0 !important;
+                  text-align: right !important;
+                  box-shadow: none !important;
+            }
       </style>
 </head>
 
@@ -109,7 +148,7 @@
             </div>
 
       </div>
-      <div class="th-menu-wrapper">
+      <div class="th-menu-wrapper menu-mobile">
             <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
                   <div class="mobile-logo"><a href="/"><img src="{{asset($Setting["logo_general_website"])}}"
                                     alt="Frutin"></a>
@@ -117,10 +156,10 @@
                   <div class="th-mobile-menu">
                         <ul>
                               <li><a href="/">Trang chủ</a></li>
-                              <li class="menu-item-has-children"><a href="#">Sản phẩm</a>
+                              <li class="menu-item-has-children"><a class="item-menu-button" href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
                                           @foreach ($menuCategory as $key => $item )
-                                          <li>
+                                          <li class="item-sanpham ">
                                             <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
                                             <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                           </li>
@@ -155,9 +194,9 @@
 
                                                                         <li class="menu-item-has-children">
                                                                               <a href="#">Sản phẩm</a>
-                                                                              <ul class="sub-menu">
+                                                                              <ul class="sub-menu" >
                                                                                     @foreach ($menuCategory as $key => $item )
-                                                                                    <li>
+                                                                                    <li class="item-sanpham">
                                                                                         <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
                                                                                         <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                                                                     </li>
@@ -243,9 +282,9 @@
                                                       <li><a href="/">Trang chủ</a></li>
                                                       <li class="menu-item-has-children">
                                                             <a href="#">Sản phẩm</a>
-                                                            <ul class="sub-menu">
+                                                            <ul class="sub-menu" style="height: calc(100vh - 150px); overflow-y: auto;">
                                                                   @foreach ($menuCategory as $key => $item )
-                                                                  <li>
+                                                                  <li class="item-sanpham">
                                                                     <img src="{{asset($item["image_category"])}}" alt="Không tìm thấy hình ảnh">
                                                                     <a href="{{route('category.index',$item['url_category'])}}">{{$item["name_category"]}}</a>
                                                                   </li>

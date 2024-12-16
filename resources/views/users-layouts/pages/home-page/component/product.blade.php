@@ -21,8 +21,8 @@
                 <div class="swiper-slide">
                     <div class="th-product product-grid">
                         <a href="{{route('detail-product',$item['url_product'])}}">
-                            <div class="product-img">
-                                <img src="{{asset($item["image_product"]["url_image"])}}" alt="Product Image">
+                            <div class="product-img" style="height: 180px; width: 250px">
+                                <img style="object-fit: cover; height: 100%; width: 100%;" src="{{asset($item["image_product"]["url_image"])}}" alt="Product Image">
                             </div>
                         </a>
                         <div class="product-content">
